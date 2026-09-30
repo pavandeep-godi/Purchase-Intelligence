@@ -128,6 +128,22 @@ GROQ_API_KEY=your-key-here
 
 You can optionally choose a Groq model with `GROQ_MODEL`. Keep `.env` private; never share it or commit it to source control. If Groq is unavailable, the app uses the local Python analysis and remains usable.
 
+## ☁️ Deploy on Streamlit Community Cloud
+
+The code is published in the GitHub repository **Purchase-Intelligence**, on the **`main`** branch. To deploy it:
+
+1. Sign in to [Streamlit Community Cloud](https://share.streamlit.io/) with GitHub and authorize Streamlit to access this repository. If the repository is private, also grant access to private repositories in the Streamlit account's **Settings → Linked accounts → Source control**.
+2. Choose **Create app**, then select `pavandeep-godi/Purchase-Intelligence`, branch `main`, and the app file `app.py`.
+3. If you want Groq AI on the hosted app, open the app's **Settings → Secrets** and add:
+
+	```toml
+	GROQ_API_KEY = "your-key-here"
+	```
+
+	Do not put the key in a GitHub file. The hosted app reads Streamlit Secrets; the local app can read the ignored `.env` file. The app can be deployed without a key, using Python analysis and local summaries.
+
+If Streamlit says it cannot find or connect to the repository, first check that you selected the `main` branch and `app.py`, and that Streamlit has GitHub permission to access the repository. Repository admins can authorize the GitHub connection.
+
 ## 📝 Create a shareable analysis report
 
 Generate a plain-text summary and a machine-readable JSON report from the included CSVs:

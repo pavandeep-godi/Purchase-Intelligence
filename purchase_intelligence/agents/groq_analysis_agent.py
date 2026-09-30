@@ -14,16 +14,19 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def load_groq_environment() -> None:
-    """Load standard .env assignments, and support a single raw Groq token safely."""
+    """Load Groq credentials from environment, local .env, or Streamlit Cloud secrets."""
     env_path = ROOT / ".env"
-    if not env_path.exists():
-        return
-    try:
-        lines = env_path.read_text(encoding="utf-8").splitlines()
-    except OSError:
-        return
+    content_lines: list[str] = []
+    if env_path.exists():
+        try:
+            content_lines = [
+                line.strip()
+                for line in env_path.read_text(encoding="utf-8").splitlines()
+                if line.strip() and not line.lstrip().startswith("#")
+            ]
+        except OSError:
+            content_lines = []
 
-    content_lines = [line.strip() for line in lines if line.strip() and not line.lstrip().startswith("#")]
     assignments: dict[str, str] = {}
     for line in content_lines:
         candidate = line.removeprefix("export ").strip()
@@ -35,11 +38,22 @@ def load_groq_environment() -> None:
     for name, value in assignments.items():
         os.environ.setdefault(name, value)
 
-    # A single unlabelled gsk_ token is supported for the user's current .env format.
+    # Also accept a single raw key for existing local .env setups.
     if not os.getenv("GROQ_API_KEY") and len(content_lines) == 1:
         raw_value = content_lines[0]
         if raw_value.startswith("gsk_") and "=" not in raw_value:
             os.environ["GROQ_API_KEY"] = raw_value
+
+    # Community Cloud stores keys in st.secrets, not in a deployed .env file.
+    if not os.getenv("GROQ_API_KEY"):
+        try:
+            import streamlit as st
+
+            secret_key = st.secrets.get("GROQ_API_KEY")
+        except Exception:
+            secret_key = None
+        if secret_key:
+            os.environ["GROQ_API_KEY"] = str(secret_key)
 
 
 def _get_client() -> tuple[Any | None, str]:

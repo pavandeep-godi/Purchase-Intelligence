@@ -2,6 +2,9 @@
 
 from pathlib import Path
 import json
+import os
+import sys
+import tempfile
 from types import SimpleNamespace
 from unittest.mock import patch
 import unittest
@@ -9,6 +12,7 @@ import unittest
 import pandas as pd
 
 from purchase_intelligence.agents.data_quality_agent import run_quality_checks
+from purchase_intelligence.agents import groq_analysis_agent
 from purchase_intelligence.agents.groq_analysis_agent import build_groq_context, run_groq_review
 from purchase_intelligence.agents.spend_analysis_agent import analyze_spend
 
@@ -81,6 +85,17 @@ class PurchaseAnalysisTests(unittest.TestCase):
         self.assertEqual(review["dashboard_metrics"]["landed_spend_inr"], self.analysis["summary"]["landed_spend_inr"])
         self.assertFalse(review["executive_summary_validated"])
         self.assertIn("valid purchase lines", review["executive_summary"])
+
+    def test_groq_key_loads_from_streamlit_cloud_secrets(self) -> None:
+        cloud_secrets = SimpleNamespace(secrets={"GROQ_API_KEY": "test-groq-key"})
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            with (
+                patch.object(groq_analysis_agent, "ROOT", Path(temporary_directory)),
+                patch.dict(os.environ, {}, clear=True),
+                patch.dict(sys.modules, {"streamlit": cloud_secrets}),
+            ):
+                groq_analysis_agent.load_groq_environment()
+                self.assertEqual(os.environ["GROQ_API_KEY"], "test-groq-key")
 
 
 if __name__ == "__main__":
