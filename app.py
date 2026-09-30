@@ -222,7 +222,13 @@ st.markdown(f"**Reporting period:** {', '.join(selected_quarters) if selected_qu
 if summary["excluded_purchase_rows"]:
     st.warning(f"{summary['excluded_purchase_rows']:,} invalid purchase rows were excluded from spend calculations. Review Data checks below.")
 if llm_review["source"].startswith("Python fallback"):
-    st.warning(f"Groq review is unavailable: {llm_review['status']}. Dashboard metrics are using the validated Python fallback.")
+    if "GROQ_API_KEY not found" in llm_review["status"]:
+        st.warning(
+            "Groq review is unavailable because no API key was found. Dashboard metrics are using the validated Python fallback. "
+            "For Streamlit Community Cloud, open this app's Settings → Secrets and add GROQ_API_KEY = \"your-key-here\", then reboot the app."
+        )
+    else:
+        st.warning(f"Groq review is unavailable: {llm_review['status']}. Dashboard metrics are using the validated Python fallback.")
 else:
     st.caption(f"Groq analysis active · {llm_review['matched_metric_count']}/{llm_review['metric_count']} KPI values reconciled · "
                f"Charts: {llm_review['dashboard_series_source']}.")
