@@ -1,0 +1,1316 @@
+purchase_order_id,purchase_date,quarter,material,quantity_kg,price_per_kg_inr,vendor,source_country,freight_cost_to_india_per_kg_inr,chemical_category,chemical_family
+PO-000001,2024-01-01,2024Q1,Hydrochloric Acid,7632.62,13.38,Aarav Chemtrade,Japan,1.12,Inorganic Chemicals,Mineral Acids
+PO-000002,2024-02-03,2024Q1,Acetone,9738.43,71.88,Lotus Raw Materials,India,0.0,Solvents,Ketones
+PO-000003,2024-03-15,2024Q1,Polyethylene Resin,8336.0,124.59,Quartz Materials India,India,0.0,Polymers,Polyolefins
+PO-000004,2024-01-26,2024Q1,Polyethylene Resin,2515.37,148.56,Vantage Chemical Supply,Japan,6.78,Polymers,Polyolefins
+PO-000005,2024-01-31,2024Q1,Acetone,609.44,73.12,Lotus Raw Materials,India,0.0,Solvents,Ketones
+PO-000006,2024-01-06,2024Q1,Urea,1090.61,36.15,Eastern ChemSource,Japan,1.46,Agrochemicals,Nitrogen Compounds
+PO-000007,2024-03-02,2024Q1,Titanium Dioxide,1901.57,319.85,Oceanic Ingredients,Japan,11.56,Pigments,Oxides
+PO-000008,2024-02-01,2024Q1,Glycerine,9629.04,108.16,Evergreen Materials,Singapore,4.74,Specialty Chemicals,Polyols
+PO-000009,2024-01-28,2024Q1,Sodium Carbonate,768.31,32.82,Deccan Molecules,Germany,2.51,Inorganic Chemicals,Carbonates
+PO-000010,2024-02-23,2024Q1,Acetone,2375.05,86.14,Eastern ChemSource,UAE,5.51,Solvents,Ketones
+PO-000011,2024-02-20,2024Q1,Ethyl Acetate,1041.67,122.72,Coastal Industrial Supply,Germany,7.19,Solvents,Esters
+PO-000012,2024-01-23,2024Q1,Polyethylene Resin,635.21,131.84,Deccan Molecules,Singapore,4.4,Polymers,Polyolefins
+PO-000013,2024-02-12,2024Q1,Methanol,10735.68,37.9,Eastern ChemSource,UAE,2.91,Solvents,Alcohols
+PO-000014,2024-03-28,2024Q1,Sodium Carbonate,1124.42,28.78,Jupiter Fine Chemicals,Singapore,2.07,Inorganic Chemicals,Carbonates
+PO-000015,2024-01-12,2024Q1,Sulphuric Acid,2065.31,9.55,Quartz Materials India,Germany,0.4,Inorganic Chemicals,Mineral Acids
+PO-000016,2024-01-22,2024Q1,Toluene,6118.26,94.33,Jupiter Fine Chemicals,UAE,5.15,Solvents,Aromatics
+PO-000017,2024-03-12,2024Q1,Glycerine,1279.02,86.72,Quartz Materials India,China,6.48,Specialty Chemicals,Polyols
+PO-000018,2024-01-18,2024Q1,Urea,380.51,31.99,Deccan Molecules,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-000019,2024-02-20,2024Q1,Epoxy Resin,809.84,222.25,Quartz Materials India,South Korea,10.92,Polymers,Thermosets
+PO-000020,2024-02-14,2024Q1,Citric Acid,420.59,86.41,Lotus Raw Materials,Singapore,2.86,Specialty Chemicals,Organic Acids
+PO-000021,2024-01-27,2024Q1,Caustic Soda,24127.83,41.45,Oceanic Ingredients,China,5.37,Inorganic Chemicals,Alkalis
+PO-000022,2024-01-19,2024Q1,Methanol,1296.05,39.19,Eastern ChemSource,South Korea,3.29,Solvents,Alcohols
+PO-000023,2024-01-24,2024Q1,Glycerine,1297.54,111.97,Oceanic Ingredients,South Korea,7.91,Specialty Chemicals,Polyols
+PO-000024,2024-01-22,2024Q1,Urea,1242.07,32.82,Eastern ChemSource,UAE,2.23,Agrochemicals,Nitrogen Compounds
+PO-000025,2024-03-15,2024Q1,Titanium Dioxide,23476.59,267.31,Eastern ChemSource,Singapore,16.3,Pigments,Oxides
+PO-000026,2024-01-29,2024Q1,Polypropylene Resin,23447.5,110.91,Horizon Petrochem,UAE,6.84,Polymers,Polyolefins
+PO-000027,2024-02-02,2024Q1,Titanium Dioxide,16053.12,200.46,Unity Industrial Partners,China,15.61,Pigments,Oxides
+PO-000028,2024-02-19,2024Q1,Polyethylene Resin,2439.67,143.65,Vantage Chemical Supply,Japan,6.73,Polymers,Polyolefins
+PO-000029,2024-02-27,2024Q1,Acetone,410.53,81.27,Bharat Specialities,UAE,6.81,Solvents,Ketones
+PO-000030,2024-03-10,2024Q1,Urea,5380.45,36.84,Eastern ChemSource,Japan,1.31,Agrochemicals,Nitrogen Compounds
+PO-000031,2024-01-06,2024Q1,Glycerine,1976.51,103.87,Evergreen Materials,Singapore,5.53,Specialty Chemicals,Polyols
+PO-000032,2024-03-25,2024Q1,Polypropylene Resin,8853.79,127.77,Lotus Raw Materials,Singapore,5.74,Polymers,Polyolefins
+PO-000033,2024-01-29,2024Q1,Epoxy Resin,3814.9,275.43,Oceanic Ingredients,Singapore,15.66,Polymers,Thermosets
+PO-000034,2024-03-22,2024Q1,Methanol,24362.11,36.49,Deccan Molecules,Singapore,0.94,Solvents,Alcohols
+PO-000035,2024-02-04,2024Q1,Glycerine,533.94,85.71,Horizon Petrochem,UAE,5.14,Specialty Chemicals,Polyols
+PO-000036,2024-02-15,2024Q1,Epoxy Resin,518.29,225.95,Ridgeway Chemicals,China,16.7,Polymers,Thermosets
+PO-000037,2024-03-09,2024Q1,Titanium Dioxide,1023.42,292.42,Westport Materials,South Korea,19.95,Pigments,Oxides
+PO-000038,2024-03-19,2024Q1,Caustic Soda,2561.27,39.0,Indus Industrial Solutions,Singapore,3.75,Inorganic Chemicals,Alkalis
+PO-000039,2024-03-25,2024Q1,Epoxy Resin,11992.1,251.6,Global Process Partners,UAE,4.3,Polymers,Thermosets
+PO-000040,2024-02-07,2024Q1,Epoxy Resin,1261.1,257.98,Eastern ChemSource,Singapore,17.22,Polymers,Thermosets
+PO-000041,2024-03-11,2024Q1,Urea,12688.05,32.1,Meridian ChemLink,China,3.12,Agrochemicals,Nitrogen Compounds
+PO-000042,2024-01-28,2024Q1,Sodium Carbonate,7885.23,35.66,Kaveri Trading,Germany,2.34,Inorganic Chemicals,Carbonates
+PO-000043,2024-03-02,2024Q1,Carbon Black,1611.03,123.85,Nexus Bulk Supply,India,0.0,Pigments,Carbon Materials
+PO-000044,2024-03-29,2024Q1,Hydrochloric Acid,3887.89,14.97,Summit Process Supply,Germany,0.56,Inorganic Chemicals,Mineral Acids
+PO-000045,2024-03-25,2024Q1,Toluene,17329.47,84.19,Summit Process Supply,Thailand,4.51,Solvents,Aromatics
+PO-000046,2024-03-12,2024Q1,Sulphuric Acid,21085.68,8.3,Quartz Materials India,Thailand,0.72,Inorganic Chemicals,Mineral Acids
+PO-000047,2024-01-27,2024Q1,Acetone,1601.89,78.92,Bharat Specialities,UAE,7.21,Solvents,Ketones
+PO-000048,2024-01-23,2024Q1,Titanium Dioxide,8437.98,283.54,Coastal Industrial Supply,South Korea,5.36,Pigments,Oxides
+PO-000049,2024-01-11,2024Q1,Hydrochloric Acid,386.6,12.73,Evergreen Materials,Singapore,1.13,Inorganic Chemicals,Mineral Acids
+PO-000050,2024-02-25,2024Q1,Citric Acid,1054.55,87.24,Coastal Industrial Supply,Thailand,1.64,Specialty Chemicals,Organic Acids
+PO-000051,2024-02-13,2024Q1,Toluene,7787.64,89.3,Indus Industrial Solutions,UAE,5.63,Solvents,Aromatics
+PO-000052,2024-01-16,2024Q1,Carbon Black,5115.0,124.62,Westport Materials,UAE,3.33,Pigments,Carbon Materials
+PO-000053,2024-02-29,2024Q1,Polyethylene Resin,1878.03,118.98,Global Process Partners,Thailand,6.87,Polymers,Polyolefins
+PO-000054,2024-01-28,2024Q1,Carbon Black,2198.51,141.37,Westport Materials,Japan,7.42,Pigments,Carbon Materials
+PO-000055,2024-01-25,2024Q1,Titanium Dioxide,6246.93,227.59,Vantage Chemical Supply,Thailand,10.17,Pigments,Oxides
+PO-000056,2024-02-10,2024Q1,Sulphuric Acid,1291.93,10.4,Summit Process Supply,Germany,0.76,Inorganic Chemicals,Mineral Acids
+PO-000057,2024-02-19,2024Q1,Epoxy Resin,490.72,229.15,Jupiter Fine Chemicals,India,0.0,Polymers,Thermosets
+PO-000058,2024-01-27,2024Q1,Hydrochloric Acid,22423.62,12.66,Pioneer Chemical House,UAE,0.22,Inorganic Chemicals,Mineral Acids
+PO-000059,2024-01-10,2024Q1,Toluene,5650.29,99.43,Vantage Chemical Supply,Japan,6.65,Solvents,Aromatics
+PO-000060,2024-01-23,2024Q1,Hydrochloric Acid,557.57,12.59,Evergreen Materials,Singapore,1.12,Inorganic Chemicals,Mineral Acids
+PO-000061,2024-01-11,2024Q1,Caustic Soda,2069.89,40.24,Jupiter Fine Chemicals,Japan,3.6,Inorganic Chemicals,Alkalis
+PO-000062,2024-02-25,2024Q1,Sodium Carbonate,2004.18,29.3,Jupiter Fine Chemicals,Singapore,2.17,Inorganic Chemicals,Carbonates
+PO-000063,2024-03-17,2024Q1,Ethyl Acetate,23224.88,98.1,Bharat Specialities,India,0.0,Solvents,Esters
+PO-000064,2024-03-05,2024Q1,Carbon Black,12675.81,112.85,Lotus Raw Materials,Thailand,4.3,Pigments,Carbon Materials
+PO-000065,2024-02-10,2024Q1,Sodium Carbonate,1693.06,27.6,Vantage Chemical Supply,Thailand,2.44,Inorganic Chemicals,Carbonates
+PO-000066,2024-03-18,2024Q1,Epoxy Resin,969.22,270.92,Oceanic Ingredients,Singapore,17.64,Polymers,Thermosets
+PO-000067,2024-01-03,2024Q1,Hydrochloric Acid,2216.07,12.85,Pioneer Chemical House,Singapore,1.08,Inorganic Chemicals,Mineral Acids
+PO-000068,2024-03-09,2024Q1,Acetone,15561.03,71.11,Global Process Partners,China,3.99,Solvents,Ketones
+PO-000069,2024-03-05,2024Q1,Sodium Carbonate,12726.35,26.07,Jupiter Fine Chemicals,China,0.73,Inorganic Chemicals,Carbonates
+PO-000070,2024-01-11,2024Q1,Titanium Dioxide,4261.53,261.25,Bharat Specialities,UAE,11.21,Pigments,Oxides
+PO-000071,2024-01-16,2024Q1,Urea,503.26,30.96,Meridian ChemLink,China,2.73,Agrochemicals,Nitrogen Compounds
+PO-000072,2024-03-26,2024Q1,Epoxy Resin,4741.88,283.47,Oceanic Ingredients,South Korea,18.76,Polymers,Thermosets
+PO-000073,2024-02-25,2024Q1,Urea,912.8,37.73,Trident ChemWorks,Singapore,1.95,Agrochemicals,Nitrogen Compounds
+PO-000074,2024-01-11,2024Q1,Polyethylene Resin,416.16,133.17,Jupiter Fine Chemicals,South Korea,4.18,Polymers,Polyolefins
+PO-000075,2024-03-08,2024Q1,Urea,647.08,30.08,Summit Process Supply,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-000076,2024-03-07,2024Q1,Titanium Dioxide,826.63,294.08,Oceanic Ingredients,Singapore,13.05,Pigments,Oxides
+PO-000077,2024-01-24,2024Q1,Carbon Black,4936.02,133.93,Lotus Raw Materials,Germany,3.98,Pigments,Carbon Materials
+PO-000078,2024-01-04,2024Q1,Titanium Dioxide,1537.14,242.29,Bharat Specialities,Thailand,7.28,Pigments,Oxides
+PO-000079,2024-03-16,2024Q1,Urea,5660.3,38.57,Trident ChemWorks,Singapore,1.89,Agrochemicals,Nitrogen Compounds
+PO-000080,2024-03-13,2024Q1,Methanol,20902.33,36.66,Deccan Molecules,Singapore,1.01,Solvents,Alcohols
+PO-000081,2024-02-15,2024Q1,Glycerine,11733.34,107.65,Quartz Materials India,South Korea,2.8,Specialty Chemicals,Polyols
+PO-000082,2024-02-15,2024Q1,Urea,4773.42,37.11,Westport Materials,Singapore,0.62,Agrochemicals,Nitrogen Compounds
+PO-000083,2024-01-06,2024Q1,Titanium Dioxide,2548.33,261.41,Unity Industrial Partners,Japan,21.06,Pigments,Oxides
+PO-000084,2024-01-29,2024Q1,Epoxy Resin,1539.76,255.75,Global Process Partners,UAE,4.66,Polymers,Thermosets
+PO-000085,2024-03-23,2024Q1,Polypropylene Resin,455.7,99.49,Horizon Petrochem,China,5.55,Polymers,Polyolefins
+PO-000086,2024-02-24,2024Q1,Epoxy Resin,1920.02,216.65,Horizon Petrochem,South Korea,7.56,Polymers,Thermosets
+PO-000087,2024-03-29,2024Q1,Hydrochloric Acid,8395.47,12.2,Indus Industrial Solutions,UAE,1.07,Inorganic Chemicals,Mineral Acids
+PO-000088,2024-03-12,2024Q1,Acetone,11502.35,81.03,Eastern ChemSource,UAE,6.38,Solvents,Ketones
+PO-000089,2024-02-29,2024Q1,Toluene,5264.74,107.1,Vantage Chemical Supply,Japan,6.36,Solvents,Aromatics
+PO-000090,2024-02-17,2024Q1,Sulphuric Acid,4688.97,8.11,Quartz Materials India,Thailand,0.76,Inorganic Chemicals,Mineral Acids
+PO-000091,2024-02-25,2024Q1,Methanol,439.39,33.73,Global Process Partners,UAE,2.95,Solvents,Alcohols
+PO-000092,2024-02-16,2024Q1,Methanol,6494.38,32.84,Jupiter Fine Chemicals,India,0.0,Solvents,Alcohols
+PO-000093,2024-01-25,2024Q1,Polyethylene Resin,1757.75,133.86,Jupiter Fine Chemicals,Singapore,11.12,Polymers,Polyolefins
+PO-000094,2024-01-08,2024Q1,Carbon Black,7830.58,117.27,Global Process Partners,Thailand,8.0,Pigments,Carbon Materials
+PO-000095,2024-03-28,2024Q1,Acetone,2144.12,64.8,Unity Industrial Partners,China,7.04,Solvents,Ketones
+PO-000096,2024-01-29,2024Q1,Toluene,5740.09,82.43,Horizon Petrochem,India,0.0,Solvents,Aromatics
+PO-000097,2024-02-21,2024Q1,Carbon Black,416.78,107.61,Unity Industrial Partners,India,0.0,Pigments,Carbon Materials
+PO-000098,2024-03-18,2024Q1,Urea,6477.67,31.3,Coastal Industrial Supply,Singapore,0.86,Agrochemicals,Nitrogen Compounds
+PO-000099,2024-01-22,2024Q1,Epoxy Resin,25785.04,246.29,Jupiter Fine Chemicals,South Korea,5.02,Polymers,Thermosets
+PO-000100,2024-02-26,2024Q1,Methanol,1579.39,32.84,Frontier Chemical Co,Singapore,0.91,Solvents,Alcohols
+PO-000101,2024-05-07,2024Q2,Sulphuric Acid,9733.33,9.78,Meridian ChemLink,India,0.0,Inorganic Chemicals,Mineral Acids
+PO-000102,2024-05-24,2024Q2,Carbon Black,5184.7,104.19,Bharat Specialities,Thailand,3.3,Pigments,Carbon Materials
+PO-000103,2024-04-15,2024Q2,Hydrochloric Acid,2028.12,12.5,Unity Industrial Partners,South Korea,0.41,Inorganic Chemicals,Mineral Acids
+PO-000104,2024-06-25,2024Q2,Urea,8814.03,32.54,Eastern ChemSource,UAE,2.23,Agrochemicals,Nitrogen Compounds
+PO-000105,2024-05-30,2024Q2,Methanol,8126.25,33.25,Frontier Chemical Co,UAE,1.83,Solvents,Alcohols
+PO-000106,2024-06-29,2024Q2,Polypropylene Resin,1594.39,138.9,Vantage Chemical Supply,South Korea,10.28,Polymers,Polyolefins
+PO-000107,2024-04-25,2024Q2,Polyethylene Resin,5382.0,119.37,Evergreen Materials,China,9.42,Polymers,Polyolefins
+PO-000108,2024-05-29,2024Q2,Glycerine,870.35,88.53,Quartz Materials India,China,5.54,Specialty Chemicals,Polyols
+PO-000109,2024-06-06,2024Q2,Polyethylene Resin,11621.72,128.12,Deccan Molecules,Singapore,4.34,Polymers,Polyolefins
+PO-000110,2024-06-23,2024Q2,Methanol,1027.46,38.07,Jupiter Fine Chemicals,Japan,1.18,Solvents,Alcohols
+PO-000111,2024-06-06,2024Q2,Glycerine,5541.93,98.28,Vantage Chemical Supply,Singapore,8.62,Specialty Chemicals,Polyols
+PO-000112,2024-04-13,2024Q2,Ethyl Acetate,935.2,92.7,Horizon Petrochem,Thailand,7.93,Solvents,Esters
+PO-000113,2024-04-16,2024Q2,Acetone,505.43,78.1,Aarav Chemtrade,Thailand,6.02,Solvents,Ketones
+PO-000114,2024-05-17,2024Q2,Sodium Carbonate,400.32,34.23,Vantage Chemical Supply,Germany,0.65,Inorganic Chemicals,Carbonates
+PO-000115,2024-06-12,2024Q2,Polyethylene Resin,5469.36,131.62,Quartz Materials India,Singapore,2.43,Polymers,Polyolefins
+PO-000116,2024-04-04,2024Q2,Caustic Soda,17128.91,39.72,Quartz Materials India,Thailand,2.29,Inorganic Chemicals,Alkalis
+PO-000117,2024-04-23,2024Q2,Caustic Soda,561.83,34.36,Indus Industrial Solutions,China,3.52,Inorganic Chemicals,Alkalis
+PO-000118,2024-06-04,2024Q2,Polypropylene Resin,2417.61,131.73,Lotus Raw Materials,South Korea,4.32,Polymers,Polyolefins
+PO-000119,2024-05-05,2024Q2,Sulphuric Acid,18608.0,10.36,Evergreen Materials,Germany,0.33,Inorganic Chemicals,Mineral Acids
+PO-000120,2024-05-28,2024Q2,Epoxy Resin,1532.86,220.71,Ridgeway Chemicals,China,15.97,Polymers,Thermosets
+PO-000121,2024-05-08,2024Q2,Urea,1659.33,32.55,Coastal Industrial Supply,Singapore,0.84,Agrochemicals,Nitrogen Compounds
+PO-000122,2024-05-18,2024Q2,Epoxy Resin,22658.06,277.39,Ridgeway Chemicals,Germany,21.91,Polymers,Thermosets
+PO-000123,2024-06-16,2024Q2,Caustic Soda,5373.68,39.26,Quartz Materials India,India,0.0,Inorganic Chemicals,Alkalis
+PO-000124,2024-04-12,2024Q2,Polyethylene Resin,5998.76,155.62,Trident ChemWorks,Japan,8.69,Polymers,Polyolefins
+PO-000125,2024-06-05,2024Q2,Polyethylene Resin,12702.97,134.31,Deccan Molecules,India,0.0,Polymers,Polyolefins
+PO-000126,2024-06-01,2024Q2,Ethyl Acetate,5967.75,118.76,Deccan Molecules,South Korea,12.63,Solvents,Esters
+PO-000127,2024-06-19,2024Q2,Caustic Soda,8227.29,37.08,Indus Industrial Solutions,China,3.58,Inorganic Chemicals,Alkalis
+PO-000128,2024-05-28,2024Q2,Toluene,543.17,99.25,Nexus Bulk Supply,China,2.24,Solvents,Aromatics
+PO-000129,2024-04-21,2024Q2,Urea,18747.52,38.68,Trident ChemWorks,Singapore,1.93,Agrochemicals,Nitrogen Compounds
+PO-000130,2024-06-26,2024Q2,Methanol,2530.71,41.14,Eastern ChemSource,Germany,2.64,Solvents,Alcohols
+PO-000131,2024-05-17,2024Q2,Caustic Soda,9367.0,39.25,Indus Industrial Solutions,Singapore,3.26,Inorganic Chemicals,Alkalis
+PO-000132,2024-04-30,2024Q2,Hydrochloric Acid,480.59,14.17,Pioneer Chemical House,Singapore,1.08,Inorganic Chemicals,Mineral Acids
+PO-000133,2024-04-26,2024Q2,Carbon Black,18214.52,128.73,Eastern ChemSource,South Korea,4.48,Pigments,Carbon Materials
+PO-000134,2024-05-03,2024Q2,Glycerine,890.83,99.1,Jupiter Fine Chemicals,UAE,8.05,Specialty Chemicals,Polyols
+PO-000135,2024-06-09,2024Q2,Carbon Black,11292.26,109.94,Unity Industrial Partners,India,0.0,Pigments,Carbon Materials
+PO-000136,2024-05-28,2024Q2,Acetone,2578.12,82.32,Eastern ChemSource,UAE,5.89,Solvents,Ketones
+PO-000137,2024-04-15,2024Q2,Toluene,13109.16,81.37,Horizon Petrochem,China,7.47,Solvents,Aromatics
+PO-000138,2024-05-05,2024Q2,Toluene,1044.26,86.56,Unity Industrial Partners,India,0.0,Solvents,Aromatics
+PO-000139,2024-06-10,2024Q2,Citric Acid,6152.5,84.45,Ridgeway Chemicals,China,5.35,Specialty Chemicals,Organic Acids
+PO-000140,2024-04-08,2024Q2,Hydrochloric Acid,4792.99,11.33,Summit Process Supply,Thailand,0.98,Inorganic Chemicals,Mineral Acids
+PO-000141,2024-05-20,2024Q2,Polyethylene Resin,630.94,134.13,Pioneer Chemical House,UAE,6.27,Polymers,Polyolefins
+PO-000142,2024-05-21,2024Q2,Titanium Dioxide,21328.57,272.54,Oceanic Ingredients,UAE,9.65,Pigments,Oxides
+PO-000143,2024-05-11,2024Q2,Polypropylene Resin,6414.75,139.7,Vantage Chemical Supply,South Korea,9.23,Polymers,Polyolefins
+PO-000144,2024-06-04,2024Q2,Acetone,2435.58,80.54,Global Process Partners,Singapore,2.51,Solvents,Ketones
+PO-000145,2024-05-05,2024Q2,Titanium Dioxide,4778.47,315.63,Trident ChemWorks,Japan,15.3,Pigments,Oxides
+PO-000146,2024-06-11,2024Q2,Ethyl Acetate,13143.01,111.96,Jupiter Fine Chemicals,South Korea,7.87,Solvents,Esters
+PO-000147,2024-04-05,2024Q2,Polypropylene Resin,2066.19,110.76,Vantage Chemical Supply,China,5.14,Polymers,Polyolefins
+PO-000148,2024-04-14,2024Q2,Sodium Carbonate,19549.65,28.56,Jupiter Fine Chemicals,UAE,1.18,Inorganic Chemicals,Carbonates
+PO-000149,2024-04-06,2024Q2,Hydrochloric Acid,12921.09,12.84,Pioneer Chemical House,UAE,0.23,Inorganic Chemicals,Mineral Acids
+PO-000150,2024-06-14,2024Q2,Citric Acid,454.56,108.26,Trident ChemWorks,Japan,2.84,Specialty Chemicals,Organic Acids
+PO-000151,2024-06-22,2024Q2,Carbon Black,9526.27,136.5,Lotus Raw Materials,Japan,10.67,Pigments,Carbon Materials
+PO-000152,2024-05-09,2024Q2,Glycerine,903.23,98.66,Evergreen Materials,India,0.0,Specialty Chemicals,Polyols
+PO-000153,2024-04-21,2024Q2,Hydrochloric Acid,933.45,12.65,Aarav Chemtrade,India,0.0,Inorganic Chemicals,Mineral Acids
+PO-000154,2024-06-28,2024Q2,Epoxy Resin,10293.32,231.67,Eastern ChemSource,Thailand,15.02,Polymers,Thermosets
+PO-000155,2024-04-10,2024Q2,Titanium Dioxide,12724.15,285.11,Deccan Molecules,Japan,14.49,Pigments,Oxides
+PO-000156,2024-04-17,2024Q2,Sodium Carbonate,1166.46,31.08,Vantage Chemical Supply,Germany,0.63,Inorganic Chemicals,Carbonates
+PO-000157,2024-05-05,2024Q2,Toluene,555.3,103.33,Nexus Bulk Supply,India,0.0,Solvents,Aromatics
+PO-000158,2024-05-10,2024Q2,Carbon Black,1014.61,143.21,Evergreen Materials,Germany,9.36,Pigments,Carbon Materials
+PO-000159,2024-04-24,2024Q2,Ethyl Acetate,635.88,106.69,Frontier Chemical Co,UAE,2.81,Solvents,Esters
+PO-000160,2024-06-14,2024Q2,Toluene,9469.63,102.31,Meridian ChemLink,UAE,3.96,Solvents,Aromatics
+PO-000161,2024-06-14,2024Q2,Polyethylene Resin,387.56,133.46,Evergreen Materials,Singapore,11.17,Polymers,Polyolefins
+PO-000162,2024-05-15,2024Q2,Ethyl Acetate,6228.81,114.76,Oceanic Ingredients,Singapore,6.66,Solvents,Esters
+PO-000163,2024-04-02,2024Q2,Methanol,18306.51,41.05,Eastern ChemSource,South Korea,3.31,Solvents,Alcohols
+PO-000164,2024-05-30,2024Q2,Glycerine,25352.65,85.24,Quartz Materials India,China,5.76,Specialty Chemicals,Polyols
+PO-000165,2024-06-11,2024Q2,Ethyl Acetate,777.64,118.66,Deccan Molecules,South Korea,7.06,Solvents,Esters
+PO-000166,2024-06-22,2024Q2,Carbon Black,457.36,109.65,Global Process Partners,Thailand,7.92,Pigments,Carbon Materials
+PO-000167,2024-05-16,2024Q2,Titanium Dioxide,1071.72,281.67,Westport Materials,Japan,17.69,Pigments,Oxides
+PO-000168,2024-06-21,2024Q2,Epoxy Resin,647.89,245.65,Trident ChemWorks,China,11.5,Polymers,Thermosets
+PO-000169,2024-04-24,2024Q2,Toluene,1710.25,100.35,Nexus Bulk Supply,India,0.0,Solvents,Aromatics
+PO-000170,2024-06-05,2024Q2,Glycerine,5669.09,87.01,Horizon Petrochem,China,3.22,Specialty Chemicals,Polyols
+PO-000171,2024-05-06,2024Q2,Citric Acid,24298.17,86.5,Pioneer Chemical House,China,3.45,Specialty Chemicals,Organic Acids
+PO-000172,2024-04-08,2024Q2,Polypropylene Resin,15991.56,130.79,Coastal Industrial Supply,Japan,9.77,Polymers,Polyolefins
+PO-000173,2024-04-21,2024Q2,Urea,653.39,35.71,Trident ChemWorks,Thailand,1.96,Agrochemicals,Nitrogen Compounds
+PO-000174,2024-05-31,2024Q2,Sulphuric Acid,1062.89,10.18,Evergreen Materials,Germany,0.35,Inorganic Chemicals,Mineral Acids
+PO-000175,2024-06-06,2024Q2,Hydrochloric Acid,1282.96,10.5,Indus Industrial Solutions,Thailand,0.88,Inorganic Chemicals,Mineral Acids
+PO-000176,2024-04-17,2024Q2,Sulphuric Acid,10213.9,10.29,Summit Process Supply,Germany,0.73,Inorganic Chemicals,Mineral Acids
+PO-000177,2024-05-13,2024Q2,Sodium Carbonate,831.5,33.14,Eastern ChemSource,Singapore,2.26,Inorganic Chemicals,Carbonates
+PO-000178,2024-06-19,2024Q2,Carbon Black,506.01,132.55,Evergreen Materials,Germany,9.8,Pigments,Carbon Materials
+PO-000179,2024-06-16,2024Q2,Hydrochloric Acid,2101.64,11.6,Summit Process Supply,Thailand,1.04,Inorganic Chemicals,Mineral Acids
+PO-000180,2024-04-12,2024Q2,Toluene,2417.95,79.63,Horizon Petrochem,China,7.3,Solvents,Aromatics
+PO-000181,2024-04-03,2024Q2,Glycerine,576.35,102.53,Vantage Chemical Supply,Singapore,8.64,Specialty Chemicals,Polyols
+PO-000182,2024-04-18,2024Q2,Hydrochloric Acid,10460.76,11.91,Frontier Chemical Co,Singapore,0.62,Inorganic Chemicals,Mineral Acids
+PO-000183,2024-06-18,2024Q2,Urea,23466.57,36.78,Westport Materials,Singapore,0.68,Agrochemicals,Nitrogen Compounds
+PO-000184,2024-04-05,2024Q2,Acetone,4639.68,75.52,Summit Process Supply,China,1.39,Solvents,Ketones
+PO-000185,2024-05-30,2024Q2,Citric Acid,4212.47,87.94,Horizon Petrochem,Germany,7.5,Specialty Chemicals,Organic Acids
+PO-000186,2024-05-19,2024Q2,Citric Acid,848.28,81.68,Summit Process Supply,Thailand,3.78,Specialty Chemicals,Organic Acids
+PO-000187,2024-05-05,2024Q2,Caustic Soda,4336.5,41.11,Oceanic Ingredients,China,3.12,Inorganic Chemicals,Alkalis
+PO-000188,2024-04-07,2024Q2,Ethyl Acetate,1088.81,105.89,Global Process Partners,Thailand,5.25,Solvents,Esters
+PO-000189,2024-05-17,2024Q2,Sulphuric Acid,1838.8,9.79,Quartz Materials India,Germany,0.41,Inorganic Chemicals,Mineral Acids
+PO-000190,2024-06-18,2024Q2,Urea,21234.01,33.74,Coastal Industrial Supply,Singapore,0.96,Agrochemicals,Nitrogen Compounds
+PO-000191,2024-06-05,2024Q2,Hydrochloric Acid,6546.6,11.88,Aarav Chemtrade,India,0.0,Inorganic Chemicals,Mineral Acids
+PO-000192,2024-06-12,2024Q2,Acetone,19423.84,73.74,Lotus Raw Materials,India,0.0,Solvents,Ketones
+PO-000193,2024-06-21,2024Q2,Toluene,1114.98,81.65,Unity Industrial Partners,India,0.0,Solvents,Aromatics
+PO-000194,2024-04-03,2024Q2,Toluene,23871.2,96.25,Summit Process Supply,Singapore,1.7,Solvents,Aromatics
+PO-000195,2024-06-11,2024Q2,Urea,867.42,34.4,Trident ChemWorks,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-000196,2024-06-08,2024Q2,Acetone,5444.47,74.05,Ridgeway Chemicals,China,3.41,Solvents,Ketones
+PO-000197,2024-05-17,2024Q2,Titanium Dioxide,6349.01,246.29,Lotus Raw Materials,Thailand,19.94,Pigments,Oxides
+PO-000198,2024-04-28,2024Q2,Glycerine,484.93,86.95,Frontier Chemical Co,India,0.0,Specialty Chemicals,Polyols
+PO-000199,2024-06-05,2024Q2,Acetone,23768.74,74.78,Aarav Chemtrade,Thailand,5.23,Solvents,Ketones
+PO-000200,2024-05-07,2024Q2,Sulphuric Acid,433.93,10.9,Aarav Chemtrade,Germany,0.27,Inorganic Chemicals,Mineral Acids
+PO-000201,2024-05-27,2024Q2,Glycerine,25692.22,97.38,Jupiter Fine Chemicals,Thailand,4.79,Specialty Chemicals,Polyols
+PO-000202,2024-06-20,2024Q2,Methanol,2581.09,40.09,Bharat Specialities,Singapore,2.07,Solvents,Alcohols
+PO-000203,2024-05-15,2024Q2,Titanium Dioxide,20991.88,255.1,Aarav Chemtrade,Singapore,7.76,Pigments,Oxides
+PO-000204,2024-05-14,2024Q2,Epoxy Resin,6130.02,226.89,Ridgeway Chemicals,China,15.7,Polymers,Thermosets
+PO-000205,2024-05-13,2024Q2,Hydrochloric Acid,925.73,13.08,Pioneer Chemical House,UAE,0.25,Inorganic Chemicals,Mineral Acids
+PO-000206,2024-04-02,2024Q2,Polyethylene Resin,1106.39,153.2,Trident ChemWorks,Japan,9.84,Polymers,Polyolefins
+PO-000207,2024-05-04,2024Q2,Toluene,15941.99,84.51,Indus Industrial Solutions,China,1.73,Solvents,Aromatics
+PO-000208,2024-09-25,2024Q3,Sulphuric Acid,11238.68,9.4,Meridian ChemLink,India,0.0,Inorganic Chemicals,Mineral Acids
+PO-000209,2024-07-13,2024Q3,Ethyl Acetate,2022.71,96.71,Horizon Petrochem,Thailand,6.81,Solvents,Esters
+PO-000210,2024-09-11,2024Q3,Titanium Dioxide,5323.26,299.53,Coastal Industrial Supply,South Korea,5.07,Pigments,Oxides
+PO-000211,2024-08-14,2024Q3,Acetone,2183.59,99.29,Aarav Chemtrade,Germany,4.88,Solvents,Ketones
+PO-000212,2024-08-20,2024Q3,Toluene,5459.12,89.58,Summit Process Supply,India,0.0,Solvents,Aromatics
+PO-000213,2024-09-18,2024Q3,Acetone,10862.18,90.64,Jupiter Fine Chemicals,Germany,6.97,Solvents,Ketones
+PO-000214,2024-08-07,2024Q3,Titanium Dioxide,3865.47,296.97,Oceanic Ingredients,UAE,8.76,Pigments,Oxides
+PO-000215,2024-08-14,2024Q3,Epoxy Resin,4754.91,251.18,Global Process Partners,UAE,4.9,Polymers,Thermosets
+PO-000216,2024-07-22,2024Q3,Titanium Dioxide,644.25,324.89,Trident ChemWorks,South Korea,16.46,Pigments,Oxides
+PO-000217,2024-09-12,2024Q3,Ethyl Acetate,5279.85,104.94,Eastern ChemSource,Thailand,6.42,Solvents,Esters
+PO-000218,2024-08-20,2024Q3,Sodium Carbonate,1802.48,30.15,Vantage Chemical Supply,Thailand,2.17,Inorganic Chemicals,Carbonates
+PO-000219,2024-08-06,2024Q3,Sodium Carbonate,441.82,31.6,Unity Industrial Partners,Japan,1.62,Inorganic Chemicals,Carbonates
+PO-000220,2024-09-04,2024Q3,Polypropylene Resin,809.33,116.33,Coastal Industrial Supply,Thailand,6.33,Polymers,Polyolefins
+PO-000221,2024-07-26,2024Q3,Sodium Carbonate,558.27,31.81,Eastern ChemSource,Singapore,2.33,Inorganic Chemicals,Carbonates
+PO-000222,2024-07-30,2024Q3,Caustic Soda,450.14,42.54,Eastern ChemSource,India,0.0,Inorganic Chemicals,Alkalis
+PO-000223,2024-08-26,2024Q3,Caustic Soda,420.96,42.61,Eastern ChemSource,Thailand,2.19,Inorganic Chemicals,Alkalis
+PO-000224,2024-08-20,2024Q3,Citric Acid,5277.34,89.38,Coastal Industrial Supply,Singapore,6.69,Specialty Chemicals,Organic Acids
+PO-000225,2024-09-07,2024Q3,Caustic Soda,9392.06,42.23,Evergreen Materials,India,0.0,Inorganic Chemicals,Alkalis
+PO-000226,2024-08-14,2024Q3,Toluene,5112.77,86.61,Indus Industrial Solutions,China,1.79,Solvents,Aromatics
+PO-000227,2024-08-22,2024Q3,Epoxy Resin,12242.99,283.68,Trident ChemWorks,UAE,8.26,Polymers,Thermosets
+PO-000228,2024-07-27,2024Q3,Acetone,2586.82,90.48,Jupiter Fine Chemicals,Germany,6.69,Solvents,Ketones
+PO-000229,2024-08-08,2024Q3,Carbon Black,20691.01,129.51,Eastern ChemSource,South Korea,4.47,Pigments,Carbon Materials
+PO-000230,2024-08-06,2024Q3,Sodium Carbonate,544.9,31.3,Deccan Molecules,South Korea,2.36,Inorganic Chemicals,Carbonates
+PO-000231,2024-07-27,2024Q3,Urea,551.23,38.15,Westport Materials,South Korea,1.1,Agrochemicals,Nitrogen Compounds
+PO-000232,2024-08-01,2024Q3,Polyethylene Resin,525.42,145.11,Jupiter Fine Chemicals,South Korea,4.49,Polymers,Polyolefins
+PO-000233,2024-08-19,2024Q3,Hydrochloric Acid,5996.89,14.24,Deccan Molecules,Japan,0.54,Inorganic Chemicals,Mineral Acids
+PO-000234,2024-08-01,2024Q3,Caustic Soda,1810.68,44.36,Jupiter Fine Chemicals,Japan,3.46,Inorganic Chemicals,Alkalis
+PO-000235,2024-07-25,2024Q3,Sodium Carbonate,4220.07,28.05,Unity Industrial Partners,South Korea,0.74,Inorganic Chemicals,Carbonates
+PO-000236,2024-07-05,2024Q3,Epoxy Resin,19075.34,252.77,Ridgeway Chemicals,South Korea,14.36,Polymers,Thermosets
+PO-000237,2024-08-24,2024Q3,Epoxy Resin,1047.8,237.15,Jupiter Fine Chemicals,India,0.0,Polymers,Thermosets
+PO-000238,2024-09-08,2024Q3,Hydrochloric Acid,23010.9,12.42,Aarav Chemtrade,India,0.0,Inorganic Chemicals,Mineral Acids
+PO-000239,2024-08-28,2024Q3,Polyethylene Resin,1993.35,136.35,Quartz Materials India,Singapore,2.73,Polymers,Polyolefins
+PO-000240,2024-09-22,2024Q3,Ethyl Acetate,1191.04,116.88,Jupiter Fine Chemicals,South Korea,8.13,Solvents,Esters
+PO-000241,2024-07-12,2024Q3,Titanium Dioxide,10972.42,285.46,Lotus Raw Materials,Japan,8.62,Pigments,Oxides
+PO-000242,2024-09-24,2024Q3,Methanol,592.14,39.25,Bharat Specialities,South Korea,0.79,Solvents,Alcohols
+PO-000243,2024-08-12,2024Q3,Polypropylene Resin,1698.1,139.13,Deccan Molecules,South Korea,3.58,Polymers,Polyolefins
+PO-000244,2024-08-13,2024Q3,Polypropylene Resin,1679.95,137.64,Deccan Molecules,South Korea,3.71,Polymers,Polyolefins
+PO-000245,2024-08-22,2024Q3,Titanium Dioxide,2318.72,211.59,Unity Industrial Partners,China,14.42,Pigments,Oxides
+PO-000246,2024-07-04,2024Q3,Toluene,16479.7,91.56,Unity Industrial Partners,India,0.0,Solvents,Aromatics
+PO-000247,2024-09-09,2024Q3,Glycerine,5372.81,103.02,Pioneer Chemical House,India,0.0,Specialty Chemicals,Polyols
+PO-000248,2024-08-02,2024Q3,Toluene,906.75,96.03,Indus Industrial Solutions,UAE,5.59,Solvents,Aromatics
+PO-000249,2024-08-16,2024Q3,Caustic Soda,22840.05,42.17,Eastern ChemSource,India,0.0,Inorganic Chemicals,Alkalis
+PO-000250,2024-08-30,2024Q3,Sodium Carbonate,899.25,32.12,Deccan Molecules,South Korea,2.33,Inorganic Chemicals,Carbonates
+PO-000251,2024-07-22,2024Q3,Urea,12457.44,33.94,Eastern ChemSource,Thailand,1.09,Agrochemicals,Nitrogen Compounds
+PO-000252,2024-07-17,2024Q3,Polypropylene Resin,9955.79,135.96,Coastal Industrial Supply,Japan,10.44,Polymers,Polyolefins
+PO-000253,2024-09-18,2024Q3,Hydrochloric Acid,5001.0,12.88,Pioneer Chemical House,India,0.0,Inorganic Chemicals,Mineral Acids
+PO-000254,2024-07-21,2024Q3,Glycerine,1121.28,108.94,Evergreen Materials,Singapore,5.31,Specialty Chemicals,Polyols
+PO-000255,2024-07-08,2024Q3,Methanol,4522.53,37.07,Deccan Molecules,Singapore,0.92,Solvents,Alcohols
+PO-000256,2024-09-25,2024Q3,Urea,651.29,33.29,Coastal Industrial Supply,Singapore,0.86,Agrochemicals,Nitrogen Compounds
+PO-000257,2024-09-05,2024Q3,Caustic Soda,1682.53,48.73,Coastal Industrial Supply,Germany,3.7,Inorganic Chemicals,Alkalis
+PO-000258,2024-08-11,2024Q3,Polypropylene Resin,19474.27,98.95,Horizon Petrochem,China,5.56,Polymers,Polyolefins
+PO-000259,2024-07-19,2024Q3,Glycerine,2551.97,85.73,Frontier Chemical Co,India,0.0,Specialty Chemicals,Polyols
+PO-000260,2024-07-05,2024Q3,Citric Acid,5435.7,133.34,Summit Process Supply,Thailand,3.66,Specialty Chemicals,Organic Acids
+PO-000261,2024-09-04,2024Q3,Carbon Black,17643.66,107.84,Bharat Specialities,Thailand,3.57,Pigments,Carbon Materials
+PO-000262,2024-07-09,2024Q3,Hydrochloric Acid,971.66,13.46,Pioneer Chemical House,Singapore,0.91,Inorganic Chemicals,Mineral Acids
+PO-000263,2024-08-10,2024Q3,Acetone,1556.19,113.11,Eastern ChemSource,UAE,5.61,Solvents,Ketones
+PO-000264,2024-08-25,2024Q3,Polypropylene Resin,18237.19,134.29,Lotus Raw Materials,India,0.0,Polymers,Polyolefins
+PO-000265,2024-07-25,2024Q3,Acetone,1886.55,77.05,Aarav Chemtrade,Thailand,5.49,Solvents,Ketones
+PO-000266,2024-09-22,2024Q3,Glycerine,474.13,110.33,Evergreen Materials,Singapore,5.28,Specialty Chemicals,Polyols
+PO-000267,2024-07-21,2024Q3,Carbon Black,654.53,118.64,Global Process Partners,Thailand,8.07,Pigments,Carbon Materials
+PO-000268,2024-09-17,2024Q3,Acetone,9066.29,96.39,Aarav Chemtrade,Germany,5.06,Solvents,Ketones
+PO-000269,2024-08-02,2024Q3,Caustic Soda,21407.2,40.18,Quartz Materials India,Thailand,2.31,Inorganic Chemicals,Alkalis
+PO-000270,2024-09-10,2024Q3,Carbon Black,652.85,133.85,Lotus Raw Materials,Japan,11.22,Pigments,Carbon Materials
+PO-000271,2024-09-19,2024Q3,Hydrochloric Acid,2236.68,12.72,Pioneer Chemical House,India,0.0,Inorganic Chemicals,Mineral Acids
+PO-000272,2024-08-13,2024Q3,Polypropylene Resin,9192.85,141.94,Deccan Molecules,South Korea,4.03,Polymers,Polyolefins
+PO-000273,2024-09-03,2024Q3,Citric Acid,473.19,83.61,Horizon Petrochem,India,0.0,Specialty Chemicals,Organic Acids
+PO-000274,2024-08-10,2024Q3,Carbon Black,17995.81,118.03,Lotus Raw Materials,Thailand,4.17,Pigments,Carbon Materials
+PO-000275,2024-07-15,2024Q3,Glycerine,473.57,112.87,Evergreen Materials,Singapore,5.24,Specialty Chemicals,Polyols
+PO-000276,2024-09-08,2024Q3,Ethyl Acetate,900.13,113.8,Evergreen Materials,UAE,6.24,Solvents,Esters
+PO-000277,2024-07-29,2024Q3,Hydrochloric Acid,394.91,14.2,Westport Materials,Thailand,0.51,Inorganic Chemicals,Mineral Acids
+PO-000278,2024-09-11,2024Q3,Sodium Carbonate,626.4,30.42,Jupiter Fine Chemicals,Singapore,2.11,Inorganic Chemicals,Carbonates
+PO-000279,2024-07-29,2024Q3,Epoxy Resin,26167.78,240.8,Ridgeway Chemicals,China,16.14,Polymers,Thermosets
+PO-000280,2024-08-04,2024Q3,Ethyl Acetate,5980.9,119.29,Oceanic Ingredients,Singapore,5.62,Solvents,Esters
+PO-000281,2024-08-31,2024Q3,Polypropylene Resin,5169.74,136.07,Deccan Molecules,Japan,6.31,Polymers,Polyolefins
+PO-000282,2024-09-05,2024Q3,Acetone,6414.2,76.3,Aarav Chemtrade,Thailand,5.74,Solvents,Ketones
+PO-000283,2024-08-03,2024Q3,Glycerine,18867.13,124.7,Nexus Bulk Supply,Japan,8.25,Specialty Chemicals,Polyols
+PO-000284,2024-09-11,2024Q3,Caustic Soda,22956.12,37.28,Indus Industrial Solutions,China,3.84,Inorganic Chemicals,Alkalis
+PO-000285,2024-09-03,2024Q3,Sodium Carbonate,21645.36,31.52,Summit Process Supply,Singapore,1.11,Inorganic Chemicals,Carbonates
+PO-000286,2024-09-06,2024Q3,Acetone,6094.84,90.75,Lotus Raw Materials,Japan,1.79,Solvents,Ketones
+PO-000287,2024-07-07,2024Q3,Sodium Carbonate,6473.52,42.38,Vantage Chemical Supply,Thailand,2.06,Inorganic Chemicals,Carbonates
+PO-000288,2024-09-19,2024Q3,Polyethylene Resin,12862.94,133.84,Global Process Partners,Thailand,7.13,Polymers,Polyolefins
+PO-000289,2024-07-29,2024Q3,Ethyl Acetate,2242.63,108.47,Unity Industrial Partners,India,0.0,Solvents,Esters
+PO-000290,2024-09-16,2024Q3,Acetone,5829.03,71.52,Unity Industrial Partners,China,7.13,Solvents,Ketones
+PO-000291,2024-08-04,2024Q3,Titanium Dioxide,8602.1,251.42,Aarav Chemtrade,Singapore,8.03,Pigments,Oxides
+PO-000292,2024-07-05,2024Q3,Citric Acid,1284.42,87.94,Coastal Industrial Supply,Thailand,1.61,Specialty Chemicals,Organic Acids
+PO-000293,2024-08-08,2024Q3,Epoxy Resin,1175.96,273.09,Oceanic Ingredients,South Korea,16.11,Polymers,Thermosets
+PO-000294,2024-07-10,2024Q3,Glycerine,5641.17,102.47,Vantage Chemical Supply,Singapore,7.49,Specialty Chemicals,Polyols
+PO-000295,2024-08-24,2024Q3,Urea,516.43,31.99,Summit Process Supply,China,2.53,Agrochemicals,Nitrogen Compounds
+PO-000296,2024-07-24,2024Q3,Polyethylene Resin,8231.2,129.19,Quartz Materials India,India,0.0,Polymers,Polyolefins
+PO-000297,2024-08-26,2024Q3,Toluene,810.27,88.97,Quartz Materials India,UAE,6.72,Solvents,Aromatics
+PO-000298,2024-07-30,2024Q3,Urea,3942.81,36.31,Westport Materials,Singapore,0.69,Agrochemicals,Nitrogen Compounds
+PO-000299,2024-09-15,2024Q3,Titanium Dioxide,642.35,289.71,Eastern ChemSource,Singapore,17.96,Pigments,Oxides
+PO-000300,2024-08-25,2024Q3,Titanium Dioxide,2648.45,262.89,Aarav Chemtrade,Thailand,6.05,Pigments,Oxides
+PO-000301,2024-07-28,2024Q3,Caustic Soda,447.15,49.43,Coastal Industrial Supply,Germany,3.5,Inorganic Chemicals,Alkalis
+PO-000302,2024-08-08,2024Q3,Sodium Carbonate,921.47,35.11,Nexus Bulk Supply,South Korea,1.86,Inorganic Chemicals,Carbonates
+PO-000303,2024-09-28,2024Q3,Epoxy Resin,8078.58,253.75,Trident ChemWorks,China,10.27,Polymers,Thermosets
+PO-000304,2024-07-24,2024Q3,Sodium Carbonate,617.32,30.82,Jupiter Fine Chemicals,Singapore,2.09,Inorganic Chemicals,Carbonates
+PO-000305,2024-09-20,2024Q3,Polyethylene Resin,4937.29,141.9,Pioneer Chemical House,UAE,6.51,Polymers,Polyolefins
+PO-000306,2024-08-27,2024Q3,Ethyl Acetate,1072.17,119.47,Evergreen Materials,South Korea,2.63,Solvents,Esters
+PO-000307,2024-09-10,2024Q3,Toluene,1151.51,97.52,Summit Process Supply,Singapore,1.83,Solvents,Aromatics
+PO-000308,2024-07-03,2024Q3,Carbon Black,25304.2,129.05,Lotus Raw Materials,Japan,11.15,Pigments,Carbon Materials
+PO-000309,2024-08-19,2024Q3,Caustic Soda,2510.09,41.38,Jupiter Fine Chemicals,South Korea,2.05,Inorganic Chemicals,Alkalis
+PO-000310,2024-09-09,2024Q3,Polypropylene Resin,10667.23,132.34,Jupiter Fine Chemicals,Japan,4.05,Polymers,Polyolefins
+PO-000311,2024-08-04,2024Q3,Toluene,11852.1,77.17,Horizon Petrochem,China,8.14,Solvents,Aromatics
+PO-000312,2024-08-03,2024Q3,Methanol,24650.44,35.62,Evergreen Materials,India,0.0,Solvents,Alcohols
+PO-000313,2024-08-31,2024Q3,Epoxy Resin,2353.37,254.4,Eastern ChemSource,Thailand,15.36,Polymers,Thermosets
+PO-000314,2024-09-20,2024Q3,Ethyl Acetate,1938.92,101.59,Frontier Chemical Co,UAE,2.46,Solvents,Esters
+PO-000315,2024-08-26,2024Q3,Urea,938.9,37.11,Eastern ChemSource,Japan,1.35,Agrochemicals,Nitrogen Compounds
+PO-000316,2024-07-07,2024Q3,Hydrochloric Acid,1091.86,13.32,Pioneer Chemical House,Singapore,1.08,Inorganic Chemicals,Mineral Acids
+PO-000317,2024-08-17,2024Q3,Citric Acid,10061.49,81.89,Horizon Petrochem,India,0.0,Specialty Chemicals,Organic Acids
+PO-000318,2024-09-10,2024Q3,Sodium Carbonate,11161.54,29.83,Summit Process Supply,Singapore,1.07,Inorganic Chemicals,Carbonates
+PO-000319,2024-07-03,2024Q3,Carbon Black,588.07,136.44,Westport Materials,UAE,3.43,Pigments,Carbon Materials
+PO-000320,2024-09-25,2024Q3,Citric Acid,1007.36,92.21,Horizon Petrochem,Japan,4.5,Specialty Chemicals,Organic Acids
+PO-000321,2024-08-19,2024Q3,Polypropylene Resin,11790.34,140.12,Eastern ChemSource,South Korea,4.27,Polymers,Polyolefins
+PO-000322,2024-12-02,2024Q4,Methanol,1860.89,40.05,Eastern ChemSource,UAE,3.27,Solvents,Alcohols
+PO-000323,2024-12-10,2024Q4,Methanol,4746.95,35.39,Frontier Chemical Co,Singapore,0.97,Solvents,Alcohols
+PO-000324,2024-10-01,2024Q4,Caustic Soda,447.15,41.91,Eastern ChemSource,India,0.0,Inorganic Chemicals,Alkalis
+PO-000325,2024-10-16,2024Q4,Glycerine,2517.93,119.41,Westport Materials,Singapore,5.14,Specialty Chemicals,Polyols
+PO-000326,2024-12-27,2024Q4,Ethyl Acetate,19514.99,101.26,Lotus Raw Materials,China,7.75,Solvents,Esters
+PO-000327,2024-10-17,2024Q4,Sulphuric Acid,1302.36,10.18,Aarav Chemtrade,UAE,0.75,Inorganic Chemicals,Mineral Acids
+PO-000328,2024-12-17,2024Q4,Methanol,9971.58,41.2,Jupiter Fine Chemicals,Japan,1.28,Solvents,Alcohols
+PO-000329,2024-12-25,2024Q4,Carbon Black,16671.04,140.74,Westport Materials,UAE,3.38,Pigments,Carbon Materials
+PO-000330,2024-11-30,2024Q4,Glycerine,2145.03,98.25,Evergreen Materials,India,0.0,Specialty Chemicals,Polyols
+PO-000331,2024-10-24,2024Q4,Toluene,26015.75,81.65,Indus Industrial Solutions,China,1.92,Solvents,Aromatics
+PO-000332,2024-12-15,2024Q4,Methanol,935.81,42.09,Bharat Specialities,South Korea,0.77,Solvents,Alcohols
+PO-000333,2024-11-23,2024Q4,Hydrochloric Acid,820.14,15.72,Summit Process Supply,Germany,0.62,Inorganic Chemicals,Mineral Acids
+PO-000334,2024-12-29,2024Q4,Carbon Black,444.66,119.12,Unity Industrial Partners,India,0.0,Pigments,Carbon Materials
+PO-000335,2024-10-06,2024Q4,Caustic Soda,814.4,42.58,Evergreen Materials,UAE,1.97,Inorganic Chemicals,Alkalis
+PO-000336,2024-10-05,2024Q4,Sodium Carbonate,12491.27,28.63,Unity Industrial Partners,South Korea,0.82,Inorganic Chemicals,Carbonates
+PO-000337,2024-10-09,2024Q4,Citric Acid,2342.65,164.69,Ridgeway Chemicals,Germany,5.22,Specialty Chemicals,Organic Acids
+PO-000338,2024-10-03,2024Q4,Glycerine,5935.83,120.93,Westport Materials,Singapore,4.47,Specialty Chemicals,Polyols
+PO-000339,2024-12-23,2024Q4,Caustic Soda,11203.23,43.95,Oceanic Ingredients,Thailand,2.04,Inorganic Chemicals,Alkalis
+PO-000340,2024-10-23,2024Q4,Glycerine,1262.57,113.27,Quartz Materials India,South Korea,2.76,Specialty Chemicals,Polyols
+PO-000341,2024-11-25,2024Q4,Toluene,13390.42,109.82,Meridian ChemLink,UAE,3.98,Solvents,Aromatics
+PO-000342,2024-11-01,2024Q4,Acetone,1176.12,74.94,Summit Process Supply,China,1.56,Solvents,Ketones
+PO-000343,2024-10-31,2024Q4,Hydrochloric Acid,21827.37,13.84,Evergreen Materials,Singapore,1.01,Inorganic Chemicals,Mineral Acids
+PO-000344,2024-11-16,2024Q4,Carbon Black,562.56,119.13,Global Process Partners,Thailand,9.09,Pigments,Carbon Materials
+PO-000345,2024-11-15,2024Q4,Hydrochloric Acid,8019.09,12.84,Pioneer Chemical House,India,0.0,Inorganic Chemicals,Mineral Acids
+PO-000346,2024-10-02,2024Q4,Glycerine,21492.73,109.2,Quartz Materials India,Germany,9.54,Specialty Chemicals,Polyols
+PO-000347,2024-11-23,2024Q4,Citric Acid,1341.9,101.76,Westport Materials,UAE,5.83,Specialty Chemicals,Organic Acids
+PO-000348,2024-10-03,2024Q4,Polypropylene Resin,4126.58,109.85,Unity Industrial Partners,Thailand,4.52,Polymers,Polyolefins
+PO-000349,2024-12-17,2024Q4,Ethyl Acetate,4348.26,107.57,Vantage Chemical Supply,India,0.0,Solvents,Esters
+PO-000350,2024-11-13,2024Q4,Toluene,486.13,99.65,Horizon Petrochem,Japan,6.19,Solvents,Aromatics
+PO-000351,2024-10-19,2024Q4,Sulphuric Acid,410.37,8.82,Evergreen Materials,Thailand,0.49,Inorganic Chemicals,Mineral Acids
+PO-000352,2024-11-30,2024Q4,Sodium Carbonate,20856.72,32.65,Deccan Molecules,South Korea,2.35,Inorganic Chemicals,Carbonates
+PO-000353,2024-11-07,2024Q4,Sodium Carbonate,2257.51,38.9,Kaveri Trading,Germany,2.13,Inorganic Chemicals,Carbonates
+PO-000354,2024-12-19,2024Q4,Titanium Dioxide,15561.34,296.71,Oceanic Ingredients,UAE,9.39,Pigments,Oxides
+PO-000355,2024-12-10,2024Q4,Urea,2286.89,35.29,Deccan Molecules,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-000356,2024-11-23,2024Q4,Toluene,989.79,83.46,Horizon Petrochem,China,7.64,Solvents,Aromatics
+PO-000357,2024-10-26,2024Q4,Toluene,9702.4,98.37,Jupiter Fine Chemicals,UAE,4.91,Solvents,Aromatics
+PO-000358,2024-10-30,2024Q4,Acetone,994.99,74.86,Jupiter Fine Chemicals,China,6.13,Solvents,Ketones
+PO-000359,2024-12-09,2024Q4,Titanium Dioxide,470.6,247.81,Westport Materials,China,12.12,Pigments,Oxides
+PO-000360,2024-10-31,2024Q4,Titanium Dioxide,1124.71,333.38,Trident ChemWorks,Japan,16.47,Pigments,Oxides
+PO-000361,2024-12-15,2024Q4,Polypropylene Resin,1338.43,105.15,Horizon Petrochem,China,5.1,Polymers,Polyolefins
+PO-000362,2024-11-13,2024Q4,Ethyl Acetate,5942.23,122.89,Vantage Chemical Supply,UAE,4.31,Solvents,Esters
+PO-000363,2024-10-29,2024Q4,Polypropylene Resin,8822.66,137.42,Coastal Industrial Supply,Japan,9.45,Polymers,Polyolefins
+PO-000364,2024-10-01,2024Q4,Sulphuric Acid,526.79,9.74,Aarav Chemtrade,Thailand,0.25,Inorganic Chemicals,Mineral Acids
+PO-000365,2024-12-01,2024Q4,Urea,22756.08,34.78,Coastal Industrial Supply,Singapore,0.89,Agrochemicals,Nitrogen Compounds
+PO-000366,2024-12-06,2024Q4,Caustic Soda,5460.93,43.57,Eastern ChemSource,Thailand,2.08,Inorganic Chemicals,Alkalis
+PO-000367,2024-12-20,2024Q4,Carbon Black,16032.49,145.8,Lotus Raw Materials,Germany,4.25,Pigments,Carbon Materials
+PO-000368,2024-10-01,2024Q4,Hydrochloric Acid,16076.49,13.96,Aarav Chemtrade,Japan,1.13,Inorganic Chemicals,Mineral Acids
+PO-000369,2024-11-25,2024Q4,Glycerine,10887.76,108.67,Jupiter Fine Chemicals,UAE,8.14,Specialty Chemicals,Polyols
+PO-000370,2024-12-10,2024Q4,Glycerine,20117.58,96.02,Quartz Materials India,China,6.36,Specialty Chemicals,Polyols
+PO-000371,2024-11-21,2024Q4,Methanol,1256.8,33.07,Jupiter Fine Chemicals,Thailand,1.95,Solvents,Alcohols
+PO-000372,2024-11-23,2024Q4,Epoxy Resin,8059.59,316.07,Trident ChemWorks,Japan,13.63,Polymers,Thermosets
+PO-000373,2024-11-30,2024Q4,Toluene,1168.11,96.92,Summit Process Supply,Singapore,1.6,Solvents,Aromatics
+PO-000374,2024-11-22,2024Q4,Methanol,25968.94,42.0,Jupiter Fine Chemicals,Japan,1.14,Solvents,Alcohols
+PO-000375,2024-10-15,2024Q4,Ethyl Acetate,10610.46,113.44,Coastal Industrial Supply,India,0.0,Solvents,Esters
+PO-000376,2024-12-18,2024Q4,Glycerine,25107.75,95.01,Frontier Chemical Co,India,0.0,Specialty Chemicals,Polyols
+PO-000377,2024-10-30,2024Q4,Toluene,12831.18,120.57,Vantage Chemical Supply,Germany,4.63,Solvents,Aromatics
+PO-000378,2024-10-13,2024Q4,Epoxy Resin,6052.07,302.43,Oceanic Ingredients,South Korea,17.57,Polymers,Thermosets
+PO-000379,2024-10-07,2024Q4,Polyethylene Resin,1126.6,170.03,Coastal Industrial Supply,Germany,8.98,Polymers,Polyolefins
+PO-000380,2024-10-04,2024Q4,Carbon Black,6530.61,139.76,Lotus Raw Materials,Japan,10.24,Pigments,Carbon Materials
+PO-000381,2024-12-16,2024Q4,Polyethylene Resin,2111.46,150.77,Bharat Specialities,Singapore,11.81,Polymers,Polyolefins
+PO-000382,2024-12-17,2024Q4,Citric Acid,22161.48,105.24,Bharat Specialities,Japan,4.87,Specialty Chemicals,Organic Acids
+PO-000383,2024-10-29,2024Q4,Acetone,970.16,84.55,Global Process Partners,Singapore,2.29,Solvents,Ketones
+PO-000384,2024-10-21,2024Q4,Methanol,487.85,35.76,Jupiter Fine Chemicals,Thailand,2.05,Solvents,Alcohols
+PO-000385,2024-10-14,2024Q4,Carbon Black,4330.14,127.0,Lotus Raw Materials,Thailand,3.98,Pigments,Carbon Materials
+PO-000386,2024-10-24,2024Q4,Epoxy Resin,1693.25,262.66,Trident ChemWorks,China,11.76,Polymers,Thermosets
+PO-000387,2024-11-21,2024Q4,Caustic Soda,12236.32,42.58,Indus Industrial Solutions,Singapore,3.61,Inorganic Chemicals,Alkalis
+PO-000388,2024-10-03,2024Q4,Epoxy Resin,1262.22,255.09,Jupiter Fine Chemicals,South Korea,4.68,Polymers,Thermosets
+PO-000389,2024-10-27,2024Q4,Urea,1256.94,35.26,Meridian ChemLink,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-000390,2024-12-12,2024Q4,Polyethylene Resin,503.97,142.84,Deccan Molecules,Singapore,4.32,Polymers,Polyolefins
+PO-000391,2024-12-22,2024Q4,Titanium Dioxide,415.1,249.8,Westport Materials,China,12.16,Pigments,Oxides
+PO-000392,2024-12-03,2024Q4,Ethyl Acetate,10444.04,119.29,Vantage Chemical Supply,UAE,4.73,Solvents,Esters
+PO-000393,2024-10-04,2024Q4,Epoxy Resin,796.69,233.86,Horizon Petrochem,South Korea,7.39,Polymers,Thermosets
+PO-000394,2024-11-17,2024Q4,Acetone,4561.48,75.19,Eastern ChemSource,Thailand,6.97,Solvents,Ketones
+PO-000395,2024-11-04,2024Q4,Caustic Soda,606.89,74.35,Jupiter Fine Chemicals,Japan,3.13,Inorganic Chemicals,Alkalis
+PO-000396,2024-10-09,2024Q4,Glycerine,8673.48,98.31,Horizon Petrochem,UAE,5.4,Specialty Chemicals,Polyols
+PO-000397,2024-10-05,2024Q4,Sodium Carbonate,7780.54,27.27,Jupiter Fine Chemicals,China,0.67,Inorganic Chemicals,Carbonates
+PO-000398,2024-10-15,2024Q4,Titanium Dioxide,6222.92,237.39,Frontier Chemical Co,India,0.0,Pigments,Oxides
+PO-000399,2024-12-11,2024Q4,Glycerine,1029.18,123.74,Vantage Chemical Supply,Germany,8.51,Specialty Chemicals,Polyols
+PO-000400,2024-10-20,2024Q4,Polypropylene Resin,12410.66,138.71,Lotus Raw Materials,India,0.0,Polymers,Polyolefins
+PO-000401,2024-12-25,2024Q4,Epoxy Resin,1241.04,279.53,Ridgeway Chemicals,South Korea,12.52,Polymers,Thermosets
+PO-000402,2024-10-27,2024Q4,Polyethylene Resin,1585.24,138.24,Summit Process Supply,Singapore,7.2,Polymers,Polyolefins
+PO-000403,2024-11-14,2024Q4,Carbon Black,919.71,129.24,Bharat Specialities,South Korea,4.38,Pigments,Carbon Materials
+PO-000404,2024-12-05,2024Q4,Urea,2449.63,34.17,Eastern ChemSource,UAE,2.52,Agrochemicals,Nitrogen Compounds
+PO-000405,2024-12-17,2024Q4,Hydrochloric Acid,2503.3,13.42,Pioneer Chemical House,UAE,0.25,Inorganic Chemicals,Mineral Acids
+PO-000406,2024-10-09,2024Q4,Polypropylene Resin,2229.12,133.13,Lotus Raw Materials,India,0.0,Polymers,Polyolefins
+PO-000407,2024-12-25,2024Q4,Polyethylene Resin,4221.85,134.45,Global Process Partners,Thailand,7.3,Polymers,Polyolefins
+PO-000408,2024-10-01,2024Q4,Sulphuric Acid,599.79,10.67,Westport Materials,UAE,0.41,Inorganic Chemicals,Mineral Acids
+PO-000409,2024-12-08,2024Q4,Methanol,1884.82,36.58,Evergreen Materials,India,0.0,Solvents,Alcohols
+PO-000410,2024-12-19,2024Q4,Citric Acid,1063.0,75.08,Frontier Chemical Co,India,0.0,Specialty Chemicals,Organic Acids
+PO-000411,2024-10-05,2024Q4,Urea,623.49,36.6,Westport Materials,Singapore,0.62,Agrochemicals,Nitrogen Compounds
+PO-000412,2024-10-02,2024Q4,Methanol,427.17,37.09,Deccan Molecules,South Korea,1.74,Solvents,Alcohols
+PO-000413,2024-11-04,2024Q4,Polypropylene Resin,5769.05,142.62,Lotus Raw Materials,South Korea,4.29,Polymers,Polyolefins
+PO-000414,2024-10-04,2024Q4,Urea,4729.43,41.36,Westport Materials,South Korea,1.13,Agrochemicals,Nitrogen Compounds
+PO-000415,2024-12-02,2024Q4,Carbon Black,1610.22,126.13,Global Process Partners,Thailand,9.34,Pigments,Carbon Materials
+PO-000416,2024-10-21,2024Q4,Polypropylene Resin,876.5,135.2,Deccan Molecules,Japan,7.26,Polymers,Polyolefins
+PO-000417,2024-12-21,2024Q4,Sodium Carbonate,2396.56,29.05,Unity Industrial Partners,Singapore,0.72,Inorganic Chemicals,Carbonates
+PO-000418,2024-10-05,2024Q4,Acetone,803.23,84.41,Aarav Chemtrade,Thailand,5.67,Solvents,Ketones
+PO-000419,2024-10-29,2024Q4,Ethyl Acetate,9918.22,120.01,Jupiter Fine Chemicals,South Korea,8.31,Solvents,Esters
+PO-000420,2024-11-25,2024Q4,Citric Acid,6045.36,79.76,Frontier Chemical Co,India,0.0,Specialty Chemicals,Organic Acids
+PO-000421,2024-12-15,2024Q4,Acetone,26870.59,85.87,Eastern ChemSource,UAE,5.26,Solvents,Ketones
+PO-000422,2024-11-19,2024Q4,Citric Acid,1212.34,117.17,Trident ChemWorks,Japan,3.13,Specialty Chemicals,Organic Acids
+PO-000423,2024-10-09,2024Q4,Urea,13365.23,34.22,Meridian ChemLink,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-000424,2024-12-24,2024Q4,Carbon Black,9135.46,124.89,Global Process Partners,Thailand,9.24,Pigments,Carbon Materials
+PO-000425,2024-11-28,2024Q4,Acetone,15683.16,102.67,Trident ChemWorks,Germany,1.67,Solvents,Ketones
+PO-000426,2024-10-10,2024Q4,Carbon Black,2677.37,139.42,Nexus Bulk Supply,India,0.0,Pigments,Carbon Materials
+PO-000427,2024-10-03,2024Q4,Sulphuric Acid,5289.74,11.49,Aarav Chemtrade,Germany,0.25,Inorganic Chemicals,Mineral Acids
+PO-000428,2024-11-20,2024Q4,Urea,1722.85,32.81,Meridian ChemLink,China,3.11,Agrochemicals,Nitrogen Compounds
+PO-000429,2024-11-18,2024Q4,Citric Acid,9977.82,94.68,Kaveri Trading,Thailand,8.01,Specialty Chemicals,Organic Acids
+PO-000430,2024-12-08,2024Q4,Methanol,497.72,35.86,Westport Materials,Thailand,1.32,Solvents,Alcohols
+PO-000431,2024-12-20,2024Q4,Ethyl Acetate,3947.17,167.82,Lotus Raw Materials,China,7.41,Solvents,Esters
+PO-000432,2024-11-04,2024Q4,Polyethylene Resin,648.99,147.24,Jupiter Fine Chemicals,South Korea,4.36,Polymers,Polyolefins
+PO-000433,2024-12-11,2024Q4,Acetone,637.41,91.0,Jupiter Fine Chemicals,Germany,7.61,Solvents,Ketones
+PO-000434,2024-12-04,2024Q4,Epoxy Resin,2188.37,235.42,Eastern ChemSource,Thailand,16.61,Polymers,Thermosets
+PO-000435,2024-11-05,2024Q4,Ethyl Acetate,416.37,130.99,Coastal Industrial Supply,Japan,8.0,Solvents,Esters
+PO-000436,2024-11-24,2024Q4,Epoxy Resin,5436.13,273.84,Eastern ChemSource,Singapore,16.72,Polymers,Thermosets
+PO-000437,2024-12-25,2024Q4,Sodium Carbonate,16672.39,28.44,Jupiter Fine Chemicals,China,0.65,Inorganic Chemicals,Carbonates
+PO-000438,2024-12-21,2024Q4,Carbon Black,15652.98,142.17,Nexus Bulk Supply,India,0.0,Pigments,Carbon Materials
+PO-000439,2024-10-12,2024Q4,Acetone,2356.07,102.41,Trident ChemWorks,Germany,1.66,Solvents,Ketones
+PO-000440,2024-11-09,2024Q4,Sulphuric Acid,18789.38,10.28,Summit Process Supply,UAE,0.45,Inorganic Chemicals,Mineral Acids
+PO-000441,2024-11-29,2024Q4,Ethyl Acetate,13206.49,106.64,Lotus Raw Materials,China,8.03,Solvents,Esters
+PO-000442,2024-12-22,2024Q4,Carbon Black,526.06,144.72,Westport Materials,Japan,7.12,Pigments,Carbon Materials
+PO-000443,2025-02-10,2025Q1,Ethyl Acetate,505.06,96.47,Eastern ChemSource,Thailand,6.28,Solvents,Esters
+PO-000444,2025-03-11,2025Q1,Toluene,493.33,97.22,Frontier Chemical Co,Japan,8.62,Solvents,Aromatics
+PO-000445,2025-02-26,2025Q1,Hydrochloric Acid,1305.55,13.55,Deccan Molecules,Japan,0.54,Inorganic Chemicals,Mineral Acids
+PO-000446,2025-03-28,2025Q1,Urea,439.48,32.25,Meridian ChemLink,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-000447,2025-03-29,2025Q1,Carbon Black,8327.01,128.87,Nexus Bulk Supply,India,0.0,Pigments,Carbon Materials
+PO-000448,2025-01-18,2025Q1,Polypropylene Resin,4804.02,135.85,Deccan Molecules,South Korea,3.58,Polymers,Polyolefins
+PO-000449,2025-01-27,2025Q1,Carbon Black,2169.26,132.63,Lotus Raw Materials,Germany,3.96,Pigments,Carbon Materials
+PO-000450,2025-02-18,2025Q1,Sodium Carbonate,563.95,29.06,Unity Industrial Partners,Japan,1.72,Inorganic Chemicals,Carbonates
+PO-000451,2025-01-30,2025Q1,Carbon Black,2536.6,101.09,Unity Industrial Partners,India,0.0,Pigments,Carbon Materials
+PO-000452,2025-03-15,2025Q1,Ethyl Acetate,1047.24,119.38,Lotus Raw Materials,Japan,4.17,Solvents,Esters
+PO-000453,2025-03-30,2025Q1,Epoxy Resin,11683.06,238.02,Ridgeway Chemicals,South Korea,12.74,Polymers,Thermosets
+PO-000454,2025-01-12,2025Q1,Titanium Dioxide,4599.81,251.64,Frontier Chemical Co,South Korea,16.85,Pigments,Oxides
+PO-000455,2025-02-21,2025Q1,Carbon Black,13397.0,106.08,Bharat Specialities,Thailand,3.32,Pigments,Carbon Materials
+PO-000456,2025-01-31,2025Q1,Acetone,2298.15,74.85,Lotus Raw Materials,India,0.0,Solvents,Ketones
+PO-000457,2025-03-06,2025Q1,Polyethylene Resin,1033.14,123.01,Quartz Materials India,India,0.0,Polymers,Polyolefins
+PO-000458,2025-03-13,2025Q1,Ethyl Acetate,5712.08,103.86,Frontier Chemical Co,UAE,2.74,Solvents,Esters
+PO-000459,2025-02-12,2025Q1,Titanium Dioxide,1724.04,261.91,Eastern ChemSource,Singapore,16.71,Pigments,Oxides
+PO-000460,2025-02-15,2025Q1,Caustic Soda,601.72,38.65,Jupiter Fine Chemicals,South Korea,2.12,Inorganic Chemicals,Alkalis
+PO-000461,2025-01-31,2025Q1,Citric Acid,480.81,81.41,Summit Process Supply,Thailand,4.03,Specialty Chemicals,Organic Acids
+PO-000462,2025-01-16,2025Q1,Epoxy Resin,665.98,297.22,Trident ChemWorks,Japan,16.07,Polymers,Thermosets
+PO-000463,2025-01-05,2025Q1,Toluene,1843.25,90.38,Jupiter Fine Chemicals,UAE,4.82,Solvents,Aromatics
+PO-000464,2025-03-28,2025Q1,Titanium Dioxide,9462.35,291.73,Eastern ChemSource,Japan,10.95,Pigments,Oxides
+PO-000465,2025-01-11,2025Q1,Methanol,1060.67,30.39,Indus Industrial Solutions,India,0.0,Solvents,Alcohols
+PO-000466,2025-01-31,2025Q1,Sodium Carbonate,633.57,35.72,Kaveri Trading,Germany,2.22,Inorganic Chemicals,Carbonates
+PO-000467,2025-02-18,2025Q1,Urea,24842.09,27.83,Evergreen Materials,China,1.99,Agrochemicals,Nitrogen Compounds
+PO-000468,2025-01-23,2025Q1,Epoxy Resin,435.08,230.63,Quartz Materials India,South Korea,23.86,Polymers,Thermosets
+PO-000469,2025-03-31,2025Q1,Urea,9366.28,31.13,Meridian ChemLink,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-000470,2025-02-26,2025Q1,Sodium Carbonate,10880.45,32.19,Eastern ChemSource,Singapore,2.25,Inorganic Chemicals,Carbonates
+PO-000471,2025-03-07,2025Q1,Polypropylene Resin,485.12,124.86,Eastern ChemSource,South Korea,3.99,Polymers,Polyolefins
+PO-000472,2025-02-02,2025Q1,Polypropylene Resin,412.94,107.74,Vantage Chemical Supply,China,4.95,Polymers,Polyolefins
+PO-000473,2025-01-08,2025Q1,Citric Acid,17161.75,78.29,Horizon Petrochem,India,0.0,Specialty Chemicals,Organic Acids
+PO-000474,2025-01-09,2025Q1,Polypropylene Resin,1971.74,114.69,Coastal Industrial Supply,Thailand,5.71,Polymers,Polyolefins
+PO-000475,2025-01-25,2025Q1,Acetone,8718.1,79.32,Global Process Partners,Singapore,2.53,Solvents,Ketones
+PO-000476,2025-01-22,2025Q1,Epoxy Resin,17642.07,238.52,Ridgeway Chemicals,South Korea,14.22,Polymers,Thermosets
+PO-000477,2025-03-11,2025Q1,Ethyl Acetate,10975.17,103.6,Evergreen Materials,Thailand,3.55,Solvents,Esters
+PO-000478,2025-01-27,2025Q1,Sulphuric Acid,501.71,10.11,Westport Materials,UAE,0.4,Inorganic Chemicals,Mineral Acids
+PO-000479,2025-03-30,2025Q1,Sulphuric Acid,11907.6,9.99,Aarav Chemtrade,UAE,0.75,Inorganic Chemicals,Mineral Acids
+PO-000480,2025-03-22,2025Q1,Epoxy Resin,4423.4,223.72,Quartz Materials India,South Korea,10.59,Polymers,Thermosets
+PO-000481,2025-02-14,2025Q1,Polypropylene Resin,1872.9,119.17,Coastal Industrial Supply,Thailand,6.7,Polymers,Polyolefins
+PO-000482,2025-01-29,2025Q1,Carbon Black,1072.72,102.39,Bharat Specialities,Thailand,3.25,Pigments,Carbon Materials
+PO-000483,2025-02-03,2025Q1,Titanium Dioxide,11369.55,274.92,Eastern ChemSource,Singapore,16.87,Pigments,Oxides
+PO-000484,2025-02-16,2025Q1,Caustic Soda,17563.73,41.39,Oceanic Ingredients,Thailand,2.15,Inorganic Chemicals,Alkalis
+PO-000485,2025-02-15,2025Q1,Acetone,786.47,85.54,Aarav Chemtrade,Germany,4.52,Solvents,Ketones
+PO-000486,2025-01-29,2025Q1,Citric Acid,4149.93,83.91,Horizon Petrochem,Japan,4.95,Specialty Chemicals,Organic Acids
+PO-000487,2025-03-14,2025Q1,Titanium Dioxide,19567.94,243.42,Aarav Chemtrade,Thailand,5.44,Pigments,Oxides
+PO-000488,2025-03-22,2025Q1,Glycerine,668.97,90.53,Jupiter Fine Chemicals,Thailand,5.03,Specialty Chemicals,Polyols
+PO-000489,2025-01-05,2025Q1,Epoxy Resin,19295.78,267.38,Ridgeway Chemicals,Germany,22.91,Polymers,Thermosets
+PO-000490,2025-01-01,2025Q1,Carbon Black,435.54,126.19,Lotus Raw Materials,Germany,4.27,Pigments,Carbon Materials
+PO-000491,2025-01-23,2025Q1,Glycerine,2143.97,90.72,Horizon Petrochem,UAE,5.62,Specialty Chemicals,Polyols
+PO-000492,2025-01-11,2025Q1,Acetone,1658.06,77.77,Global Process Partners,Singapore,2.6,Solvents,Ketones
+PO-000493,2025-01-03,2025Q1,Epoxy Resin,973.77,224.07,Quartz Materials India,Singapore,20.1,Polymers,Thermosets
+PO-000494,2025-02-15,2025Q1,Ethyl Acetate,16249.41,108.84,Vantage Chemical Supply,UAE,4.54,Solvents,Esters
+PO-000495,2025-03-20,2025Q1,Epoxy Resin,26411.53,236.13,Quartz Materials India,Singapore,20.81,Polymers,Thermosets
+PO-000496,2025-03-06,2025Q1,Toluene,19544.71,95.66,Jupiter Fine Chemicals,UAE,5.16,Solvents,Aromatics
+PO-000497,2025-02-22,2025Q1,Urea,22577.45,32.0,Summit Process Supply,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-000498,2025-02-17,2025Q1,Polyethylene Resin,22031.32,129.65,Deccan Molecules,India,0.0,Polymers,Polyolefins
+PO-000499,2025-01-19,2025Q1,Polypropylene Resin,5382.42,132.29,Lotus Raw Materials,Singapore,5.47,Polymers,Polyolefins
+PO-000500,2025-03-11,2025Q1,Epoxy Resin,1125.01,227.31,Jupiter Fine Chemicals,India,0.0,Polymers,Thermosets
+PO-000501,2025-03-14,2025Q1,Polypropylene Resin,21435.09,133.29,Eastern ChemSource,South Korea,3.71,Polymers,Polyolefins
+PO-000502,2025-01-19,2025Q1,Sodium Carbonate,879.48,29.46,Deccan Molecules,Singapore,0.85,Inorganic Chemicals,Carbonates
+PO-000503,2025-01-14,2025Q1,Toluene,4749.22,85.03,Frontier Chemical Co,India,0.0,Solvents,Aromatics
+PO-000504,2025-01-18,2025Q1,Polypropylene Resin,4293.37,126.4,Deccan Molecules,South Korea,3.94,Polymers,Polyolefins
+PO-000505,2025-01-03,2025Q1,Caustic Soda,8762.62,45.35,Coastal Industrial Supply,Germany,3.49,Inorganic Chemicals,Alkalis
+PO-000506,2025-03-31,2025Q1,Titanium Dioxide,1164.23,270.19,Aarav Chemtrade,Germany,13.15,Pigments,Oxides
+PO-000507,2025-02-07,2025Q1,Acetone,11774.93,73.77,Ridgeway Chemicals,China,3.22,Solvents,Ketones
+PO-000508,2025-03-02,2025Q1,Sulphuric Acid,11356.69,10.85,Eastern ChemSource,South Korea,0.8,Inorganic Chemicals,Mineral Acids
+PO-000509,2025-01-30,2025Q1,Citric Acid,403.39,86.2,Coastal Industrial Supply,Singapore,7.47,Specialty Chemicals,Organic Acids
+PO-000510,2025-02-20,2025Q1,Citric Acid,22700.19,81.68,Coastal Industrial Supply,Singapore,7.16,Specialty Chemicals,Organic Acids
+PO-000511,2025-03-04,2025Q1,Sulphuric Acid,10946.78,10.3,Evergreen Materials,Germany,0.38,Inorganic Chemicals,Mineral Acids
+PO-000512,2025-02-19,2025Q1,Sulphuric Acid,971.15,8.9,Evergreen Materials,Thailand,0.49,Inorganic Chemicals,Mineral Acids
+PO-000513,2025-01-28,2025Q1,Acetone,12522.79,82.56,Jupiter Fine Chemicals,Japan,4.63,Solvents,Ketones
+PO-000514,2025-02-28,2025Q1,Carbon Black,24433.92,106.77,Global Process Partners,Thailand,8.21,Pigments,Carbon Materials
+PO-000515,2025-03-16,2025Q1,Urea,25610.4,31.68,Eastern ChemSource,Thailand,0.95,Agrochemicals,Nitrogen Compounds
+PO-000516,2025-02-24,2025Q1,Epoxy Resin,2629.05,244.27,Trident ChemWorks,China,11.5,Polymers,Thermosets
+PO-000517,2025-02-03,2025Q1,Urea,10398.16,29.04,Summit Process Supply,China,1.27,Agrochemicals,Nitrogen Compounds
+PO-000518,2025-03-19,2025Q1,Carbon Black,20099.98,127.92,Evergreen Materials,Germany,10.09,Pigments,Carbon Materials
+PO-000519,2025-01-02,2025Q1,Urea,23640.63,33.77,Trident ChemWorks,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-000520,2025-02-24,2025Q1,Methanol,980.25,38.35,Westport Materials,UAE,3.39,Solvents,Alcohols
+PO-000521,2025-03-11,2025Q1,Polypropylene Resin,13150.56,114.68,Jupiter Fine Chemicals,UAE,9.61,Polymers,Polyolefins
+PO-000522,2025-01-19,2025Q1,Polypropylene Resin,6396.84,113.87,Horizon Petrochem,UAE,7.14,Polymers,Polyolefins
+PO-000523,2025-03-25,2025Q1,Hydrochloric Acid,470.81,12.81,Ridgeway Chemicals,UAE,0.48,Inorganic Chemicals,Mineral Acids
+PO-000524,2025-03-26,2025Q1,Acetone,2219.12,73.62,Eastern ChemSource,Thailand,6.93,Solvents,Ketones
+PO-000525,2025-02-28,2025Q1,Ethyl Acetate,25020.48,101.68,Eastern ChemSource,Thailand,7.08,Solvents,Esters
+PO-000526,2025-03-15,2025Q1,Acetone,11115.67,76.7,Aarav Chemtrade,Thailand,5.34,Solvents,Ketones
+PO-000527,2025-03-02,2025Q1,Toluene,11388.6,80.05,Horizon Petrochem,India,0.0,Solvents,Aromatics
+PO-000528,2025-02-02,2025Q1,Sulphuric Acid,918.18,8.89,Westport Materials,China,0.59,Inorganic Chemicals,Mineral Acids
+PO-000529,2025-01-21,2025Q1,Methanol,5669.21,46.16,Frontier Chemical Co,Singapore,0.89,Solvents,Alcohols
+PO-000530,2025-02-05,2025Q1,Sodium Carbonate,12340.47,25.62,Jupiter Fine Chemicals,China,0.62,Inorganic Chemicals,Carbonates
+PO-000531,2025-01-03,2025Q1,Polyethylene Resin,2354.98,130.17,Quartz Materials India,Singapore,2.67,Polymers,Polyolefins
+PO-000532,2025-03-04,2025Q1,Hydrochloric Acid,432.91,12.1,Frontier Chemical Co,Singapore,0.64,Inorganic Chemicals,Mineral Acids
+PO-000533,2025-01-30,2025Q1,Methanol,487.7,42.77,Trident ChemWorks,Japan,1.07,Solvents,Alcohols
+PO-000534,2025-02-08,2025Q1,Polypropylene Resin,8751.59,136.8,Deccan Molecules,South Korea,3.36,Polymers,Polyolefins
+PO-000535,2025-01-19,2025Q1,Caustic Soda,21525.73,41.18,Bharat Specialities,Singapore,3.39,Inorganic Chemicals,Alkalis
+PO-000536,2025-03-10,2025Q1,Sodium Carbonate,1217.38,33.0,Nexus Bulk Supply,South Korea,1.66,Inorganic Chemicals,Carbonates
+PO-000537,2025-01-25,2025Q1,Toluene,8421.78,91.05,Summit Process Supply,India,0.0,Solvents,Aromatics
+PO-000538,2025-02-17,2025Q1,Urea,2172.61,36.4,Trident ChemWorks,Singapore,1.98,Agrochemicals,Nitrogen Compounds
+PO-000539,2025-02-25,2025Q1,Titanium Dioxide,3950.81,285.9,Aarav Chemtrade,Germany,12.5,Pigments,Oxides
+PO-000540,2025-02-01,2025Q1,Epoxy Resin,24708.93,265.46,Oceanic Ingredients,Singapore,18.0,Polymers,Thermosets
+PO-000541,2025-01-29,2025Q1,Toluene,11790.5,95.13,Nexus Bulk Supply,China,2.28,Solvents,Aromatics
+PO-000542,2025-02-06,2025Q1,Sulphuric Acid,13231.38,10.59,Summit Process Supply,Germany,0.78,Inorganic Chemicals,Mineral Acids
+PO-000543,2025-01-06,2025Q1,Sulphuric Acid,537.03,9.2,Oceanic Ingredients,India,0.0,Inorganic Chemicals,Mineral Acids
+PO-000544,2025-03-16,2025Q1,Sulphuric Acid,560.34,9.81,Summit Process Supply,UAE,0.43,Inorganic Chemicals,Mineral Acids
+PO-000545,2025-02-18,2025Q1,Acetone,4120.82,88.34,Oceanic Ingredients,Singapore,3.94,Solvents,Ketones
+PO-000546,2025-03-10,2025Q1,Polypropylene Resin,22597.83,123.93,Deccan Molecules,Japan,6.85,Polymers,Polyolefins
+PO-000547,2025-03-27,2025Q1,Sulphuric Acid,1163.3,9.79,Quartz Materials India,Germany,0.4,Inorganic Chemicals,Mineral Acids
+PO-000548,2025-01-01,2025Q1,Urea,12286.07,27.73,Summit Process Supply,China,1.28,Agrochemicals,Nitrogen Compounds
+PO-000549,2025-01-31,2025Q1,Toluene,1746.44,101.94,Nexus Bulk Supply,India,0.0,Solvents,Aromatics
+PO-000550,2025-02-22,2025Q1,Acetone,18535.81,91.09,Lotus Raw Materials,Japan,1.62,Solvents,Ketones
+PO-000551,2025-03-23,2025Q1,Toluene,10182.54,97.5,Nexus Bulk Supply,India,0.0,Solvents,Aromatics
+PO-000552,2025-01-25,2025Q1,Carbon Black,12891.95,130.94,Lotus Raw Materials,Germany,4.16,Pigments,Carbon Materials
+PO-000553,2025-01-17,2025Q1,Glycerine,9876.19,86.88,Jupiter Fine Chemicals,China,6.39,Specialty Chemicals,Polyols
+PO-000554,2025-01-21,2025Q1,Caustic Soda,13258.63,38.86,Jupiter Fine Chemicals,South Korea,2.2,Inorganic Chemicals,Alkalis
+PO-000555,2025-02-09,2025Q1,Carbon Black,12952.53,125.07,Lotus Raw Materials,Japan,9.54,Pigments,Carbon Materials
+PO-000556,2025-02-10,2025Q1,Hydrochloric Acid,13026.54,11.39,Unity Industrial Partners,South Korea,0.41,Inorganic Chemicals,Mineral Acids
+PO-000557,2025-02-26,2025Q1,Titanium Dioxide,9031.9,277.83,Oceanic Ingredients,UAE,10.02,Pigments,Oxides
+PO-000558,2025-02-18,2025Q1,Polyethylene Resin,1089.41,135.26,Global Process Partners,UAE,7.39,Polymers,Polyolefins
+PO-000559,2025-03-04,2025Q1,Epoxy Resin,509.4,290.43,Trident ChemWorks,Japan,13.55,Polymers,Thermosets
+PO-000560,2025-01-07,2025Q1,Methanol,579.13,31.96,Bharat Specialities,India,0.0,Solvents,Alcohols
+PO-000561,2025-03-09,2025Q1,Acetone,6483.51,78.25,Aarav Chemtrade,Thailand,5.8,Solvents,Ketones
+PO-000562,2025-02-08,2025Q1,Urea,1059.28,37.32,Trident ChemWorks,Singapore,1.8,Agrochemicals,Nitrogen Compounds
+PO-000563,2025-02-22,2025Q1,Titanium Dioxide,1133.93,229.9,Unity Industrial Partners,Thailand,9.74,Pigments,Oxides
+PO-000564,2025-03-02,2025Q1,Polyethylene Resin,8236.87,138.34,Pioneer Chemical House,UAE,6.15,Polymers,Polyolefins
+PO-000565,2025-01-05,2025Q1,Caustic Soda,841.05,40.5,Coastal Industrial Supply,UAE,2.07,Inorganic Chemicals,Alkalis
+PO-000566,2025-01-20,2025Q1,Polypropylene Resin,877.46,145.15,Meridian ChemLink,Germany,2.61,Polymers,Polyolefins
+PO-000567,2025-01-17,2025Q1,Hydrochloric Acid,406.14,12.97,Pioneer Chemical House,UAE,0.25,Inorganic Chemicals,Mineral Acids
+PO-000568,2025-02-28,2025Q1,Carbon Black,7868.63,136.25,Westport Materials,Japan,7.16,Pigments,Carbon Materials
+PO-000569,2025-01-01,2025Q1,Ethyl Acetate,6121.92,106.82,Vantage Chemical Supply,India,0.0,Solvents,Esters
+PO-000570,2025-02-15,2025Q1,Methanol,7937.94,30.76,Frontier Chemical Co,Singapore,0.86,Solvents,Alcohols
+PO-000571,2025-05-20,2025Q2,Urea,6417.39,30.35,Summit Process Supply,China,1.21,Agrochemicals,Nitrogen Compounds
+PO-000572,2025-04-14,2025Q2,Acetone,1220.17,79.36,Eastern ChemSource,Thailand,6.48,Solvents,Ketones
+PO-000573,2025-04-05,2025Q2,Sulphuric Acid,5322.56,10.37,Westport Materials,UAE,0.46,Inorganic Chemicals,Mineral Acids
+PO-000574,2025-06-13,2025Q2,Ethyl Acetate,16969.87,118.16,Lotus Raw Materials,Japan,3.67,Solvents,Esters
+PO-000575,2025-05-22,2025Q2,Carbon Black,591.43,107.69,Unity Industrial Partners,India,0.0,Pigments,Carbon Materials
+PO-000576,2025-04-23,2025Q2,Toluene,10271.58,83.96,Horizon Petrochem,India,0.0,Solvents,Aromatics
+PO-000577,2025-04-20,2025Q2,Glycerine,437.1,114.08,Pioneer Chemical House,South Korea,7.98,Specialty Chemicals,Polyols
+PO-000578,2025-06-17,2025Q2,Methanol,26572.01,39.0,Jupiter Fine Chemicals,Japan,1.14,Solvents,Alcohols
+PO-000579,2025-06-21,2025Q2,Ethyl Acetate,12926.08,102.9,Bharat Specialities,China,9.94,Solvents,Esters
+PO-000580,2025-04-03,2025Q2,Acetone,23302.65,90.39,Oceanic Ingredients,India,0.0,Solvents,Ketones
+PO-000581,2025-04-08,2025Q2,Glycerine,6491.09,105.5,Westport Materials,Singapore,4.72,Specialty Chemicals,Polyols
+PO-000582,2025-06-17,2025Q2,Carbon Black,916.17,102.75,Unity Industrial Partners,India,0.0,Pigments,Carbon Materials
+PO-000583,2025-05-13,2025Q2,Citric Acid,13161.55,89.88,Horizon Petrochem,Japan,4.55,Specialty Chemicals,Organic Acids
+PO-000584,2025-04-05,2025Q2,Sodium Carbonate,2165.58,26.5,Summit Process Supply,Thailand,1.0,Inorganic Chemicals,Carbonates
+PO-000585,2025-04-03,2025Q2,Toluene,20664.12,77.92,Horizon Petrochem,China,7.74,Solvents,Aromatics
+PO-000586,2025-05-08,2025Q2,Sodium Carbonate,12126.71,32.88,Vantage Chemical Supply,Germany,0.54,Inorganic Chemicals,Carbonates
+PO-000587,2025-06-13,2025Q2,Sulphuric Acid,6493.93,10.07,Aarav Chemtrade,Germany,0.26,Inorganic Chemicals,Mineral Acids
+PO-000588,2025-04-05,2025Q2,Acetone,1924.08,89.22,Summit Process Supply,Germany,4.43,Solvents,Ketones
+PO-000589,2025-06-20,2025Q2,Toluene,6139.48,83.36,Indus Industrial Solutions,China,1.89,Solvents,Aromatics
+PO-000590,2025-05-17,2025Q2,Hydrochloric Acid,1022.43,13.84,Pioneer Chemical House,Singapore,0.89,Inorganic Chemicals,Mineral Acids
+PO-000591,2025-04-22,2025Q2,Sulphuric Acid,534.17,9.59,Westport Materials,China,0.69,Inorganic Chemicals,Mineral Acids
+PO-000592,2025-05-29,2025Q2,Epoxy Resin,490.59,299.5,Ridgeway Chemicals,Germany,20.83,Polymers,Thermosets
+PO-000593,2025-05-14,2025Q2,Acetone,1824.55,90.69,Summit Process Supply,Germany,4.15,Solvents,Ketones
+PO-000594,2025-05-22,2025Q2,Toluene,9839.4,98.89,Frontier Chemical Co,Japan,8.45,Solvents,Aromatics
+PO-000595,2025-04-15,2025Q2,Sulphuric Acid,4933.41,9.94,Oceanic Ingredients,India,0.0,Inorganic Chemicals,Mineral Acids
+PO-000596,2025-04-05,2025Q2,Caustic Soda,5312.34,37.5,Quartz Materials India,India,0.0,Inorganic Chemicals,Alkalis
+PO-000597,2025-06-17,2025Q2,Acetone,6694.13,89.89,Deccan Molecules,Germany,6.14,Solvents,Ketones
+PO-000598,2025-05-11,2025Q2,Glycerine,9813.21,96.28,Vantage Chemical Supply,Singapore,7.96,Specialty Chemicals,Polyols
+PO-000599,2025-06-22,2025Q2,Epoxy Resin,2067.37,245.01,Jupiter Fine Chemicals,South Korea,4.68,Polymers,Thermosets
+PO-000600,2025-06-23,2025Q2,Methanol,1112.82,56.78,Evergreen Materials,Germany,1.76,Solvents,Alcohols
+PO-000601,2025-04-30,2025Q2,Titanium Dioxide,469.23,285.89,Deccan Molecules,Germany,12.28,Pigments,Oxides
+PO-000602,2025-04-24,2025Q2,Citric Acid,1242.21,94.01,Westport Materials,UAE,5.66,Specialty Chemicals,Organic Acids
+PO-000603,2025-04-15,2025Q2,Polyethylene Resin,512.86,122.01,Evergreen Materials,China,9.02,Polymers,Polyolefins
+PO-000604,2025-05-06,2025Q2,Sulphuric Acid,2403.75,9.5,Oceanic Ingredients,India,0.0,Inorganic Chemicals,Mineral Acids
+PO-000605,2025-05-20,2025Q2,Toluene,13476.98,93.7,Nexus Bulk Supply,China,2.26,Solvents,Aromatics
+PO-000606,2025-06-29,2025Q2,Urea,638.46,32.21,Coastal Industrial Supply,Singapore,0.95,Agrochemicals,Nitrogen Compounds
+PO-000607,2025-04-11,2025Q2,Ethyl Acetate,6698.96,123.65,Unity Industrial Partners,Germany,2.48,Solvents,Esters
+PO-000608,2025-05-26,2025Q2,Methanol,13015.13,39.41,Bharat Specialities,Singapore,1.95,Solvents,Alcohols
+PO-000609,2025-05-19,2025Q2,Toluene,27215.96,76.87,Horizon Petrochem,China,7.66,Solvents,Aromatics
+PO-000610,2025-05-13,2025Q2,Carbon Black,563.78,129.93,Westport Materials,UAE,3.3,Pigments,Carbon Materials
+PO-000611,2025-05-23,2025Q2,Hydrochloric Acid,499.19,11.79,Summit Process Supply,Thailand,0.92,Inorganic Chemicals,Mineral Acids
+PO-000612,2025-06-20,2025Q2,Glycerine,1739.03,104.82,Quartz Materials India,South Korea,2.79,Specialty Chemicals,Polyols
+PO-000613,2025-06-23,2025Q2,Glycerine,23090.66,92.15,Jupiter Fine Chemicals,Thailand,5.26,Specialty Chemicals,Polyols
+PO-000614,2025-04-17,2025Q2,Titanium Dioxide,2716.91,265.8,Deccan Molecules,Japan,13.35,Pigments,Oxides
+PO-000615,2025-06-07,2025Q2,Carbon Black,991.18,126.91,Nexus Bulk Supply,India,0.0,Pigments,Carbon Materials
+PO-000616,2025-06-25,2025Q2,Epoxy Resin,4892.43,282.9,Oceanic Ingredients,South Korea,16.04,Polymers,Thermosets
+PO-000617,2025-04-15,2025Q2,Toluene,24184.35,87.35,Unity Industrial Partners,India,0.0,Solvents,Aromatics
+PO-000618,2025-05-06,2025Q2,Carbon Black,830.1,137.47,Nexus Bulk Supply,India,0.0,Pigments,Carbon Materials
+PO-000619,2025-05-02,2025Q2,Carbon Black,11420.25,112.89,Lotus Raw Materials,Thailand,4.56,Pigments,Carbon Materials
+PO-000620,2025-04-27,2025Q2,Urea,658.85,37.09,Eastern ChemSource,Japan,1.36,Agrochemicals,Nitrogen Compounds
+PO-000621,2025-06-17,2025Q2,Ethyl Acetate,22594.03,113.05,Deccan Molecules,South Korea,6.98,Solvents,Esters
+PO-000622,2025-05-12,2025Q2,Titanium Dioxide,2043.96,227.23,Unity Industrial Partners,Thailand,10.62,Pigments,Oxides
+PO-000623,2025-06-29,2025Q2,Ethyl Acetate,1708.04,108.33,Vantage Chemical Supply,India,0.0,Solvents,Esters
+PO-000624,2025-05-02,2025Q2,Acetone,2297.95,91.41,Oceanic Ingredients,Singapore,3.97,Solvents,Ketones
+PO-000625,2025-04-22,2025Q2,Citric Acid,6861.9,91.5,Horizon Petrochem,Japan,4.75,Specialty Chemicals,Organic Acids
+PO-000626,2025-05-23,2025Q2,Acetone,23114.93,87.31,Eastern ChemSource,UAE,5.57,Solvents,Ketones
+PO-000627,2025-06-04,2025Q2,Toluene,9884.47,106.65,Vantage Chemical Supply,Japan,6.61,Solvents,Aromatics
+PO-000628,2025-05-03,2025Q2,Urea,6196.7,28.15,Evergreen Materials,China,2.1,Agrochemicals,Nitrogen Compounds
+PO-000629,2025-06-20,2025Q2,Sodium Carbonate,445.56,37.83,Kaveri Trading,Japan,1.96,Inorganic Chemicals,Carbonates
+PO-000630,2025-06-29,2025Q2,Carbon Black,4849.82,132.79,Nexus Bulk Supply,India,0.0,Pigments,Carbon Materials
+PO-000631,2025-04-07,2025Q2,Hydrochloric Acid,11492.72,10.86,Indus Industrial Solutions,Thailand,1.04,Inorganic Chemicals,Mineral Acids
+PO-000632,2025-05-11,2025Q2,Citric Acid,13617.05,96.43,Westport Materials,UAE,6.1,Specialty Chemicals,Organic Acids
+PO-000633,2025-04-11,2025Q2,Titanium Dioxide,11824.35,271.0,Coastal Industrial Supply,South Korea,5.29,Pigments,Oxides
+PO-000634,2025-06-16,2025Q2,Carbon Black,630.67,121.94,Lotus Raw Materials,Thailand,4.67,Pigments,Carbon Materials
+PO-000635,2025-04-11,2025Q2,Citric Acid,4046.82,83.69,Coastal Industrial Supply,Thailand,1.61,Specialty Chemicals,Organic Acids
+PO-000636,2025-04-07,2025Q2,Citric Acid,19420.34,97.13,Bharat Specialities,Japan,4.74,Specialty Chemicals,Organic Acids
+PO-000637,2025-04-06,2025Q2,Methanol,19267.75,36.8,Westport Materials,UAE,3.3,Solvents,Alcohols
+PO-000638,2025-05-01,2025Q2,Polypropylene Resin,5721.32,103.3,Horizon Petrochem,China,5.06,Polymers,Polyolefins
+PO-000639,2025-06-09,2025Q2,Sulphuric Acid,932.86,10.47,Westport Materials,UAE,0.4,Inorganic Chemicals,Mineral Acids
+PO-000640,2025-04-14,2025Q2,Carbon Black,16189.22,121.97,Bharat Specialities,Singapore,5.11,Pigments,Carbon Materials
+PO-000641,2025-04-05,2025Q2,Acetone,427.96,91.61,Lotus Raw Materials,Japan,1.68,Solvents,Ketones
+PO-000642,2025-05-14,2025Q2,Polyethylene Resin,4532.42,149.0,Coastal Industrial Supply,Japan,9.65,Polymers,Polyolefins
+PO-000643,2025-05-17,2025Q2,Urea,21284.91,35.62,Westport Materials,Singapore,0.59,Agrochemicals,Nitrogen Compounds
+PO-000644,2025-06-22,2025Q2,Polyethylene Resin,8430.35,137.03,Global Process Partners,UAE,8.0,Polymers,Polyolefins
+PO-000645,2025-04-04,2025Q2,Acetone,5532.4,88.48,Aarav Chemtrade,Germany,4.63,Solvents,Ketones
+PO-000646,2025-05-19,2025Q2,Urea,10645.69,35.29,Eastern ChemSource,Japan,1.49,Agrochemicals,Nitrogen Compounds
+PO-000647,2025-04-23,2025Q2,Toluene,6009.52,102.64,Nexus Bulk Supply,India,0.0,Solvents,Aromatics
+PO-000648,2025-06-21,2025Q2,Hydrochloric Acid,627.18,12.61,Deccan Molecules,Singapore,0.57,Inorganic Chemicals,Mineral Acids
+PO-000649,2025-05-10,2025Q2,Hydrochloric Acid,25781.96,11.95,Summit Process Supply,Thailand,1.1,Inorganic Chemicals,Mineral Acids
+PO-000650,2025-04-22,2025Q2,Sulphuric Acid,939.71,8.52,Evergreen Materials,Thailand,0.47,Inorganic Chemicals,Mineral Acids
+PO-000651,2025-06-10,2025Q2,Methanol,12189.93,40.67,Ridgeway Chemicals,South Korea,1.26,Solvents,Alcohols
+PO-000652,2025-06-06,2025Q2,Methanol,12595.55,34.12,Bharat Specialities,India,0.0,Solvents,Alcohols
+PO-000653,2025-04-30,2025Q2,Hydrochloric Acid,425.01,12.14,Indus Industrial Solutions,UAE,1.09,Inorganic Chemicals,Mineral Acids
+PO-000654,2025-05-24,2025Q2,Acetone,6184.07,83.19,Oceanic Ingredients,India,0.0,Solvents,Ketones
+PO-000655,2025-04-17,2025Q2,Epoxy Resin,6277.85,251.43,Ridgeway Chemicals,South Korea,13.99,Polymers,Thermosets
+PO-000656,2025-04-20,2025Q2,Urea,1779.22,36.42,Westport Materials,Singapore,0.68,Agrochemicals,Nitrogen Compounds
+PO-000657,2025-05-24,2025Q2,Citric Acid,6516.28,100.87,Eastern ChemSource,Japan,3.02,Specialty Chemicals,Organic Acids
+PO-000658,2025-05-16,2025Q2,Carbon Black,26478.36,139.76,Lotus Raw Materials,Germany,4.64,Pigments,Carbon Materials
+PO-000659,2025-05-11,2025Q2,Toluene,5896.02,82.21,Frontier Chemical Co,India,0.0,Solvents,Aromatics
+PO-000660,2025-06-09,2025Q2,Sulphuric Acid,969.0,10.07,Aarav Chemtrade,UAE,0.73,Inorganic Chemicals,Mineral Acids
+PO-000661,2025-04-26,2025Q2,Carbon Black,9533.58,134.17,Lotus Raw Materials,Japan,10.32,Pigments,Carbon Materials
+PO-000662,2025-05-10,2025Q2,Sulphuric Acid,1309.84,9.98,Summit Process Supply,UAE,0.96,Inorganic Chemicals,Mineral Acids
+PO-000663,2025-06-09,2025Q2,Citric Acid,2720.61,91.0,Westport Materials,UAE,6.22,Specialty Chemicals,Organic Acids
+PO-000664,2025-05-05,2025Q2,Polyethylene Resin,687.51,131.01,Deccan Molecules,Singapore,4.35,Polymers,Polyolefins
+PO-000665,2025-05-31,2025Q2,Epoxy Resin,18084.31,284.16,Trident ChemWorks,UAE,8.41,Polymers,Thermosets
+PO-000666,2025-06-13,2025Q2,Ethyl Acetate,5782.34,106.99,Vantage Chemical Supply,India,0.0,Solvents,Esters
+PO-000667,2025-06-24,2025Q2,Sulphuric Acid,8767.03,10.57,Quartz Materials India,Germany,0.39,Inorganic Chemicals,Mineral Acids
+PO-000668,2025-06-12,2025Q2,Toluene,1048.73,94.14,Quartz Materials India,UAE,6.7,Solvents,Aromatics
+PO-000669,2025-05-15,2025Q2,Titanium Dioxide,4771.62,319.62,Trident ChemWorks,South Korea,18.2,Pigments,Oxides
+PO-000670,2025-06-18,2025Q2,Toluene,653.06,88.29,Quartz Materials India,UAE,7.59,Solvents,Aromatics
+PO-000671,2025-05-19,2025Q2,Toluene,12908.59,91.82,Horizon Petrochem,Japan,6.52,Solvents,Aromatics
+PO-000672,2025-06-12,2025Q2,Hydrochloric Acid,6290.14,12.19,Aarav Chemtrade,India,0.0,Inorganic Chemicals,Mineral Acids
+PO-000673,2025-04-28,2025Q2,Sulphuric Acid,2001.47,9.47,Meridian ChemLink,India,0.0,Inorganic Chemicals,Mineral Acids
+PO-000674,2025-04-05,2025Q2,Polyethylene Resin,6273.53,139.67,Bharat Specialities,Singapore,22.5,Polymers,Polyolefins
+PO-000675,2025-04-24,2025Q2,Caustic Soda,26167.67,38.34,Quartz Materials India,India,0.0,Inorganic Chemicals,Alkalis
+PO-000676,2025-04-17,2025Q2,Polypropylene Resin,464.65,115.76,Unity Industrial Partners,South Korea,10.74,Polymers,Polyolefins
+PO-000677,2025-05-23,2025Q2,Sodium Carbonate,1092.68,31.24,Vantage Chemical Supply,UAE,2.31,Inorganic Chemicals,Carbonates
+PO-000678,2025-04-17,2025Q2,Carbon Black,24538.35,138.09,Lotus Raw Materials,Japan,9.63,Pigments,Carbon Materials
+PO-000679,2025-06-10,2025Q2,Titanium Dioxide,636.37,238.49,Vantage Chemical Supply,Thailand,9.91,Pigments,Oxides
+PO-000680,2025-05-21,2025Q2,Methanol,1116.55,37.58,Global Process Partners,UAE,3.15,Solvents,Alcohols
+PO-000681,2025-04-03,2025Q2,Sulphuric Acid,17342.56,8.39,Evergreen Materials,Thailand,0.47,Inorganic Chemicals,Mineral Acids
+PO-000682,2025-04-21,2025Q2,Acetone,17135.39,75.03,Lotus Raw Materials,India,0.0,Solvents,Ketones
+PO-000683,2025-05-13,2025Q2,Epoxy Resin,541.03,266.51,Trident ChemWorks,UAE,8.81,Polymers,Thermosets
+PO-000684,2025-04-13,2025Q2,Polypropylene Resin,9477.85,141.56,Vantage Chemical Supply,South Korea,10.13,Polymers,Polyolefins
+PO-000685,2025-06-28,2025Q2,Methanol,6629.96,43.15,Eastern ChemSource,Germany,2.44,Solvents,Alcohols
+PO-000686,2025-05-28,2025Q2,Glycerine,656.27,97.63,Jupiter Fine Chemicals,Thailand,5.17,Specialty Chemicals,Polyols
+PO-000687,2025-04-11,2025Q2,Sulphuric Acid,8225.14,10.23,Eastern ChemSource,South Korea,0.83,Inorganic Chemicals,Mineral Acids
+PO-000688,2025-05-07,2025Q2,Carbon Black,2743.08,115.68,Bharat Specialities,South Korea,4.25,Pigments,Carbon Materials
+PO-000689,2025-05-12,2025Q2,Carbon Black,684.06,116.39,Bharat Specialities,Singapore,5.59,Pigments,Carbon Materials
+PO-000690,2025-05-09,2025Q2,Citric Acid,7977.43,84.18,Pioneer Chemical House,China,3.75,Specialty Chemicals,Organic Acids
+PO-000691,2025-05-01,2025Q2,Polyethylene Resin,815.7,121.86,Bharat Specialities,Thailand,12.92,Polymers,Polyolefins
+PO-000692,2025-04-17,2025Q2,Methanol,509.91,44.69,Trident ChemWorks,Japan,0.95,Solvents,Alcohols
+PO-000693,2025-05-11,2025Q2,Titanium Dioxide,9923.21,292.25,Trident ChemWorks,Thailand,21.39,Pigments,Oxides
+PO-000694,2025-04-14,2025Q2,Methanol,1186.96,35.41,Frontier Chemical Co,UAE,1.91,Solvents,Alcohols
+PO-000695,2025-04-13,2025Q2,Carbon Black,8245.84,121.52,Lotus Raw Materials,Thailand,4.54,Pigments,Carbon Materials
+PO-000696,2025-04-13,2025Q2,Urea,4970.55,32.28,Summit Process Supply,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-000697,2025-06-20,2025Q2,Sodium Carbonate,22780.09,28.97,Unity Industrial Partners,Singapore,0.81,Inorganic Chemicals,Carbonates
+PO-000698,2025-05-05,2025Q2,Sodium Carbonate,1341.96,41.53,Jupiter Fine Chemicals,China,0.63,Inorganic Chemicals,Carbonates
+PO-000699,2025-06-01,2025Q2,Citric Acid,952.39,88.54,Horizon Petrochem,Germany,7.07,Specialty Chemicals,Organic Acids
+PO-000700,2025-04-13,2025Q2,Glycerine,5960.48,111.95,Westport Materials,Singapore,4.42,Specialty Chemicals,Polyols
+PO-000701,2025-06-07,2025Q2,Citric Acid,25067.79,110.89,Trident ChemWorks,Japan,2.88,Specialty Chemicals,Organic Acids
+PO-000702,2025-06-14,2025Q2,Polypropylene Resin,606.5,135.98,Lotus Raw Materials,Singapore,5.82,Polymers,Polyolefins
+PO-000703,2025-05-30,2025Q2,Acetone,945.12,89.08,Lotus Raw Materials,Japan,1.75,Solvents,Ketones
+PO-000704,2025-04-25,2025Q2,Toluene,530.68,88.26,Quartz Materials India,UAE,6.67,Solvents,Aromatics
+PO-000705,2025-04-16,2025Q2,Polypropylene Resin,9465.72,149.96,Meridian ChemLink,Germany,2.7,Polymers,Polyolefins
+PO-000706,2025-08-05,2025Q3,Ethyl Acetate,1767.5,102.79,Lotus Raw Materials,China,7.31,Solvents,Esters
+PO-000707,2025-08-06,2025Q3,Polypropylene Resin,12927.25,135.08,Lotus Raw Materials,India,0.0,Polymers,Polyolefins
+PO-000708,2025-07-28,2025Q3,Carbon Black,18828.9,142.22,Lotus Raw Materials,Germany,4.17,Pigments,Carbon Materials
+PO-000709,2025-09-20,2025Q3,Sodium Carbonate,10500.03,28.57,Unity Industrial Partners,Singapore,0.74,Inorganic Chemicals,Carbonates
+PO-000710,2025-09-17,2025Q3,Ethyl Acetate,10710.1,103.45,Lotus Raw Materials,China,7.07,Solvents,Esters
+PO-000711,2025-09-12,2025Q3,Caustic Soda,4663.43,45.16,Evergreen Materials,UAE,1.95,Inorganic Chemicals,Alkalis
+PO-000712,2025-09-12,2025Q3,Glycerine,2216.57,103.93,Vantage Chemical Supply,Singapore,7.41,Specialty Chemicals,Polyols
+PO-000713,2025-09-25,2025Q3,Caustic Soda,1075.28,52.06,Coastal Industrial Supply,Germany,3.62,Inorganic Chemicals,Alkalis
+PO-000714,2025-07-09,2025Q3,Carbon Black,2068.23,118.52,Global Process Partners,Thailand,8.48,Pigments,Carbon Materials
+PO-000715,2025-07-01,2025Q3,Methanol,24985.77,31.91,Jupiter Fine Chemicals,Thailand,2.04,Solvents,Alcohols
+PO-000716,2025-07-30,2025Q3,Polyethylene Resin,1305.7,133.23,Global Process Partners,Thailand,6.97,Polymers,Polyolefins
+PO-000717,2025-07-18,2025Q3,Carbon Black,493.92,132.77,Westport Materials,UAE,3.43,Pigments,Carbon Materials
+PO-000718,2025-07-04,2025Q3,Sulphuric Acid,6567.59,10.76,Aarav Chemtrade,Germany,0.25,Inorganic Chemicals,Mineral Acids
+PO-000719,2025-08-31,2025Q3,Caustic Soda,431.34,39.53,Coastal Industrial Supply,UAE,2.07,Inorganic Chemicals,Alkalis
+PO-000720,2025-07-10,2025Q3,Glycerine,1139.03,97.98,Meridian ChemLink,Thailand,6.75,Specialty Chemicals,Polyols
+PO-000721,2025-09-17,2025Q3,Carbon Black,13891.76,118.37,Bharat Specialities,Singapore,5.24,Pigments,Carbon Materials
+PO-000722,2025-08-06,2025Q3,Polyethylene Resin,546.17,157.29,Coastal Industrial Supply,Germany,9.2,Polymers,Polyolefins
+PO-000723,2025-07-15,2025Q3,Glycerine,957.69,109.8,Evergreen Materials,Singapore,5.22,Specialty Chemicals,Polyols
+PO-000724,2025-09-11,2025Q3,Sulphuric Acid,26058.95,9.95,Oceanic Ingredients,India,0.0,Inorganic Chemicals,Mineral Acids
+PO-000725,2025-07-09,2025Q3,Urea,2473.07,35.25,Eastern ChemSource,UAE,2.36,Agrochemicals,Nitrogen Compounds
+PO-000726,2025-08-09,2025Q3,Citric Acid,6818.11,93.96,Eastern ChemSource,Japan,3.29,Specialty Chemicals,Organic Acids
+PO-000727,2025-09-01,2025Q3,Polyethylene Resin,12411.77,126.92,Deccan Molecules,India,0.0,Polymers,Polyolefins
+PO-000728,2025-09-16,2025Q3,Sodium Carbonate,9197.09,27.38,Vantage Chemical Supply,Thailand,2.2,Inorganic Chemicals,Carbonates
+PO-000729,2025-07-13,2025Q3,Glycerine,22554.65,103.16,Vantage Chemical Supply,Singapore,8.8,Specialty Chemicals,Polyols
+PO-000730,2025-08-15,2025Q3,Sulphuric Acid,13522.45,11.2,Aarav Chemtrade,Germany,0.29,Inorganic Chemicals,Mineral Acids
+PO-000731,2025-08-18,2025Q3,Titanium Dioxide,27613.15,274.24,Deccan Molecules,Japan,15.28,Pigments,Oxides
+PO-000732,2025-07-29,2025Q3,Sulphuric Acid,12522.28,9.52,Meridian ChemLink,India,0.0,Inorganic Chemicals,Mineral Acids
+PO-000733,2025-09-25,2025Q3,Ethyl Acetate,2613.79,114.84,Vantage Chemical Supply,Singapore,5.36,Solvents,Esters
+PO-000734,2025-07-22,2025Q3,Hydrochloric Acid,2493.46,12.09,Aarav Chemtrade,India,0.0,Inorganic Chemicals,Mineral Acids
+PO-000735,2025-08-08,2025Q3,Hydrochloric Acid,25090.79,12.4,Deccan Molecules,UAE,0.29,Inorganic Chemicals,Mineral Acids
+PO-000736,2025-09-07,2025Q3,Citric Acid,613.98,90.37,Coastal Industrial Supply,Thailand,1.44,Specialty Chemicals,Organic Acids
+PO-000737,2025-08-05,2025Q3,Titanium Dioxide,6602.46,306.97,Westport Materials,South Korea,20.72,Pigments,Oxides
+PO-000738,2025-07-20,2025Q3,Toluene,10543.84,97.55,Frontier Chemical Co,Japan,8.58,Solvents,Aromatics
+PO-000739,2025-07-04,2025Q3,Toluene,27854.44,84.91,Unity Industrial Partners,China,4.41,Solvents,Aromatics
+PO-000740,2025-09-05,2025Q3,Caustic Soda,25630.5,38.31,Quartz Materials India,India,0.0,Inorganic Chemicals,Alkalis
+PO-000741,2025-08-28,2025Q3,Titanium Dioxide,646.74,239.35,Vantage Chemical Supply,Thailand,11.16,Pigments,Oxides
+PO-000742,2025-07-12,2025Q3,Titanium Dioxide,20618.49,320.55,Eastern ChemSource,Japan,11.43,Pigments,Oxides
+PO-000743,2025-08-12,2025Q3,Sodium Carbonate,4947.86,30.17,Unity Industrial Partners,Japan,1.84,Inorganic Chemicals,Carbonates
+PO-000744,2025-09-21,2025Q3,Urea,8150.32,30.74,Summit Process Supply,China,1.32,Agrochemicals,Nitrogen Compounds
+PO-000745,2025-08-26,2025Q3,Polyethylene Resin,1349.44,131.37,Jupiter Fine Chemicals,Singapore,11.01,Polymers,Polyolefins
+PO-000746,2025-08-02,2025Q3,Ethyl Acetate,660.13,125.43,Evergreen Materials,South Korea,2.83,Solvents,Esters
+PO-000747,2025-08-27,2025Q3,Glycerine,12969.15,85.68,Horizon Petrochem,China,3.33,Specialty Chemicals,Polyols
+PO-000748,2025-07-01,2025Q3,Titanium Dioxide,2545.67,282.58,Deccan Molecules,Japan,13.92,Pigments,Oxides
+PO-000749,2025-08-30,2025Q3,Acetone,1315.01,79.69,Eastern ChemSource,Thailand,7.02,Solvents,Ketones
+PO-000750,2025-08-12,2025Q3,Polypropylene Resin,18429.9,134.62,Vantage Chemical Supply,South Korea,10.42,Polymers,Polyolefins
+PO-000751,2025-07-16,2025Q3,Toluene,819.37,100.71,Meridian ChemLink,UAE,4.08,Solvents,Aromatics
+PO-000752,2025-08-25,2025Q3,Titanium Dioxide,1370.02,323.98,Eastern ChemSource,Japan,11.45,Pigments,Oxides
+PO-000753,2025-07-27,2025Q3,Sulphuric Acid,12320.19,9.47,Summit Process Supply,UAE,0.5,Inorganic Chemicals,Mineral Acids
+PO-000754,2025-08-19,2025Q3,Methanol,544.45,36.64,Frontier Chemical Co,UAE,1.99,Solvents,Alcohols
+PO-000755,2025-07-31,2025Q3,Methanol,26484.99,33.65,Indus Industrial Solutions,India,0.0,Solvents,Alcohols
+PO-000756,2025-07-06,2025Q3,Sodium Carbonate,22439.11,37.35,Pioneer Chemical House,Germany,1.98,Inorganic Chemicals,Carbonates
+PO-000757,2025-07-22,2025Q3,Polyethylene Resin,2535.75,152.78,Vantage Chemical Supply,Japan,6.77,Polymers,Polyolefins
+PO-000758,2025-09-13,2025Q3,Citric Acid,12419.41,83.12,Coastal Industrial Supply,Thailand,1.63,Specialty Chemicals,Organic Acids
+PO-000759,2025-07-21,2025Q3,Toluene,2557.72,100.17,Jupiter Fine Chemicals,UAE,4.91,Solvents,Aromatics
+PO-000760,2025-09-17,2025Q3,Sulphuric Acid,1252.67,9.38,Ridgeway Chemicals,China,0.88,Inorganic Chemicals,Mineral Acids
+PO-000761,2025-07-30,2025Q3,Toluene,891.39,100.07,Vantage Chemical Supply,UAE,9.22,Solvents,Aromatics
+PO-000762,2025-08-21,2025Q3,Methanol,12780.15,36.96,Evergreen Materials,India,0.0,Solvents,Alcohols
+PO-000763,2025-07-27,2025Q3,Methanol,12839.56,34.28,Westport Materials,Thailand,1.36,Solvents,Alcohols
+PO-000764,2025-08-07,2025Q3,Glycerine,12262.66,100.9,Evergreen Materials,India,0.0,Specialty Chemicals,Polyols
+PO-000765,2025-08-01,2025Q3,Methanol,549.68,33.77,Jupiter Fine Chemicals,Thailand,1.75,Solvents,Alcohols
+PO-000766,2025-07-17,2025Q3,Polypropylene Resin,658.13,122.87,Coastal Industrial Supply,Thailand,6.11,Polymers,Polyolefins
+PO-000767,2025-07-22,2025Q3,Glycerine,946.83,91.52,Horizon Petrochem,UAE,5.78,Specialty Chemicals,Polyols
+PO-000768,2025-08-04,2025Q3,Epoxy Resin,9926.01,269.25,Global Process Partners,UAE,4.07,Polymers,Thermosets
+PO-000769,2025-08-28,2025Q3,Hydrochloric Acid,25462.96,12.32,Deccan Molecules,UAE,0.3,Inorganic Chemicals,Mineral Acids
+PO-000770,2025-08-05,2025Q3,Sodium Carbonate,2599.5,29.77,Unity Industrial Partners,Japan,1.65,Inorganic Chemicals,Carbonates
+PO-000771,2025-08-14,2025Q3,Polyethylene Resin,20701.5,138.35,Bharat Specialities,UAE,7.86,Polymers,Polyolefins
+PO-000772,2025-07-24,2025Q3,Hydrochloric Acid,828.83,14.12,Pioneer Chemical House,Singapore,0.94,Inorganic Chemicals,Mineral Acids
+PO-000773,2025-07-12,2025Q3,Sodium Carbonate,1107.27,37.58,Nexus Bulk Supply,South Korea,1.69,Inorganic Chemicals,Carbonates
+PO-000774,2025-07-08,2025Q3,Ethyl Acetate,1362.97,106.64,Bharat Specialities,India,0.0,Solvents,Esters
+PO-000775,2025-08-11,2025Q3,Sulphuric Acid,519.3,9.33,Summit Process Supply,Thailand,0.48,Inorganic Chemicals,Mineral Acids
+PO-000776,2025-07-04,2025Q3,Epoxy Resin,18140.79,291.76,Ridgeway Chemicals,Germany,22.85,Polymers,Thermosets
+PO-000777,2025-09-17,2025Q3,Glycerine,685.22,116.54,Oceanic Ingredients,South Korea,6.88,Specialty Chemicals,Polyols
+PO-000778,2025-07-27,2025Q3,Sulphuric Acid,4056.51,9.95,Westport Materials,China,0.61,Inorganic Chemicals,Mineral Acids
+PO-000779,2025-07-14,2025Q3,Polyethylene Resin,9282.05,156.32,Vantage Chemical Supply,Japan,7.6,Polymers,Polyolefins
+PO-000780,2025-08-19,2025Q3,Ethyl Acetate,2736.93,126.11,Evergreen Materials,South Korea,3.17,Solvents,Esters
+PO-000781,2025-09-06,2025Q3,Citric Acid,21586.52,72.81,Frontier Chemical Co,India,0.0,Specialty Chemicals,Organic Acids
+PO-000782,2025-07-10,2025Q3,Toluene,656.17,91.25,Unity Industrial Partners,India,0.0,Solvents,Aromatics
+PO-000783,2025-07-31,2025Q3,Methanol,564.09,40.42,Jupiter Fine Chemicals,Japan,1.24,Solvents,Alcohols
+PO-000784,2025-07-17,2025Q3,Carbon Black,836.89,142.1,Evergreen Materials,Germany,10.44,Pigments,Carbon Materials
+PO-000785,2025-08-27,2025Q3,Sodium Carbonate,511.04,32.08,Summit Process Supply,Singapore,1.12,Inorganic Chemicals,Carbonates
+PO-000786,2025-08-04,2025Q3,Ethyl Acetate,6763.4,99.05,Deccan Molecules,Thailand,3.63,Solvents,Esters
+PO-000787,2025-07-04,2025Q3,Sodium Carbonate,12622.47,35.39,Nexus Bulk Supply,South Korea,1.78,Inorganic Chemicals,Carbonates
+PO-000788,2025-08-16,2025Q3,Urea,12787.55,32.33,Eastern ChemSource,Thailand,1.12,Agrochemicals,Nitrogen Compounds
+PO-000789,2025-07-03,2025Q3,Polypropylene Resin,13718.27,137.79,Eastern ChemSource,South Korea,3.93,Polymers,Polyolefins
+PO-000790,2025-09-07,2025Q3,Titanium Dioxide,2747.05,230.42,Frontier Chemical Co,India,0.0,Pigments,Oxides
+PO-000791,2025-09-25,2025Q3,Urea,11309.86,35.17,Meridian ChemLink,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-000792,2025-07-04,2025Q3,Glycerine,628.48,99.08,Vantage Chemical Supply,Singapore,8.21,Specialty Chemicals,Polyols
+PO-000793,2025-08-09,2025Q3,Polypropylene Resin,10427.01,122.82,Unity Industrial Partners,South Korea,9.18,Polymers,Polyolefins
+PO-000794,2025-07-09,2025Q3,Citric Acid,2456.24,104.24,Ridgeway Chemicals,Germany,4.75,Specialty Chemicals,Organic Acids
+PO-000795,2025-07-30,2025Q3,Toluene,674.31,98.55,Vantage Chemical Supply,UAE,6.08,Solvents,Aromatics
+PO-000796,2025-09-23,2025Q3,Caustic Soda,17541.21,42.17,Coastal Industrial Supply,UAE,2.27,Inorganic Chemicals,Alkalis
+PO-000797,2025-07-24,2025Q3,Ethyl Acetate,952.23,118.93,Deccan Molecules,Singapore,9.46,Solvents,Esters
+PO-000798,2025-09-17,2025Q3,Citric Acid,20281.76,100.01,Eastern ChemSource,Japan,3.03,Specialty Chemicals,Organic Acids
+PO-000799,2025-09-26,2025Q3,Urea,11190.05,59.3,Westport Materials,South Korea,1.21,Agrochemicals,Nitrogen Compounds
+PO-000800,2025-08-13,2025Q3,Polyethylene Resin,4024.37,160.2,Trident ChemWorks,Japan,10.21,Polymers,Polyolefins
+PO-000801,2025-09-05,2025Q3,Epoxy Resin,1381.71,245.37,Global Process Partners,UAE,4.09,Polymers,Thermosets
+PO-000802,2025-09-14,2025Q3,Toluene,9077.02,94.73,Jupiter Fine Chemicals,UAE,5.27,Solvents,Aromatics
+PO-000803,2025-08-16,2025Q3,Titanium Dioxide,1936.97,291.34,Trident ChemWorks,Thailand,19.33,Pigments,Oxides
+PO-000804,2025-07-29,2025Q3,Carbon Black,22699.27,117.55,Lotus Raw Materials,Thailand,4.06,Pigments,Carbon Materials
+PO-000805,2025-09-28,2025Q3,Methanol,10652.45,58.35,Bharat Specialities,Singapore,1.92,Solvents,Alcohols
+PO-000806,2025-09-23,2025Q3,Titanium Dioxide,5341.72,263.84,Unity Industrial Partners,Japan,21.23,Pigments,Oxides
+PO-000807,2025-09-28,2025Q3,Methanol,2167.68,39.88,Deccan Molecules,Singapore,1.03,Solvents,Alcohols
+PO-000808,2025-07-15,2025Q3,Carbon Black,18100.62,129.27,Eastern ChemSource,South Korea,4.4,Pigments,Carbon Materials
+PO-000809,2025-08-13,2025Q3,Glycerine,1999.71,109.33,Indus Industrial Solutions,Japan,2.34,Specialty Chemicals,Polyols
+PO-000810,2025-08-31,2025Q3,Epoxy Resin,4504.02,246.34,Quartz Materials India,Singapore,22.74,Polymers,Thermosets
+PO-000811,2025-08-09,2025Q3,Glycerine,5778.17,93.3,Jupiter Fine Chemicals,China,6.92,Specialty Chemicals,Polyols
+PO-000812,2025-08-04,2025Q3,Carbon Black,11873.93,134.26,Nexus Bulk Supply,India,0.0,Pigments,Carbon Materials
+PO-000813,2025-08-10,2025Q3,Citric Acid,27451.1,96.68,Kaveri Trading,China,7.27,Specialty Chemicals,Organic Acids
+PO-000814,2025-07-27,2025Q3,Ethyl Acetate,1214.37,108.19,Deccan Molecules,Singapore,10.52,Solvents,Esters
+PO-000815,2025-08-17,2025Q3,Hydrochloric Acid,477.85,11.66,Summit Process Supply,Thailand,1.03,Inorganic Chemicals,Mineral Acids
+PO-000816,2025-08-23,2025Q3,Ethyl Acetate,1141.52,116.8,Jupiter Fine Chemicals,South Korea,7.06,Solvents,Esters
+PO-000817,2025-09-17,2025Q3,Polyethylene Resin,450.87,135.81,Bharat Specialities,UAE,9.11,Polymers,Polyolefins
+PO-000818,2025-08-12,2025Q3,Titanium Dioxide,4715.51,286.51,Westport Materials,South Korea,17.73,Pigments,Oxides
+PO-000819,2025-08-22,2025Q3,Glycerine,24660.52,108.68,Westport Materials,Singapore,5.21,Specialty Chemicals,Polyols
+PO-000820,2025-08-14,2025Q3,Caustic Soda,12408.47,43.8,Jupiter Fine Chemicals,Japan,3.57,Inorganic Chemicals,Alkalis
+PO-000821,2025-07-13,2025Q3,Epoxy Resin,6333.0,273.3,Trident ChemWorks,UAE,8.85,Polymers,Thermosets
+PO-000822,2025-08-30,2025Q3,Hydrochloric Acid,1706.06,14.38,Westport Materials,Singapore,1.0,Inorganic Chemicals,Mineral Acids
+PO-000823,2025-09-04,2025Q3,Toluene,1864.05,108.87,Vantage Chemical Supply,Germany,4.91,Solvents,Aromatics
+PO-000824,2025-07-23,2025Q3,Sulphuric Acid,5649.39,11.3,Summit Process Supply,Germany,0.78,Inorganic Chemicals,Mineral Acids
+PO-000825,2025-07-05,2025Q3,Citric Acid,4182.93,88.73,Pioneer Chemical House,China,4.09,Specialty Chemicals,Organic Acids
+PO-000826,2025-09-19,2025Q3,Toluene,6689.57,89.06,Unity Industrial Partners,China,4.9,Solvents,Aromatics
+PO-000827,2025-07-02,2025Q3,Polypropylene Resin,2219.23,137.0,Vantage Chemical Supply,South Korea,10.43,Polymers,Polyolefins
+PO-000828,2025-08-10,2025Q3,Acetone,1077.5,81.88,Aarav Chemtrade,Thailand,5.33,Solvents,Ketones
+PO-000829,2025-07-08,2025Q3,Carbon Black,1196.45,124.07,Bharat Specialities,Singapore,4.95,Pigments,Carbon Materials
+PO-000830,2025-08-01,2025Q3,Epoxy Resin,2472.4,233.23,Eastern ChemSource,Thailand,15.89,Polymers,Thermosets
+PO-000831,2025-07-19,2025Q3,Titanium Dioxide,8520.81,284.59,Deccan Molecules,Germany,14.37,Pigments,Oxides
+PO-000832,2025-07-20,2025Q3,Acetone,19630.35,96.85,Lotus Raw Materials,Japan,1.71,Solvents,Ketones
+PO-000833,2025-07-21,2025Q3,Urea,1385.26,32.33,Eastern ChemSource,Thailand,1.02,Agrochemicals,Nitrogen Compounds
+PO-000834,2025-09-28,2025Q3,Toluene,407.01,84.8,Jupiter Fine Chemicals,China,8.12,Solvents,Aromatics
+PO-000835,2025-09-06,2025Q3,Toluene,17403.66,94.15,Jupiter Fine Chemicals,UAE,5.08,Solvents,Aromatics
+PO-000836,2025-09-27,2025Q3,Acetone,16367.56,85.77,Eastern ChemSource,UAE,6.05,Solvents,Ketones
+PO-000837,2025-09-28,2025Q3,Sulphuric Acid,6335.45,10.24,Westport Materials,UAE,0.39,Inorganic Chemicals,Mineral Acids
+PO-000838,2025-09-14,2025Q3,Caustic Soda,13647.52,40.74,Jupiter Fine Chemicals,South Korea,2.03,Inorganic Chemicals,Alkalis
+PO-000839,2025-09-09,2025Q3,Carbon Black,1381.52,139.42,Westport Materials,UAE,3.53,Pigments,Carbon Materials
+PO-000840,2025-08-03,2025Q3,Sodium Carbonate,1312.15,34.53,Pioneer Chemical House,Germany,2.13,Inorganic Chemicals,Carbonates
+PO-000841,2025-07-29,2025Q3,Citric Acid,8950.34,93.72,Westport Materials,UAE,5.45,Specialty Chemicals,Organic Acids
+PO-000842,2025-09-25,2025Q3,Polyethylene Resin,1378.4,137.85,Quartz Materials India,India,0.0,Polymers,Polyolefins
+PO-000843,2025-08-13,2025Q3,Methanol,10790.85,39.28,Jupiter Fine Chemicals,Japan,1.32,Solvents,Alcohols
+PO-000844,2025-09-26,2025Q3,Glycerine,1009.55,114.82,Pioneer Chemical House,South Korea,6.79,Specialty Chemicals,Polyols
+PO-000845,2025-09-25,2025Q3,Methanol,6208.22,38.53,Eastern ChemSource,South Korea,3.22,Solvents,Alcohols
+PO-000846,2025-07-25,2025Q3,Epoxy Resin,5053.04,230.74,Eastern ChemSource,Thailand,16.05,Polymers,Thermosets
+PO-000847,2025-09-19,2025Q3,Epoxy Resin,12317.59,229.67,Quartz Materials India,South Korea,12.48,Polymers,Thermosets
+PO-000848,2025-10-04,2025Q4,Polyethylene Resin,13613.89,147.57,Evergreen Materials,Singapore,10.47,Polymers,Polyolefins
+PO-000849,2025-11-02,2025Q4,Hydrochloric Acid,2251.51,10.98,Indus Industrial Solutions,Thailand,1.0,Inorganic Chemicals,Mineral Acids
+PO-000850,2025-10-01,2025Q4,Epoxy Resin,1247.33,259.03,Eastern ChemSource,Singapore,16.29,Polymers,Thermosets
+PO-000851,2025-11-17,2025Q4,Caustic Soda,2787.9,38.33,Indus Industrial Solutions,China,3.88,Inorganic Chemicals,Alkalis
+PO-000852,2025-12-16,2025Q4,Toluene,9885.2,115.07,Vantage Chemical Supply,Germany,5.1,Solvents,Aromatics
+PO-000853,2025-10-11,2025Q4,Glycerine,12360.72,100.86,Evergreen Materials,India,0.0,Specialty Chemicals,Polyols
+PO-000854,2025-12-06,2025Q4,Citric Acid,5266.32,90.32,Ridgeway Chemicals,China,5.23,Specialty Chemicals,Organic Acids
+PO-000855,2025-11-25,2025Q4,Carbon Black,6378.39,141.51,Lotus Raw Materials,Japan,10.19,Pigments,Carbon Materials
+PO-000856,2025-11-13,2025Q4,Ethyl Acetate,27406.21,112.74,Global Process Partners,UAE,7.27,Solvents,Esters
+PO-000857,2025-10-26,2025Q4,Methanol,1065.28,42.58,Eastern ChemSource,Germany,2.47,Solvents,Alcohols
+PO-000858,2025-12-13,2025Q4,Glycerine,1192.92,116.36,Quartz Materials India,South Korea,2.62,Specialty Chemicals,Polyols
+PO-000859,2025-10-22,2025Q4,Urea,4494.29,38.5,Westport Materials,South Korea,1.25,Agrochemicals,Nitrogen Compounds
+PO-000860,2025-12-13,2025Q4,Sulphuric Acid,4304.62,10.84,Westport Materials,UAE,0.44,Inorganic Chemicals,Mineral Acids
+PO-000861,2025-11-17,2025Q4,Polyethylene Resin,627.8,134.7,Evergreen Materials,Singapore,11.53,Polymers,Polyolefins
+PO-000862,2025-10-19,2025Q4,Urea,5374.97,40.74,Westport Materials,South Korea,1.06,Agrochemicals,Nitrogen Compounds
+PO-000863,2025-11-11,2025Q4,Methanol,10797.71,36.44,Frontier Chemical Co,UAE,1.84,Solvents,Alcohols
+PO-000864,2025-10-03,2025Q4,Urea,534.07,35.89,Eastern ChemSource,UAE,2.39,Agrochemicals,Nitrogen Compounds
+PO-000865,2025-12-22,2025Q4,Urea,13745.99,36.56,Meridian ChemLink,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-000866,2025-11-17,2025Q4,Polypropylene Resin,1877.85,110.42,Horizon Petrochem,China,5.28,Polymers,Polyolefins
+PO-000867,2025-11-14,2025Q4,Ethyl Acetate,9311.56,99.9,Horizon Petrochem,Thailand,7.86,Solvents,Esters
+PO-000868,2025-12-06,2025Q4,Ethyl Acetate,417.08,108.57,Unity Industrial Partners,India,0.0,Solvents,Esters
+PO-000869,2025-12-08,2025Q4,Toluene,13570.58,97.19,Indus Industrial Solutions,UAE,5.85,Solvents,Aromatics
+PO-000870,2025-11-19,2025Q4,Titanium Dioxide,1153.74,308.03,Westport Materials,South Korea,17.81,Pigments,Oxides
+PO-000871,2025-11-06,2025Q4,Hydrochloric Acid,12283.04,16.24,Summit Process Supply,Germany,0.62,Inorganic Chemicals,Mineral Acids
+PO-000872,2025-10-11,2025Q4,Sodium Carbonate,11186.98,30.28,Unity Industrial Partners,Singapore,0.72,Inorganic Chemicals,Carbonates
+PO-000873,2025-10-25,2025Q4,Sulphuric Acid,1660.1,14.28,Quartz Materials India,Germany,0.45,Inorganic Chemicals,Mineral Acids
+PO-000874,2025-10-04,2025Q4,Acetone,5321.1,78.98,Global Process Partners,China,3.98,Solvents,Ketones
+PO-000875,2025-10-30,2025Q4,Polyethylene Resin,580.61,141.79,Pioneer Chemical House,UAE,6.1,Polymers,Polyolefins
+PO-000876,2025-11-10,2025Q4,Carbon Black,1153.7,135.45,Eastern ChemSource,South Korea,5.0,Pigments,Carbon Materials
+PO-000877,2025-11-16,2025Q4,Polypropylene Resin,616.76,146.76,Lotus Raw Materials,South Korea,4.77,Polymers,Polyolefins
+PO-000878,2025-10-26,2025Q4,Ethyl Acetate,701.38,110.3,Bharat Specialities,China,9.25,Solvents,Esters
+PO-000879,2025-11-04,2025Q4,Polyethylene Resin,1705.11,136.67,Evergreen Materials,Singapore,12.05,Polymers,Polyolefins
+PO-000880,2025-12-20,2025Q4,Hydrochloric Acid,16534.32,12.25,Frontier Chemical Co,Singapore,0.59,Inorganic Chemicals,Mineral Acids
+PO-000881,2025-10-28,2025Q4,Glycerine,7036.7,104.06,Pioneer Chemical House,India,0.0,Specialty Chemicals,Polyols
+PO-000882,2025-11-04,2025Q4,Urea,4255.46,40.54,Trident ChemWorks,Singapore,1.67,Agrochemicals,Nitrogen Compounds
+PO-000883,2025-10-10,2025Q4,Glycerine,2696.85,91.22,Quartz Materials India,China,6.14,Specialty Chemicals,Polyols
+PO-000884,2025-10-14,2025Q4,Sodium Carbonate,4654.48,27.86,Unity Industrial Partners,Singapore,0.79,Inorganic Chemicals,Carbonates
+PO-000885,2025-10-01,2025Q4,Epoxy Resin,586.07,258.79,Eastern ChemSource,Singapore,18.48,Polymers,Thermosets
+PO-000886,2025-10-02,2025Q4,Caustic Soda,688.89,41.1,Quartz Materials India,India,0.0,Inorganic Chemicals,Alkalis
+PO-000887,2025-12-14,2025Q4,Citric Acid,646.27,109.5,Trident ChemWorks,Japan,3.06,Specialty Chemicals,Organic Acids
+PO-000888,2025-10-28,2025Q4,Methanol,4392.82,35.83,Jupiter Fine Chemicals,India,0.0,Solvents,Alcohols
+PO-000889,2025-10-29,2025Q4,Carbon Black,527.46,140.92,Evergreen Materials,Germany,9.27,Pigments,Carbon Materials
+PO-000890,2025-10-09,2025Q4,Titanium Dioxide,2243.32,324.37,Trident ChemWorks,South Korea,15.28,Pigments,Oxides
+PO-000891,2025-11-20,2025Q4,Hydrochloric Acid,12892.02,14.65,Westport Materials,Thailand,0.47,Inorganic Chemicals,Mineral Acids
+PO-000892,2025-11-09,2025Q4,Urea,25168.8,33.92,Coastal Industrial Supply,Singapore,0.9,Agrochemicals,Nitrogen Compounds
+PO-000893,2025-12-09,2025Q4,Sodium Carbonate,25114.38,33.15,Vantage Chemical Supply,UAE,2.56,Inorganic Chemicals,Carbonates
+PO-000894,2025-11-24,2025Q4,Sodium Carbonate,11213.5,37.82,Kaveri Trading,Germany,2.13,Inorganic Chemicals,Carbonates
+PO-000895,2025-10-17,2025Q4,Sodium Carbonate,9320.14,29.97,Unity Industrial Partners,South Korea,0.82,Inorganic Chemicals,Carbonates
+PO-000896,2025-12-05,2025Q4,Acetone,2133.31,106.47,Trident ChemWorks,Germany,1.84,Solvents,Ketones
+PO-000897,2025-10-21,2025Q4,Toluene,2084.74,93.11,Jupiter Fine Chemicals,China,8.54,Solvents,Aromatics
+PO-000898,2025-10-22,2025Q4,Urea,12562.79,39.56,Trident ChemWorks,Singapore,1.9,Agrochemicals,Nitrogen Compounds
+PO-000899,2025-11-08,2025Q4,Glycerine,9548.2,103.27,Vantage Chemical Supply,Singapore,8.79,Specialty Chemicals,Polyols
+PO-000900,2025-12-14,2025Q4,Titanium Dioxide,22768.7,309.62,Deccan Molecules,Germany,13.53,Pigments,Oxides
+PO-000901,2025-11-09,2025Q4,Urea,2167.0,35.94,Coastal Industrial Supply,Singapore,0.85,Agrochemicals,Nitrogen Compounds
+PO-000902,2025-12-13,2025Q4,Carbon Black,2650.74,139.93,Westport Materials,UAE,3.48,Pigments,Carbon Materials
+PO-000903,2025-11-03,2025Q4,Polyethylene Resin,973.05,162.35,Coastal Industrial Supply,Japan,10.83,Polymers,Polyolefins
+PO-000904,2025-11-11,2025Q4,Sulphuric Acid,1860.98,10.69,Oceanic Ingredients,India,0.0,Inorganic Chemicals,Mineral Acids
+PO-000905,2025-12-24,2025Q4,Acetone,1724.43,114.07,Ridgeway Chemicals,China,3.46,Solvents,Ketones
+PO-000906,2025-10-28,2025Q4,Epoxy Resin,5319.79,270.27,Trident ChemWorks,China,12.45,Polymers,Thermosets
+PO-000907,2025-12-09,2025Q4,Citric Acid,819.28,101.98,Eastern ChemSource,Japan,3.1,Specialty Chemicals,Organic Acids
+PO-000908,2025-12-18,2025Q4,Citric Acid,18548.42,96.26,Bharat Specialities,Japan,4.41,Specialty Chemicals,Organic Acids
+PO-000909,2025-10-04,2025Q4,Citric Acid,1404.77,94.45,Westport Materials,India,0.0,Specialty Chemicals,Organic Acids
+PO-000910,2025-11-04,2025Q4,Acetone,25877.66,92.14,Summit Process Supply,Germany,4.3,Solvents,Ketones
+PO-000911,2025-10-05,2025Q4,Carbon Black,825.46,120.2,Bharat Specialities,Singapore,5.62,Pigments,Carbon Materials
+PO-000912,2025-10-24,2025Q4,Caustic Soda,689.57,42.77,Bharat Specialities,Singapore,3.86,Inorganic Chemicals,Alkalis
+PO-000913,2025-11-29,2025Q4,Sulphuric Acid,13235.17,10.89,Evergreen Materials,Germany,0.34,Inorganic Chemicals,Mineral Acids
+PO-000914,2025-10-07,2025Q4,Polypropylene Resin,1887.32,140.56,Deccan Molecules,South Korea,3.98,Polymers,Polyolefins
+PO-000915,2025-11-07,2025Q4,Acetone,11544.39,91.0,Oceanic Ingredients,India,0.0,Solvents,Ketones
+PO-000916,2025-10-22,2025Q4,Caustic Soda,840.61,41.29,Evergreen Materials,India,0.0,Inorganic Chemicals,Alkalis
+PO-000917,2025-10-30,2025Q4,Polypropylene Resin,1202.83,147.34,Lotus Raw Materials,South Korea,4.65,Polymers,Polyolefins
+PO-000918,2025-12-07,2025Q4,Caustic Soda,630.75,37.48,Indus Industrial Solutions,China,3.89,Inorganic Chemicals,Alkalis
+PO-000919,2025-12-08,2025Q4,Hydrochloric Acid,637.42,12.67,Horizon Petrochem,UAE,1.78,Inorganic Chemicals,Mineral Acids
+PO-000920,2025-10-11,2025Q4,Hydrochloric Acid,6920.46,14.87,Westport Materials,Singapore,0.84,Inorganic Chemicals,Mineral Acids
+PO-000921,2025-11-11,2025Q4,Ethyl Acetate,5448.29,115.67,Evergreen Materials,UAE,5.72,Solvents,Esters
+PO-000922,2025-10-19,2025Q4,Titanium Dioxide,4878.46,280.26,Eastern ChemSource,Singapore,15.48,Pigments,Oxides
+PO-000923,2025-12-09,2025Q4,Methanol,12772.0,48.67,Trident ChemWorks,Germany,2.72,Solvents,Alcohols
+PO-000924,2025-11-17,2025Q4,Methanol,677.73,40.61,Ridgeway Chemicals,South Korea,1.4,Solvents,Alcohols
+PO-000925,2025-11-22,2025Q4,Sodium Carbonate,6459.47,33.88,Vantage Chemical Supply,UAE,2.49,Inorganic Chemicals,Carbonates
+PO-000926,2025-11-27,2025Q4,Sodium Carbonate,1748.92,28.08,Jupiter Fine Chemicals,China,0.69,Inorganic Chemicals,Carbonates
+PO-000927,2025-10-01,2025Q4,Ethyl Acetate,11695.6,118.25,Vantage Chemical Supply,UAE,4.52,Solvents,Esters
+PO-000928,2025-11-19,2025Q4,Glycerine,527.89,109.36,Quartz Materials India,South Korea,2.85,Specialty Chemicals,Polyols
+PO-000929,2025-11-01,2025Q4,Acetone,6041.66,80.06,Eastern ChemSource,Thailand,7.38,Solvents,Ketones
+PO-000930,2025-11-26,2025Q4,Citric Acid,5450.4,100.72,Kaveri Trading,China,7.6,Specialty Chemicals,Organic Acids
+PO-000931,2025-11-02,2025Q4,Sodium Carbonate,975.28,32.11,Deccan Molecules,Germany,2.52,Inorganic Chemicals,Carbonates
+PO-000932,2025-12-10,2025Q4,Caustic Soda,16851.62,44.85,Evergreen Materials,India,0.0,Inorganic Chemicals,Alkalis
+PO-000933,2025-12-19,2025Q4,Urea,4428.69,35.45,Deccan Molecules,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-000934,2025-11-07,2025Q4,Toluene,13517.32,93.65,Frontier Chemical Co,India,0.0,Solvents,Aromatics
+PO-000935,2025-10-06,2025Q4,Glycerine,25865.77,102.66,Evergreen Materials,India,0.0,Specialty Chemicals,Polyols
+PO-000936,2025-10-31,2025Q4,Polypropylene Resin,8504.75,135.54,Lotus Raw Materials,Singapore,5.18,Polymers,Polyolefins
+PO-000937,2025-10-09,2025Q4,Citric Acid,22087.0,83.14,Horizon Petrochem,India,0.0,Specialty Chemicals,Organic Acids
+PO-000938,2025-10-18,2025Q4,Acetone,28158.17,93.39,Deccan Molecules,Germany,5.73,Solvents,Ketones
+PO-000939,2025-10-19,2025Q4,Sulphuric Acid,13964.4,8.95,Ridgeway Chemicals,China,0.79,Inorganic Chemicals,Mineral Acids
+PO-000940,2025-10-05,2025Q4,Acetone,9401.38,93.93,Aarav Chemtrade,Japan,5.15,Solvents,Ketones
+PO-000941,2025-12-20,2025Q4,Epoxy Resin,1001.64,250.47,Jupiter Fine Chemicals,India,0.0,Polymers,Thermosets
+PO-000942,2025-12-29,2025Q4,Polypropylene Resin,640.91,137.29,Lotus Raw Materials,Singapore,5.53,Polymers,Polyolefins
+PO-000943,2025-11-25,2025Q4,Toluene,27618.54,105.32,Vantage Chemical Supply,Japan,6.45,Solvents,Aromatics
+PO-000944,2025-12-07,2025Q4,Polyethylene Resin,24393.27,131.56,Summit Process Supply,Singapore,8.22,Polymers,Polyolefins
+PO-000945,2025-10-19,2025Q4,Acetone,1022.58,74.97,Unity Industrial Partners,China,6.45,Solvents,Ketones
+PO-000946,2025-12-28,2025Q4,Sulphuric Acid,8506.08,10.4,Aarav Chemtrade,UAE,0.67,Inorganic Chemicals,Mineral Acids
+PO-000947,2025-10-09,2025Q4,Sulphuric Acid,576.2,8.97,Evergreen Materials,Thailand,0.49,Inorganic Chemicals,Mineral Acids
+PO-000948,2025-12-15,2025Q4,Polyethylene Resin,1007.99,141.39,Deccan Molecules,Singapore,3.69,Polymers,Polyolefins
+PO-000949,2025-11-18,2025Q4,Carbon Black,2322.72,124.08,Global Process Partners,Thailand,8.46,Pigments,Carbon Materials
+PO-000950,2025-10-05,2025Q4,Citric Acid,17451.67,92.8,Horizon Petrochem,Japan,5.21,Specialty Chemicals,Organic Acids
+PO-000951,2025-11-19,2025Q4,Urea,4271.72,36.2,Trident ChemWorks,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-000952,2025-12-29,2025Q4,Citric Acid,414.49,97.82,Lotus Raw Materials,Singapore,2.76,Specialty Chemicals,Organic Acids
+PO-000953,2025-10-26,2025Q4,Acetone,589.59,95.19,Summit Process Supply,Germany,4.36,Solvents,Ketones
+PO-000954,2025-10-08,2025Q4,Acetone,9088.97,89.73,Summit Process Supply,Japan,5.71,Solvents,Ketones
+PO-000955,2025-11-07,2025Q4,Sodium Carbonate,542.26,37.91,Kaveri Trading,Germany,2.39,Inorganic Chemicals,Carbonates
+PO-000956,2025-12-05,2025Q4,Sodium Carbonate,582.7,28.36,Summit Process Supply,Thailand,1.02,Inorganic Chemicals,Carbonates
+PO-000957,2025-10-27,2025Q4,Polyethylene Resin,580.8,132.42,Summit Process Supply,Singapore,7.54,Polymers,Polyolefins
+PO-000958,2025-12-20,2025Q4,Sodium Carbonate,531.64,30.56,Unity Industrial Partners,Japan,1.72,Inorganic Chemicals,Carbonates
+PO-000959,2025-12-04,2025Q4,Toluene,8151.52,107.13,Summit Process Supply,Singapore,1.68,Solvents,Aromatics
+PO-000960,2025-11-02,2025Q4,Polypropylene Resin,668.27,136.08,Deccan Molecules,South Korea,3.68,Polymers,Polyolefins
+PO-000961,2025-11-05,2025Q4,Urea,2254.86,33.52,Meridian ChemLink,China,2.87,Agrochemicals,Nitrogen Compounds
+PO-000962,2025-10-26,2025Q4,Polypropylene Resin,640.01,206.89,Deccan Molecules,Singapore,4.9,Polymers,Polyolefins
+PO-000963,2025-12-27,2025Q4,Polypropylene Resin,21553.32,127.32,Lotus Raw Materials,India,0.0,Polymers,Polyolefins
+PO-000964,2025-12-11,2025Q4,Carbon Black,4641.11,113.34,Bharat Specialities,Thailand,3.78,Pigments,Carbon Materials
+PO-000965,2025-12-05,2025Q4,Polyethylene Resin,10604.68,141.23,Bharat Specialities,UAE,9.07,Polymers,Polyolefins
+PO-000966,2025-12-25,2025Q4,Toluene,26913.02,91.81,Quartz Materials India,UAE,6.65,Solvents,Aromatics
+PO-000967,2025-12-27,2025Q4,Glycerine,601.12,112.47,Pioneer Chemical House,South Korea,7.02,Specialty Chemicals,Polyols
+PO-000968,2025-11-18,2025Q4,Titanium Dioxide,5509.89,262.43,Frontier Chemical Co,South Korea,17.23,Pigments,Oxides
+PO-000969,2025-10-11,2025Q4,Sulphuric Acid,6128.04,11.12,Eastern ChemSource,South Korea,0.9,Inorganic Chemicals,Mineral Acids
+PO-000970,2025-11-27,2025Q4,Polyethylene Resin,11827.04,154.2,Jupiter Fine Chemicals,South Korea,3.97,Polymers,Polyolefins
+PO-000971,2025-10-31,2025Q4,Sodium Carbonate,2334.02,37.57,Pioneer Chemical House,Germany,2.28,Inorganic Chemicals,Carbonates
+PO-000972,2025-12-26,2025Q4,Caustic Soda,4182.57,41.32,Oceanic Ingredients,China,3.12,Inorganic Chemicals,Alkalis
+PO-000973,2025-11-08,2025Q4,Polypropylene Resin,2682.34,128.23,Deccan Molecules,Singapore,4.79,Polymers,Polyolefins
+PO-000974,2025-12-08,2025Q4,Sulphuric Acid,1297.35,9.26,Evergreen Materials,Thailand,0.42,Inorganic Chemicals,Mineral Acids
+PO-000975,2025-12-10,2025Q4,Carbon Black,973.75,116.58,Unity Industrial Partners,India,0.0,Pigments,Carbon Materials
+PO-000976,2025-11-25,2025Q4,Sulphuric Acid,418.82,10.89,Evergreen Materials,Germany,0.36,Inorganic Chemicals,Mineral Acids
+PO-000977,2025-12-08,2025Q4,Urea,2806.39,35.48,Deccan Molecules,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-000978,2025-10-29,2025Q4,Sulphuric Acid,2027.9,9.66,Summit Process Supply,Thailand,0.84,Inorganic Chemicals,Mineral Acids
+PO-000979,2025-12-05,2025Q4,Polyethylene Resin,1759.29,175.04,Trident ChemWorks,Japan,10.05,Polymers,Polyolefins
+PO-000980,2025-11-06,2025Q4,Sulphuric Acid,2239.68,12.77,Nexus Bulk Supply,South Korea,0.68,Inorganic Chemicals,Mineral Acids
+PO-000981,2025-11-13,2025Q4,Polyethylene Resin,18175.32,130.45,Quartz Materials India,India,0.0,Polymers,Polyolefins
+PO-000982,2025-11-25,2025Q4,Citric Acid,1088.42,97.52,Kaveri Trading,China,7.77,Specialty Chemicals,Organic Acids
+PO-000983,2025-11-09,2025Q4,Epoxy Resin,596.61,287.51,Ridgeway Chemicals,Germany,22.95,Polymers,Thermosets
+PO-000984,2025-10-08,2025Q4,Methanol,1163.38,36.05,Westport Materials,Thailand,1.26,Solvents,Alcohols
+PO-000985,2025-11-09,2025Q4,Toluene,907.66,88.52,Indus Industrial Solutions,China,1.8,Solvents,Aromatics
+PO-000986,2025-10-19,2025Q4,Toluene,1112.95,111.14,Vantage Chemical Supply,Japan,6.05,Solvents,Aromatics
+PO-000987,2025-10-11,2025Q4,Glycerine,13532.87,119.35,Pioneer Chemical House,South Korea,7.77,Specialty Chemicals,Polyols
+PO-000988,2025-10-19,2025Q4,Methanol,6303.62,38.52,Bharat Specialities,Singapore,1.9,Solvents,Alcohols
+PO-000989,2025-10-19,2025Q4,Ethyl Acetate,592.28,97.6,Unity Industrial Partners,China,5.45,Solvents,Esters
+PO-000990,2025-12-19,2025Q4,Sodium Carbonate,12191.05,39.97,Kaveri Trading,Japan,1.95,Inorganic Chemicals,Carbonates
+PO-000991,2025-12-02,2025Q4,Acetone,1038.03,75.9,Eastern ChemSource,Thailand,6.72,Solvents,Ketones
+PO-000992,2025-10-04,2025Q4,Titanium Dioxide,516.78,245.29,Frontier Chemical Co,India,0.0,Pigments,Oxides
+PO-000993,2025-10-28,2025Q4,Sodium Carbonate,2665.13,28.69,Jupiter Fine Chemicals,China,0.63,Inorganic Chemicals,Carbonates
+PO-000994,2025-11-29,2025Q4,Citric Acid,4299.08,100.41,Westport Materials,India,0.0,Specialty Chemicals,Organic Acids
+PO-000995,2025-10-16,2025Q4,Titanium Dioxide,627.72,311.67,Bharat Specialities,South Korea,11.48,Pigments,Oxides
+PO-000996,2025-10-18,2025Q4,Acetone,6365.0,73.74,Unity Industrial Partners,China,6.33,Solvents,Ketones
+PO-000997,2026-03-21,2026Q1,Epoxy Resin,22529.57,241.66,Jupiter Fine Chemicals,UAE,9.46,Polymers,Thermosets
+PO-000998,2026-02-05,2026Q1,Caustic Soda,6325.47,38.27,Evergreen Materials,India,0.0,Inorganic Chemicals,Alkalis
+PO-000999,2026-01-04,2026Q1,Caustic Soda,449.9,38.64,Quartz Materials India,Thailand,2.45,Inorganic Chemicals,Alkalis
+PO-001000,2026-03-11,2026Q1,Polyethylene Resin,638.69,153.29,Coastal Industrial Supply,Japan,11.31,Polymers,Polyolefins
+PO-001001,2026-03-16,2026Q1,Hydrochloric Acid,14027.44,10.83,Summit Process Supply,Thailand,1.07,Inorganic Chemicals,Mineral Acids
+PO-001002,2026-01-18,2026Q1,Glycerine,493.45,96.98,Vantage Chemical Supply,Singapore,8.76,Specialty Chemicals,Polyols
+PO-001003,2026-01-13,2026Q1,Methanol,488.31,32.68,Frontier Chemical Co,Singapore,0.85,Solvents,Alcohols
+PO-001004,2026-01-21,2026Q1,Caustic Soda,599.55,46.78,Coastal Industrial Supply,Germany,3.7,Inorganic Chemicals,Alkalis
+PO-001005,2026-03-29,2026Q1,Urea,863.62,31.31,Meridian ChemLink,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-001006,2026-02-27,2026Q1,Ethyl Acetate,17176.87,107.76,Bharat Specialities,Singapore,3.61,Solvents,Esters
+PO-001007,2026-03-04,2026Q1,Polypropylene Resin,4533.36,136.43,Lotus Raw Materials,South Korea,4.48,Polymers,Polyolefins
+PO-001008,2026-03-09,2026Q1,Citric Acid,18731.26,83.16,Coastal Industrial Supply,Singapore,7.64,Specialty Chemicals,Organic Acids
+PO-001009,2026-02-05,2026Q1,Titanium Dioxide,22907.58,278.62,Deccan Molecules,Germany,12.92,Pigments,Oxides
+PO-001010,2026-02-09,2026Q1,Sodium Carbonate,620.82,30.45,Vantage Chemical Supply,Germany,0.65,Inorganic Chemicals,Carbonates
+PO-001011,2026-03-15,2026Q1,Polyethylene Resin,2292.03,122.54,Quartz Materials India,India,0.0,Polymers,Polyolefins
+PO-001012,2026-02-17,2026Q1,Citric Acid,16450.47,81.11,Horizon Petrochem,Germany,7.34,Specialty Chemicals,Organic Acids
+PO-001013,2026-01-27,2026Q1,Ethyl Acetate,11325.04,114.94,Evergreen Materials,UAE,5.73,Solvents,Esters
+PO-001014,2026-03-16,2026Q1,Urea,964.93,37.07,Westport Materials,Singapore,0.64,Agrochemicals,Nitrogen Compounds
+PO-001015,2026-02-15,2026Q1,Caustic Soda,1207.32,40.34,Oceanic Ingredients,China,2.81,Inorganic Chemicals,Alkalis
+PO-001016,2026-01-20,2026Q1,Toluene,1418.78,91.54,Jupiter Fine Chemicals,UAE,4.98,Solvents,Aromatics
+PO-001017,2026-01-30,2026Q1,Titanium Dioxide,5401.08,267.26,Trident ChemWorks,Thailand,22.03,Pigments,Oxides
+PO-001018,2026-01-16,2026Q1,Epoxy Resin,1978.21,380.33,Jupiter Fine Chemicals,UAE,10.16,Polymers,Thermosets
+PO-001019,2026-01-03,2026Q1,Sulphuric Acid,19664.91,8.82,Evergreen Materials,Thailand,0.48,Inorganic Chemicals,Mineral Acids
+PO-001020,2026-01-02,2026Q1,Sodium Carbonate,5270.38,29.92,Deccan Molecules,Germany,2.39,Inorganic Chemicals,Carbonates
+PO-001021,2026-03-16,2026Q1,Citric Acid,5910.3,91.23,Westport Materials,UAE,6.25,Specialty Chemicals,Organic Acids
+PO-001022,2026-01-13,2026Q1,Citric Acid,459.76,87.34,Coastal Industrial Supply,Thailand,1.38,Specialty Chemicals,Organic Acids
+PO-001023,2026-01-13,2026Q1,Sulphuric Acid,1923.46,9.4,Summit Process Supply,Thailand,0.46,Inorganic Chemicals,Mineral Acids
+PO-001024,2026-02-16,2026Q1,Urea,17450.06,30.9,Deccan Molecules,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-001025,2026-03-07,2026Q1,Glycerine,5359.39,97.76,Vantage Chemical Supply,Singapore,8.26,Specialty Chemicals,Polyols
+PO-001026,2026-02-04,2026Q1,Methanol,2206.76,42.22,Evergreen Materials,Germany,1.63,Solvents,Alcohols
+PO-001027,2026-02-24,2026Q1,Polypropylene Resin,1016.48,133.28,Eastern ChemSource,South Korea,3.97,Polymers,Polyolefins
+PO-001028,2026-03-08,2026Q1,Toluene,2495.58,78.57,Unity Industrial Partners,China,4.33,Solvents,Aromatics
+PO-001029,2026-03-24,2026Q1,Hydrochloric Acid,654.16,12.28,Frontier Chemical Co,South Korea,0.23,Inorganic Chemicals,Mineral Acids
+PO-001030,2026-02-10,2026Q1,Methanol,1410.3,36.9,Ridgeway Chemicals,UAE,0.66,Solvents,Alcohols
+PO-001031,2026-01-11,2026Q1,Polyethylene Resin,1666.31,163.94,Trident ChemWorks,Japan,10.51,Polymers,Polyolefins
+PO-001032,2026-03-15,2026Q1,Polypropylene Resin,470.28,124.27,Deccan Molecules,Japan,7.21,Polymers,Polyolefins
+PO-001033,2026-01-19,2026Q1,Epoxy Resin,514.92,281.35,Ridgeway Chemicals,Germany,20.85,Polymers,Thermosets
+PO-001034,2026-01-29,2026Q1,Epoxy Resin,18381.14,238.89,Global Process Partners,UAE,4.9,Polymers,Thermosets
+PO-001035,2026-02-21,2026Q1,Epoxy Resin,21628.28,210.88,Ridgeway Chemicals,China,17.9,Polymers,Thermosets
+PO-001036,2026-03-16,2026Q1,Acetone,4916.24,84.58,Lotus Raw Materials,Japan,1.52,Solvents,Ketones
+PO-001037,2026-02-21,2026Q1,Titanium Dioxide,1719.75,232.72,Frontier Chemical Co,India,0.0,Pigments,Oxides
+PO-001038,2026-03-13,2026Q1,Polypropylene Resin,2715.82,101.25,Horizon Petrochem,China,4.87,Polymers,Polyolefins
+PO-001039,2026-01-16,2026Q1,Methanol,26826.25,29.54,Indus Industrial Solutions,India,0.0,Solvents,Alcohols
+PO-001040,2026-03-24,2026Q1,Acetone,1727.42,89.91,Lotus Raw Materials,Japan,1.54,Solvents,Ketones
+PO-001041,2026-01-27,2026Q1,Caustic Soda,429.46,38.21,Quartz Materials India,India,0.0,Inorganic Chemicals,Alkalis
+PO-001042,2026-01-05,2026Q1,Epoxy Resin,595.12,260.62,Trident ChemWorks,UAE,8.82,Polymers,Thermosets
+PO-001043,2026-02-14,2026Q1,Methanol,614.77,37.35,Ridgeway Chemicals,South Korea,1.39,Solvents,Alcohols
+PO-001044,2026-01-31,2026Q1,Titanium Dioxide,22653.42,271.95,Coastal Industrial Supply,South Korea,5.22,Pigments,Oxides
+PO-001045,2026-03-18,2026Q1,Toluene,6018.84,84.3,Unity Industrial Partners,China,4.23,Solvents,Aromatics
+PO-001046,2026-01-16,2026Q1,Caustic Soda,4908.67,36.74,Quartz Materials India,India,0.0,Inorganic Chemicals,Alkalis
+PO-001047,2026-01-10,2026Q1,Polypropylene Resin,8576.04,100.11,Unity Industrial Partners,Thailand,4.64,Polymers,Polyolefins
+PO-001048,2026-03-03,2026Q1,Sulphuric Acid,11221.33,10.33,Aarav Chemtrade,Germany,0.29,Inorganic Chemicals,Mineral Acids
+PO-001049,2026-01-11,2026Q1,Caustic Soda,5711.52,38.35,Bharat Specialities,Singapore,3.78,Inorganic Chemicals,Alkalis
+PO-001050,2026-03-29,2026Q1,Caustic Soda,7020.65,41.83,Jupiter Fine Chemicals,South Korea,2.04,Inorganic Chemicals,Alkalis
+PO-001051,2026-03-11,2026Q1,Sodium Carbonate,697.89,26.1,Jupiter Fine Chemicals,UAE,1.28,Inorganic Chemicals,Carbonates
+PO-001052,2026-01-02,2026Q1,Urea,8244.38,31.98,Coastal Industrial Supply,Singapore,0.85,Agrochemicals,Nitrogen Compounds
+PO-001053,2026-03-08,2026Q1,Citric Acid,454.71,97.32,Trident ChemWorks,India,0.0,Specialty Chemicals,Organic Acids
+PO-001054,2026-01-09,2026Q1,Polyethylene Resin,542.94,118.0,Indus Industrial Solutions,Singapore,4.43,Polymers,Polyolefins
+PO-001055,2026-03-23,2026Q1,Polyethylene Resin,4219.29,131.17,Quartz Materials India,Singapore,2.49,Polymers,Polyolefins
+PO-001056,2026-03-04,2026Q1,Polyethylene Resin,26823.07,133.7,Deccan Molecules,Singapore,4.3,Polymers,Polyolefins
+PO-001057,2026-03-08,2026Q1,Titanium Dioxide,24104.07,257.18,Deccan Molecules,Japan,15.09,Pigments,Oxides
+PO-001058,2026-03-24,2026Q1,Carbon Black,6226.91,138.46,Westport Materials,Japan,14.37,Pigments,Carbon Materials
+PO-001059,2026-03-02,2026Q1,Acetone,457.03,81.36,Aarav Chemtrade,Japan,5.77,Solvents,Ketones
+PO-001060,2026-03-07,2026Q1,Epoxy Resin,618.93,279.28,Ridgeway Chemicals,Germany,19.34,Polymers,Thermosets
+PO-001061,2026-02-21,2026Q1,Sodium Carbonate,1355.42,29.88,Deccan Molecules,South Korea,2.51,Inorganic Chemicals,Carbonates
+PO-001062,2026-01-16,2026Q1,Sodium Carbonate,1775.87,30.43,Vantage Chemical Supply,UAE,2.27,Inorganic Chemicals,Carbonates
+PO-001063,2026-03-12,2026Q1,Sulphuric Acid,699.08,9.61,Oceanic Ingredients,India,0.0,Inorganic Chemicals,Mineral Acids
+PO-001064,2026-02-14,2026Q1,Glycerine,21458.13,102.67,Evergreen Materials,Singapore,5.4,Specialty Chemicals,Polyols
+PO-001065,2026-01-20,2026Q1,Titanium Dioxide,11611.72,283.62,Eastern ChemSource,Germany,18.27,Pigments,Oxides
+PO-001066,2026-01-19,2026Q1,Methanol,1127.85,45.35,Trident ChemWorks,Germany,2.29,Solvents,Alcohols
+PO-001067,2026-01-09,2026Q1,Carbon Black,2454.79,106.81,Unity Industrial Partners,India,0.0,Pigments,Carbon Materials
+PO-001068,2026-02-24,2026Q1,Sodium Carbonate,11248.77,31.15,Vantage Chemical Supply,Germany,0.63,Inorganic Chemicals,Carbonates
+PO-001069,2026-01-03,2026Q1,Polyethylene Resin,1940.26,134.99,Pioneer Chemical House,UAE,6.69,Polymers,Polyolefins
+PO-001070,2026-03-02,2026Q1,Methanol,1716.88,41.53,Eastern ChemSource,Germany,2.89,Solvents,Alcohols
+PO-001071,2026-03-28,2026Q1,Acetone,11023.27,88.89,Jupiter Fine Chemicals,Germany,7.87,Solvents,Ketones
+PO-001072,2026-03-26,2026Q1,Citric Acid,917.41,97.37,Eastern ChemSource,Japan,2.92,Specialty Chemicals,Organic Acids
+PO-001073,2026-01-04,2026Q1,Sodium Carbonate,4677.81,26.89,Unity Industrial Partners,Singapore,0.82,Inorganic Chemicals,Carbonates
+PO-001074,2026-01-02,2026Q1,Polyethylene Resin,20688.08,126.39,Indus Industrial Solutions,Singapore,4.55,Polymers,Polyolefins
+PO-001075,2026-01-11,2026Q1,Toluene,12379.26,105.87,Vantage Chemical Supply,Japan,6.15,Solvents,Aromatics
+PO-001076,2026-02-25,2026Q1,Urea,12305.98,29.16,Summit Process Supply,China,1.38,Agrochemicals,Nitrogen Compounds
+PO-001077,2026-03-16,2026Q1,Sulphuric Acid,11979.31,11.19,Nexus Bulk Supply,South Korea,0.61,Inorganic Chemicals,Mineral Acids
+PO-001078,2026-03-08,2026Q1,Polypropylene Resin,2366.18,123.39,Lotus Raw Materials,Singapore,5.04,Polymers,Polyolefins
+PO-001079,2026-03-31,2026Q1,Ethyl Acetate,1983.65,97.89,Bharat Specialities,China,9.72,Solvents,Esters
+PO-001080,2026-03-13,2026Q1,Hydrochloric Acid,21880.3,12.51,Westport Materials,Thailand,0.5,Inorganic Chemicals,Mineral Acids
+PO-001081,2026-03-27,2026Q1,Titanium Dioxide,28038.7,244.53,Bharat Specialities,Thailand,7.07,Pigments,Oxides
+PO-001082,2026-03-27,2026Q1,Polypropylene Resin,2465.96,94.81,Horizon Petrochem,China,5.44,Polymers,Polyolefins
+PO-001083,2026-02-18,2026Q1,Methanol,619.57,34.15,Bharat Specialities,India,0.0,Solvents,Alcohols
+PO-001084,2026-02-20,2026Q1,Glycerine,608.04,89.04,Quartz Materials India,China,6.29,Specialty Chemicals,Polyols
+PO-001085,2026-01-05,2026Q1,Methanol,1346.07,33.45,Frontier Chemical Co,UAE,2.05,Solvents,Alcohols
+PO-001086,2026-03-15,2026Q1,Citric Acid,13360.27,92.5,Lotus Raw Materials,Singapore,2.63,Specialty Chemicals,Organic Acids
+PO-001087,2026-03-14,2026Q1,Sodium Carbonate,5536.07,28.5,Deccan Molecules,Singapore,0.87,Inorganic Chemicals,Carbonates
+PO-001088,2026-03-06,2026Q1,Titanium Dioxide,8308.65,269.5,Unity Industrial Partners,Japan,18.17,Pigments,Oxides
+PO-001089,2026-01-10,2026Q1,Glycerine,11458.82,102.62,Evergreen Materials,Singapore,4.71,Specialty Chemicals,Polyols
+PO-001090,2026-01-18,2026Q1,Polypropylene Resin,561.65,113.94,Horizon Petrochem,UAE,7.01,Polymers,Polyolefins
+PO-001091,2026-03-19,2026Q1,Methanol,11726.25,31.63,Jupiter Fine Chemicals,Thailand,1.73,Solvents,Alcohols
+PO-001092,2026-03-25,2026Q1,Citric Acid,6726.88,86.01,Kaveri Trading,China,7.82,Specialty Chemicals,Organic Acids
+PO-001093,2026-01-01,2026Q1,Sodium Carbonate,11385.73,41.53,Jupiter Fine Chemicals,China,0.63,Inorganic Chemicals,Carbonates
+PO-001094,2026-03-29,2026Q1,Sulphuric Acid,2625.4,8.34,Aarav Chemtrade,Thailand,0.25,Inorganic Chemicals,Mineral Acids
+PO-001095,2026-01-12,2026Q1,Caustic Soda,442.25,40.16,Eastern ChemSource,Thailand,2.19,Inorganic Chemicals,Alkalis
+PO-001096,2026-01-01,2026Q1,Sodium Carbonate,4204.46,27.68,Jupiter Fine Chemicals,China,0.68,Inorganic Chemicals,Carbonates
+PO-001097,2026-01-21,2026Q1,Carbon Black,8468.43,137.67,Westport Materials,Germany,2.39,Pigments,Carbon Materials
+PO-001098,2026-03-17,2026Q1,Titanium Dioxide,964.36,284.98,Deccan Molecules,Japan,15.28,Pigments,Oxides
+PO-001099,2026-02-02,2026Q1,Urea,490.8,37.23,Eastern ChemSource,Japan,1.32,Agrochemicals,Nitrogen Compounds
+PO-001100,2026-01-07,2026Q1,Sulphuric Acid,1261.91,11.61,Nexus Bulk Supply,South Korea,0.6,Inorganic Chemicals,Mineral Acids
+PO-001101,2026-03-20,2026Q1,Glycerine,5777.25,105.27,Quartz Materials India,Germany,9.93,Specialty Chemicals,Polyols
+PO-001102,2026-02-22,2026Q1,Epoxy Resin,25293.46,245.04,Jupiter Fine Chemicals,UAE,10.12,Polymers,Thermosets
+PO-001103,2026-01-21,2026Q1,Titanium Dioxide,9359.04,222.19,Vantage Chemical Supply,Thailand,11.16,Pigments,Oxides
+PO-001104,2026-02-02,2026Q1,Acetone,2242.61,72.3,Aarav Chemtrade,Thailand,6.02,Solvents,Ketones
+PO-001105,2026-03-27,2026Q1,Polypropylene Resin,5285.5,116.21,Deccan Molecules,Singapore,4.43,Polymers,Polyolefins
+PO-001106,2026-03-28,2026Q1,Polypropylene Resin,1224.62,133.04,Vantage Chemical Supply,South Korea,9.78,Polymers,Polyolefins
+PO-001107,2026-03-09,2026Q1,Methanol,2511.62,34.56,Evergreen Materials,India,0.0,Solvents,Alcohols
+PO-001108,2026-02-04,2026Q1,Caustic Soda,23301.36,36.22,Quartz Materials India,Thailand,2.57,Inorganic Chemicals,Alkalis
+PO-001109,2026-03-30,2026Q1,Ethyl Acetate,20658.94,116.23,Vantage Chemical Supply,UAE,3.97,Solvents,Esters
+PO-001110,2026-03-06,2026Q1,Titanium Dioxide,616.54,284.2,Deccan Molecules,Japan,15.45,Pigments,Oxides
+PO-001111,2026-02-21,2026Q1,Polypropylene Resin,1358.65,118.41,Unity Industrial Partners,South Korea,9.74,Polymers,Polyolefins
+PO-001112,2026-02-25,2026Q1,Urea,2260.82,33.69,Trident ChemWorks,Thailand,2.32,Agrochemicals,Nitrogen Compounds
+PO-001113,2026-02-22,2026Q1,Polyethylene Resin,2572.43,133.21,Evergreen Materials,Singapore,10.73,Polymers,Polyolefins
+PO-001114,2026-02-08,2026Q1,Polyethylene Resin,2615.65,128.67,Summit Process Supply,Singapore,7.84,Polymers,Polyolefins
+PO-001115,2026-02-22,2026Q1,Glycerine,601.72,98.78,Quartz Materials India,South Korea,2.7,Specialty Chemicals,Polyols
+PO-001116,2026-01-24,2026Q1,Glycerine,2698.74,87.76,Frontier Chemical Co,India,0.0,Specialty Chemicals,Polyols
+PO-001117,2026-03-28,2026Q1,Glycerine,698.96,144.01,Quartz Materials India,Germany,8.45,Specialty Chemicals,Polyols
+PO-001118,2026-01-25,2026Q1,Citric Acid,2406.21,85.9,Kaveri Trading,China,7.89,Specialty Chemicals,Organic Acids
+PO-001119,2026-01-06,2026Q1,Urea,597.35,36.24,Eastern ChemSource,Japan,1.48,Agrochemicals,Nitrogen Compounds
+PO-001120,2026-02-03,2026Q1,Polyethylene Resin,419.16,125.34,Indus Industrial Solutions,Singapore,4.09,Polymers,Polyolefins
+PO-001121,2026-01-02,2026Q1,Acetone,4314.33,77.48,Global Process Partners,UAE,2.84,Solvents,Ketones
+PO-001122,2026-02-28,2026Q1,Ethyl Acetate,22987.64,103.3,Coastal Industrial Supply,India,0.0,Solvents,Esters
+PO-001123,2026-03-19,2026Q1,Acetone,685.86,87.59,Oceanic Ingredients,India,0.0,Solvents,Ketones
+PO-001124,2026-02-24,2026Q1,Ethyl Acetate,16533.97,95.53,Deccan Molecules,Thailand,3.88,Solvents,Esters
+PO-001125,2026-02-24,2026Q1,Sulphuric Acid,5098.81,8.52,Quartz Materials India,Thailand,0.78,Inorganic Chemicals,Mineral Acids
+PO-001126,2026-02-18,2026Q1,Hydrochloric Acid,25920.6,12.08,Westport Materials,China,0.81,Inorganic Chemicals,Mineral Acids
+PO-001127,2026-03-19,2026Q1,Methanol,5678.57,37.01,Deccan Molecules,Singapore,1.0,Solvents,Alcohols
+PO-001128,2026-01-28,2026Q1,Methanol,968.07,32.13,Frontier Chemical Co,UAE,1.83,Solvents,Alcohols
+PO-001129,2026-01-05,2026Q1,Toluene,5457.43,87.44,Summit Process Supply,Thailand,4.86,Solvents,Aromatics
+PO-001130,2026-02-18,2026Q1,Carbon Black,1231.74,120.11,Bharat Specialities,Singapore,5.22,Pigments,Carbon Materials
+PO-001131,2026-01-16,2026Q1,Caustic Soda,908.39,38.05,Quartz Materials India,India,0.0,Inorganic Chemicals,Alkalis
+PO-001132,2026-03-19,2026Q1,Polypropylene Resin,4573.82,126.92,Deccan Molecules,South Korea,3.95,Polymers,Polyolefins
+PO-001133,2026-03-25,2026Q1,Sulphuric Acid,1121.03,9.79,Summit Process Supply,UAE,0.48,Inorganic Chemicals,Mineral Acids
+PO-001134,2026-01-28,2026Q1,Glycerine,7113.72,96.89,Meridian ChemLink,Thailand,6.93,Specialty Chemicals,Polyols
+PO-001135,2026-02-02,2026Q1,Caustic Soda,5945.18,40.25,Indus Industrial Solutions,Singapore,3.09,Inorganic Chemicals,Alkalis
+PO-001136,2026-01-18,2026Q1,Polypropylene Resin,24001.99,113.86,Unity Industrial Partners,South Korea,9.24,Polymers,Polyolefins
+PO-001137,2026-02-28,2026Q1,Glycerine,1181.38,95.38,Vantage Chemical Supply,Singapore,8.61,Specialty Chemicals,Polyols
+PO-001138,2026-01-13,2026Q1,Urea,23963.98,28.32,Evergreen Materials,China,2.25,Agrochemicals,Nitrogen Compounds
+PO-001139,2026-03-28,2026Q1,Carbon Black,4570.67,116.77,Lotus Raw Materials,Thailand,4.57,Pigments,Carbon Materials
+PO-001140,2026-03-22,2026Q1,Carbon Black,6845.96,128.36,Westport Materials,UAE,3.6,Pigments,Carbon Materials
+PO-001141,2026-02-08,2026Q1,Citric Acid,627.37,95.54,Eastern ChemSource,Japan,3.35,Specialty Chemicals,Organic Acids
+PO-001142,2026-02-25,2026Q1,Sodium Carbonate,6548.26,32.54,Pioneer Chemical House,Germany,2.21,Inorganic Chemicals,Carbonates
+PO-001143,2026-01-30,2026Q1,Polypropylene Resin,22576.33,104.85,Vantage Chemical Supply,China,5.01,Polymers,Polyolefins
+PO-001144,2026-01-05,2026Q1,Carbon Black,11914.84,124.33,Bharat Specialities,South Korea,4.29,Pigments,Carbon Materials
+PO-001145,2026-02-12,2026Q1,Urea,27206.23,31.18,Coastal Industrial Supply,Singapore,0.91,Agrochemicals,Nitrogen Compounds
+PO-001146,2026-01-15,2026Q1,Carbon Black,553.8,115.79,Global Process Partners,Thailand,8.31,Pigments,Carbon Materials
+PO-001147,2026-01-22,2026Q1,Ethyl Acetate,602.58,113.51,Jupiter Fine Chemicals,South Korea,7.02,Solvents,Esters
+PO-001148,2026-01-25,2026Q1,Toluene,5733.14,79.2,Horizon Petrochem,China,7.44,Solvents,Aromatics
+PO-001149,2026-01-30,2026Q1,Acetone,5036.26,71.88,Eastern ChemSource,Thailand,7.49,Solvents,Ketones
+PO-001150,2026-02-13,2026Q1,Citric Acid,11635.19,91.27,Kaveri Trading,China,7.87,Specialty Chemicals,Organic Acids
+PO-001151,2026-02-24,2026Q1,Ethyl Acetate,6045.21,103.28,Bharat Specialities,India,0.0,Solvents,Esters
+PO-001152,2026-03-23,2026Q1,Glycerine,457.49,119.14,Nexus Bulk Supply,South Korea,2.85,Specialty Chemicals,Polyols
+PO-001153,2026-04-10,2026Q2,Epoxy Resin,1413.71,248.75,Eastern ChemSource,Singapore,19.25,Polymers,Thermosets
+PO-001154,2026-05-30,2026Q2,Carbon Black,2587.1,138.02,Evergreen Materials,Germany,10.57,Pigments,Carbon Materials
+PO-001155,2026-06-21,2026Q2,Urea,2004.99,35.02,Meridian ChemLink,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-001156,2026-04-17,2026Q2,Carbon Black,2527.21,117.29,Global Process Partners,Thailand,9.01,Pigments,Carbon Materials
+PO-001157,2026-05-19,2026Q2,Polyethylene Resin,6953.12,136.32,Global Process Partners,UAE,7.28,Polymers,Polyolefins
+PO-001158,2026-04-23,2026Q2,Carbon Black,478.51,143.59,Westport Materials,Germany,4.86,Pigments,Carbon Materials
+PO-001159,2026-04-29,2026Q2,Glycerine,6047.52,116.56,Oceanic Ingredients,South Korea,7.57,Specialty Chemicals,Polyols
+PO-001160,2026-05-06,2026Q2,Titanium Dioxide,11677.63,450.6,Westport Materials,South Korea,19.33,Pigments,Oxides
+PO-001161,2026-05-17,2026Q2,Ethyl Acetate,2104.56,99.24,Eastern ChemSource,Thailand,6.3,Solvents,Esters
+PO-001162,2026-04-08,2026Q2,Caustic Soda,6372.91,39.12,Oceanic Ingredients,China,2.79,Inorganic Chemicals,Alkalis
+PO-001163,2026-04-25,2026Q2,Caustic Soda,4444.31,39.59,Quartz Materials India,Thailand,2.47,Inorganic Chemicals,Alkalis
+PO-001164,2026-05-03,2026Q2,Polyethylene Resin,528.09,137.47,Summit Process Supply,Singapore,7.47,Polymers,Polyolefins
+PO-001165,2026-04-12,2026Q2,Polyethylene Resin,19642.05,171.74,Global Process Partners,Thailand,6.71,Polymers,Polyolefins
+PO-001166,2026-04-01,2026Q2,Urea,572.93,29.7,Summit Process Supply,China,1.38,Agrochemicals,Nitrogen Compounds
+PO-001167,2026-04-30,2026Q2,Sodium Carbonate,16703.93,30.91,Eastern ChemSource,Singapore,2.41,Inorganic Chemicals,Carbonates
+PO-001168,2026-05-27,2026Q2,Sodium Carbonate,4996.81,39.27,Kaveri Trading,Germany,2.29,Inorganic Chemicals,Carbonates
+PO-001169,2026-05-06,2026Q2,Toluene,11166.75,80.73,Unity Industrial Partners,China,4.86,Solvents,Aromatics
+PO-001170,2026-05-06,2026Q2,Ethyl Acetate,6722.01,114.71,Vantage Chemical Supply,UAE,4.3,Solvents,Esters
+PO-001171,2026-05-29,2026Q2,Sulphuric Acid,1147.01,8.66,Ridgeway Chemicals,China,0.78,Inorganic Chemicals,Mineral Acids
+PO-001172,2026-05-20,2026Q2,Citric Acid,690.91,89.78,Lotus Raw Materials,Singapore,2.75,Specialty Chemicals,Organic Acids
+PO-001173,2026-05-10,2026Q2,Toluene,5330.34,92.85,Summit Process Supply,India,0.0,Solvents,Aromatics
+PO-001174,2026-06-14,2026Q2,Glycerine,17122.79,100.38,Meridian ChemLink,Thailand,6.72,Specialty Chemicals,Polyols
+PO-001175,2026-04-21,2026Q2,Urea,12369.36,34.2,Eastern ChemSource,Thailand,0.94,Agrochemicals,Nitrogen Compounds
+PO-001176,2026-04-18,2026Q2,Carbon Black,4631.64,128.98,Eastern ChemSource,South Korea,4.72,Pigments,Carbon Materials
+PO-001177,2026-05-12,2026Q2,Acetone,517.66,75.15,Global Process Partners,China,4.51,Solvents,Ketones
+PO-001178,2026-05-14,2026Q2,Carbon Black,664.95,117.24,Global Process Partners,Thailand,8.52,Pigments,Carbon Materials
+PO-001179,2026-04-10,2026Q2,Glycerine,14086.43,119.13,Oceanic Ingredients,South Korea,7.41,Specialty Chemicals,Polyols
+PO-001180,2026-04-10,2026Q2,Caustic Soda,22777.85,35.21,Indus Industrial Solutions,China,4.01,Inorganic Chemicals,Alkalis
+PO-001181,2026-06-13,2026Q2,Carbon Black,1833.1,112.19,Lotus Raw Materials,Thailand,4.59,Pigments,Carbon Materials
+PO-001182,2026-04-02,2026Q2,Carbon Black,25284.58,119.82,Lotus Raw Materials,Thailand,4.38,Pigments,Carbon Materials
+PO-001183,2026-04-08,2026Q2,Citric Acid,22731.2,82.99,Summit Process Supply,Thailand,3.7,Specialty Chemicals,Organic Acids
+PO-001184,2026-05-25,2026Q2,Epoxy Resin,10278.82,226.43,Eastern ChemSource,Thailand,16.78,Polymers,Thermosets
+PO-001185,2026-05-30,2026Q2,Sulphuric Acid,2415.1,9.34,Westport Materials,China,0.67,Inorganic Chemicals,Mineral Acids
+PO-001186,2026-06-26,2026Q2,Toluene,26876.46,87.04,Quartz Materials India,UAE,7.6,Solvents,Aromatics
+PO-001187,2026-04-12,2026Q2,Sulphuric Acid,20375.98,8.53,Quartz Materials India,Thailand,0.81,Inorganic Chemicals,Mineral Acids
+PO-001188,2026-04-09,2026Q2,Citric Acid,6048.33,151.02,Bharat Specialities,Japan,4.48,Specialty Chemicals,Organic Acids
+PO-001189,2026-05-16,2026Q2,Methanol,1032.75,39.63,Jupiter Fine Chemicals,Japan,1.26,Solvents,Alcohols
+PO-001190,2026-05-01,2026Q2,Methanol,2248.63,36.4,Deccan Molecules,South Korea,1.84,Solvents,Alcohols
+PO-001191,2026-04-03,2026Q2,Titanium Dioxide,6415.33,293.1,Trident ChemWorks,Thailand,21.64,Pigments,Oxides
+PO-001192,2026-06-15,2026Q2,Sodium Carbonate,1930.18,38.66,Kaveri Trading,Germany,2.22,Inorganic Chemicals,Carbonates
+PO-001193,2026-04-11,2026Q2,Epoxy Resin,928.85,279.91,Oceanic Ingredients,Singapore,15.12,Polymers,Thermosets
+PO-001194,2026-05-14,2026Q2,Carbon Black,22957.92,121.77,Bharat Specialities,South Korea,4.18,Pigments,Carbon Materials
+PO-001195,2026-06-17,2026Q2,Polyethylene Resin,1334.78,133.93,Summit Process Supply,Singapore,13.11,Polymers,Polyolefins
+PO-001196,2026-04-16,2026Q2,Ethyl Acetate,14055.18,106.08,Bharat Specialities,India,0.0,Solvents,Esters
+PO-001197,2026-05-09,2026Q2,Glycerine,1323.51,107.69,Quartz Materials India,Germany,20.29,Specialty Chemicals,Polyols
+PO-001198,2026-06-24,2026Q2,Sulphuric Acid,6467.19,10.06,Aarav Chemtrade,Germany,0.28,Inorganic Chemicals,Mineral Acids
+PO-001199,2026-05-18,2026Q2,Toluene,1847.39,96.65,Frontier Chemical Co,Japan,7.76,Solvents,Aromatics
+PO-001200,2026-05-08,2026Q2,Polyethylene Resin,12424.64,168.64,Trident ChemWorks,Japan,9.78,Polymers,Polyolefins
+PO-001201,2026-06-07,2026Q2,Polyethylene Resin,1085.65,142.97,Jupiter Fine Chemicals,South Korea,4.0,Polymers,Polyolefins
+PO-001202,2026-06-18,2026Q2,Titanium Dioxide,1347.79,315.41,Oceanic Ingredients,Japan,9.89,Pigments,Oxides
+PO-001203,2026-05-16,2026Q2,Sodium Carbonate,21658.15,37.04,Kaveri Trading,Japan,2.03,Inorganic Chemicals,Carbonates
+PO-001204,2026-04-09,2026Q2,Ethyl Acetate,1333.14,113.3,Vantage Chemical Supply,UAE,4.09,Solvents,Esters
+PO-001205,2026-06-12,2026Q2,Citric Acid,504.8,90.01,Bharat Specialities,South Korea,2.53,Specialty Chemicals,Organic Acids
+PO-001206,2026-06-04,2026Q2,Caustic Soda,13025.22,39.99,Eastern ChemSource,India,0.0,Inorganic Chemicals,Alkalis
+PO-001207,2026-04-27,2026Q2,Citric Acid,22297.01,91.45,Trident ChemWorks,India,0.0,Specialty Chemicals,Organic Acids
+PO-001208,2026-04-13,2026Q2,Sodium Carbonate,6718.11,28.37,Unity Industrial Partners,South Korea,0.72,Inorganic Chemicals,Carbonates
+PO-001209,2026-05-23,2026Q2,Citric Acid,13004.6,103.65,Ridgeway Chemicals,Germany,5.36,Specialty Chemicals,Organic Acids
+PO-001210,2026-04-01,2026Q2,Sodium Carbonate,22788.16,31.85,Deccan Molecules,Germany,2.34,Inorganic Chemicals,Carbonates
+PO-001211,2026-05-24,2026Q2,Glycerine,1170.92,119.04,Vantage Chemical Supply,Germany,7.76,Specialty Chemicals,Polyols
+PO-001212,2026-05-26,2026Q2,Epoxy Resin,1154.95,231.24,Jupiter Fine Chemicals,India,0.0,Polymers,Thermosets
+PO-001213,2026-05-29,2026Q2,Sulphuric Acid,23415.01,10.53,Summit Process Supply,Germany,0.77,Inorganic Chemicals,Mineral Acids
+PO-001214,2026-05-10,2026Q2,Epoxy Resin,631.3,246.94,Global Process Partners,UAE,4.58,Polymers,Thermosets
+PO-001215,2026-05-01,2026Q2,Sulphuric Acid,25614.7,12.06,Nexus Bulk Supply,South Korea,0.63,Inorganic Chemicals,Mineral Acids
+PO-001216,2026-06-28,2026Q2,Ethyl Acetate,1973.18,108.72,Evergreen Materials,Thailand,3.67,Solvents,Esters
+PO-001217,2026-04-19,2026Q2,Hydrochloric Acid,1016.14,14.93,Summit Process Supply,Germany,0.56,Inorganic Chemicals,Mineral Acids
+PO-001218,2026-05-22,2026Q2,Ethyl Acetate,485.39,110.8,Global Process Partners,UAE,7.61,Solvents,Esters
+PO-001219,2026-04-01,2026Q2,Acetone,9118.42,75.19,Global Process Partners,China,4.0,Solvents,Ketones
+PO-001220,2026-05-08,2026Q2,Glycerine,2741.9,106.8,Westport Materials,Singapore,5.09,Specialty Chemicals,Polyols
+PO-001221,2026-06-12,2026Q2,Polypropylene Resin,4407.54,154.82,Meridian ChemLink,Germany,2.67,Polymers,Polyolefins
+PO-001222,2026-06-26,2026Q2,Sodium Carbonate,633.3,39.25,Kaveri Trading,Germany,2.22,Inorganic Chemicals,Carbonates
+PO-001223,2026-06-23,2026Q2,Methanol,689.96,34.8,Quartz Materials India,UAE,2.43,Solvents,Alcohols
+PO-001224,2026-05-15,2026Q2,Ethyl Acetate,853.9,117.35,Deccan Molecules,South Korea,7.54,Solvents,Esters
+PO-001225,2026-04-07,2026Q2,Toluene,441.47,83.21,Indus Industrial Solutions,China,1.84,Solvents,Aromatics
+PO-001226,2026-06-07,2026Q2,Urea,24127.41,39.98,Westport Materials,South Korea,1.23,Agrochemicals,Nitrogen Compounds
+PO-001227,2026-05-15,2026Q2,Methanol,6124.32,38.12,Jupiter Fine Chemicals,Japan,1.14,Solvents,Alcohols
+PO-001228,2026-04-08,2026Q2,Polyethylene Resin,1903.17,128.01,Global Process Partners,Thailand,6.47,Polymers,Polyolefins
+PO-001229,2026-05-21,2026Q2,Caustic Soda,11839.4,43.78,Jupiter Fine Chemicals,South Korea,2.45,Inorganic Chemicals,Alkalis
+PO-001230,2026-04-29,2026Q2,Citric Acid,8469.65,86.09,Horizon Petrochem,Japan,10.85,Specialty Chemicals,Organic Acids
+PO-001231,2026-04-04,2026Q2,Ethyl Acetate,27871.49,95.81,Deccan Molecules,Thailand,3.32,Solvents,Esters
+PO-001232,2026-05-15,2026Q2,Urea,1314.06,33.99,Trident ChemWorks,Thailand,2.13,Agrochemicals,Nitrogen Compounds
+PO-001233,2026-04-16,2026Q2,Methanol,12893.01,33.54,Evergreen Materials,India,0.0,Solvents,Alcohols
+PO-001234,2026-05-17,2026Q2,Polypropylene Resin,28205.52,125.05,Deccan Molecules,Singapore,4.83,Polymers,Polyolefins
+PO-001235,2026-06-01,2026Q2,Sodium Carbonate,26213.91,29.9,Vantage Chemical Supply,UAE,2.5,Inorganic Chemicals,Carbonates
+PO-001236,2026-05-23,2026Q2,Methanol,4850.29,40.39,Eastern ChemSource,Germany,2.78,Solvents,Alcohols
+PO-001237,2026-06-15,2026Q2,Acetone,967.21,68.06,Unity Industrial Partners,China,6.69,Solvents,Ketones
+PO-001238,2026-06-11,2026Q2,Caustic Soda,2589.2,38.34,Quartz Materials India,India,0.0,Inorganic Chemicals,Alkalis
+PO-001239,2026-05-16,2026Q2,Polypropylene Resin,5905.39,132.64,Lotus Raw Materials,South Korea,4.13,Polymers,Polyolefins
+PO-001240,2026-04-10,2026Q2,Polypropylene Resin,28453.97,134.48,Vantage Chemical Supply,South Korea,8.67,Polymers,Polyolefins
+PO-001241,2026-06-16,2026Q2,Carbon Black,1389.58,142.22,Westport Materials,Japan,7.31,Pigments,Carbon Materials
+PO-001242,2026-05-11,2026Q2,Epoxy Resin,1790.0,265.32,Oceanic Ingredients,Singapore,16.47,Polymers,Thermosets
+PO-001243,2026-06-17,2026Q2,Sodium Carbonate,5229.26,29.43,Unity Industrial Partners,Japan,1.63,Inorganic Chemicals,Carbonates
+PO-001244,2026-06-14,2026Q2,Citric Acid,9003.57,88.66,Eastern ChemSource,India,0.0,Specialty Chemicals,Organic Acids
+PO-001245,2026-06-20,2026Q2,Sulphuric Acid,26740.73,8.55,Quartz Materials India,Thailand,0.83,Inorganic Chemicals,Mineral Acids
+PO-001246,2026-06-27,2026Q2,Sodium Carbonate,1080.49,34.34,Vantage Chemical Supply,Germany,0.58,Inorganic Chemicals,Carbonates
+PO-001247,2026-05-21,2026Q2,Methanol,13290.59,34.32,Evergreen Materials,India,0.0,Solvents,Alcohols
+PO-001248,2026-06-22,2026Q2,Titanium Dioxide,1063.73,247.76,Aarav Chemtrade,Thailand,6.44,Pigments,Oxides
+PO-001249,2026-04-30,2026Q2,Citric Acid,1217.25,80.45,Summit Process Supply,Thailand,3.7,Specialty Chemicals,Organic Acids
+PO-001250,2026-06-27,2026Q2,Caustic Soda,1154.72,41.64,Evergreen Materials,India,0.0,Inorganic Chemicals,Alkalis
+PO-001251,2026-04-28,2026Q2,Citric Acid,28314.23,99.37,Ridgeway Chemicals,Germany,4.82,Specialty Chemicals,Organic Acids
+PO-001252,2026-04-20,2026Q2,Carbon Black,676.91,135.01,Lotus Raw Materials,Japan,10.94,Pigments,Carbon Materials
+PO-001253,2026-04-04,2026Q2,Carbon Black,593.97,141.42,Westport Materials,Germany,2.19,Pigments,Carbon Materials
+PO-001254,2026-04-26,2026Q2,Methanol,9369.03,37.91,Deccan Molecules,Singapore,0.94,Solvents,Alcohols
+PO-001255,2026-06-11,2026Q2,Caustic Soda,1293.58,41.97,Jupiter Fine Chemicals,South Korea,2.33,Inorganic Chemicals,Alkalis
+PO-001256,2026-04-21,2026Q2,Urea,2004.64,35.55,Trident ChemWorks,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-001257,2026-04-27,2026Q2,Carbon Black,2678.03,111.91,Bharat Specialities,Thailand,3.32,Pigments,Carbon Materials
+PO-001258,2026-05-04,2026Q2,Polypropylene Resin,603.44,143.06,Coastal Industrial Supply,Japan,10.89,Polymers,Polyolefins
+PO-001259,2026-04-16,2026Q2,Polyethylene Resin,709.45,154.63,Trident ChemWorks,Japan,9.86,Polymers,Polyolefins
+PO-001260,2026-04-19,2026Q2,Sodium Carbonate,2704.86,26.76,Unity Industrial Partners,Singapore,0.73,Inorganic Chemicals,Carbonates
+PO-001261,2026-05-02,2026Q2,Polyethylene Resin,9775.4,133.12,Global Process Partners,UAE,8.01,Polymers,Polyolefins
+PO-001262,2026-04-08,2026Q2,Polypropylene Resin,26629.47,133.69,Vantage Chemical Supply,South Korea,9.03,Polymers,Polyolefins
+PO-001263,2026-05-15,2026Q2,Hydrochloric Acid,10519.66,11.75,Unity Industrial Partners,South Korea,0.42,Inorganic Chemicals,Mineral Acids
+PO-001264,2026-05-08,2026Q2,Carbon Black,691.49,178.58,Lotus Raw Materials,Germany,4.02,Pigments,Carbon Materials
+PO-001265,2026-05-06,2026Q2,Epoxy Resin,5114.35,227.53,Quartz Materials India,Singapore,22.94,Polymers,Thermosets
+PO-001266,2026-05-01,2026Q2,Carbon Black,1861.08,203.65,Evergreen Materials,Germany,9.88,Pigments,Carbon Materials
+PO-001267,2026-06-11,2026Q2,Toluene,10442.6,90.48,Summit Process Supply,Thailand,5.28,Solvents,Aromatics
+PO-001268,2026-04-24,2026Q2,Acetone,18657.57,83.53,Bharat Specialities,UAE,7.3,Solvents,Ketones
+PO-001269,2026-05-27,2026Q2,Polyethylene Resin,18334.2,133.06,Evergreen Materials,Singapore,11.12,Polymers,Polyolefins
+PO-001270,2026-05-11,2026Q2,Carbon Black,18439.12,117.66,Global Process Partners,Thailand,8.04,Pigments,Carbon Materials
+PO-001271,2026-04-26,2026Q2,Ethyl Acetate,688.0,112.02,Deccan Molecules,Singapore,9.09,Solvents,Esters
+PO-001272,2026-04-16,2026Q2,Urea,674.03,32.88,Meridian ChemLink,China,2.89,Agrochemicals,Nitrogen Compounds
+PO-001273,2026-04-02,2026Q2,Sodium Carbonate,653.98,26.91,Jupiter Fine Chemicals,China,0.72,Inorganic Chemicals,Carbonates
+PO-001274,2026-05-29,2026Q2,Sodium Carbonate,6566.27,35.98,Pioneer Chemical House,Germany,2.29,Inorganic Chemicals,Carbonates
+PO-001275,2026-06-07,2026Q2,Hydrochloric Acid,1802.08,13.43,Westport Materials,Singapore,0.85,Inorganic Chemicals,Mineral Acids
+PO-001276,2026-04-28,2026Q2,Methanol,26465.88,35.46,Deccan Molecules,Singapore,1.02,Solvents,Alcohols
+PO-001277,2026-05-23,2026Q2,Citric Acid,1383.87,87.99,Bharat Specialities,South Korea,2.2,Specialty Chemicals,Organic Acids
+PO-001278,2026-04-24,2026Q2,Acetone,6501.4,92.53,Summit Process Supply,Japan,5.36,Solvents,Ketones
+PO-001279,2026-05-11,2026Q2,Toluene,1180.09,100.26,Vantage Chemical Supply,UAE,6.2,Solvents,Aromatics
+PO-001280,2026-05-28,2026Q2,Urea,2809.9,37.65,Westport Materials,South Korea,1.17,Agrochemicals,Nitrogen Compounds
+PO-001281,2026-06-04,2026Q2,Acetone,11409.55,84.69,Global Process Partners,Singapore,2.46,Solvents,Ketones
+PO-001282,2026-05-18,2026Q2,Epoxy Resin,17511.9,302.46,Trident ChemWorks,Japan,15.48,Polymers,Thermosets
+PO-001283,2026-04-16,2026Q2,Glycerine,1172.78,111.72,Quartz Materials India,Germany,9.1,Specialty Chemicals,Polyols
+PO-001284,2026-05-09,2026Q2,Glycerine,14387.57,97.14,Meridian ChemLink,Thailand,7.46,Specialty Chemicals,Polyols
+PO-001285,2026-05-28,2026Q2,Urea,1852.37,32.87,Deccan Molecules,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-001286,2026-06-09,2026Q2,Citric Acid,1359.74,83.86,Coastal Industrial Supply,Thailand,1.54,Specialty Chemicals,Organic Acids
+PO-001287,2026-04-03,2026Q2,Toluene,5328.04,93.65,Summit Process Supply,Singapore,1.82,Solvents,Aromatics
+PO-001288,2026-05-15,2026Q2,Sulphuric Acid,6399.16,10.94,Evergreen Materials,Germany,0.38,Inorganic Chemicals,Mineral Acids
+PO-001289,2026-06-08,2026Q2,Polypropylene Resin,1278.9,130.27,Deccan Molecules,Singapore,4.3,Polymers,Polyolefins
+PO-001290,2026-05-18,2026Q2,Urea,19736.78,31.07,Deccan Molecules,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-001291,2026-05-19,2026Q2,Methanol,11644.87,39.61,Ridgeway Chemicals,South Korea,1.4,Solvents,Alcohols
+PO-001292,2026-04-27,2026Q2,Epoxy Resin,892.19,216.67,Ridgeway Chemicals,China,17.59,Polymers,Thermosets
+PO-001293,2026-06-05,2026Q2,Sodium Carbonate,10987.62,28.04,Unity Industrial Partners,Japan,1.81,Inorganic Chemicals,Carbonates
+PO-001294,2026-04-10,2026Q2,Hydrochloric Acid,1406.19,12.54,Deccan Molecules,Singapore,0.62,Inorganic Chemicals,Mineral Acids
+PO-001295,2026-04-21,2026Q2,Acetone,12102.63,83.22,Summit Process Supply,Germany,4.73,Solvents,Ketones
+PO-001296,2026-04-20,2026Q2,Carbon Black,5856.73,131.8,Westport Materials,Germany,2.43,Pigments,Carbon Materials
+PO-001297,2026-06-29,2026Q2,Urea,2018.17,33.46,Meridian ChemLink,India,0.0,Agrochemicals,Nitrogen Compounds
+PO-001298,2026-05-20,2026Q2,Sodium Carbonate,1829.49,29.68,Deccan Molecules,Singapore,0.79,Inorganic Chemicals,Carbonates
+PO-001299,2026-06-16,2026Q2,Carbon Black,2255.4,124.7,Westport Materials,UAE,3.75,Pigments,Carbon Materials
+PO-001300,2026-04-03,2026Q2,Polypropylene Resin,885.48,132.6,Deccan Molecules,Japan,6.86,Polymers,Polyolefins
+PO-001301,2026-06-12,2026Q2,Citric Acid,5334.89,96.47,Kaveri Trading,Thailand,7.9,Specialty Chemicals,Organic Acids
+PO-001302,2026-04-23,2026Q2,Methanol,17938.2,35.64,Quartz Materials India,UAE,2.55,Solvents,Alcohols
+PO-001303,2026-05-29,2026Q2,Urea,503.45,34.62,Trident ChemWorks,Thailand,1.96,Agrochemicals,Nitrogen Compounds
+PO-001304,2026-05-09,2026Q2,Caustic Soda,1047.63,40.77,Oceanic Ingredients,Thailand,2.05,Inorganic Chemicals,Alkalis
+PO-001305,2026-04-28,2026Q2,Epoxy Resin,1955.31,288.86,Oceanic Ingredients,South Korea,17.31,Polymers,Thermosets
+PO-001306,2026-06-02,2026Q2,Epoxy Resin,5155.19,411.72,Eastern ChemSource,Singapore,16.0,Polymers,Thermosets
+PO-001307,2026-05-25,2026Q2,Methanol,610.9,39.26,Westport Materials,UAE,3.55,Solvents,Alcohols
+PO-001308,2026-05-24,2026Q2,Polyethylene Resin,11563.33,132.3,Global Process Partners,UAE,7.96,Polymers,Polyolefins
+PO-001309,2026-05-13,2026Q2,Toluene,1363.32,86.54,Unity Industrial Partners,China,4.78,Solvents,Aromatics
+PO-001310,2026-06-28,2026Q2,Sodium Carbonate,13181.17,28.22,Unity Industrial Partners,Singapore,0.72,Inorganic Chemicals,Carbonates
+PO-001311,2026-05-03,2026Q2,Methanol,23212.5,35.0,Frontier Chemical Co,UAE,1.9,Solvents,Alcohols
+PO-001312,2026-05-14,2026Q2,Citric Acid,12770.28,99.89,Eastern ChemSource,Japan,3.36,Specialty Chemicals,Organic Acids
+PO-001313,2026-05-02,2026Q2,Polyethylene Resin,1265.69,120.89,Evergreen Materials,China,10.22,Polymers,Polyolefins
+PO-001314,2026-04-21,2026Q2,Polypropylene Resin,1944.74,128.81,Deccan Molecules,South Korea,3.52,Polymers,Polyolefins
+PO-001315,2026-06-20,2026Q2,Sulphuric Acid,2137.48,8.48,Evergreen Materials,Thailand,0.45,Inorganic Chemicals,Mineral Acids

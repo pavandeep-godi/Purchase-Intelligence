@@ -1,0 +1,65 @@
+PURCHASE INTELLIGENCE — PURCHASE & VENDOR SPEND SUMMARY
+==============================================================
+
+EXECUTIVE SUMMARY
+The analysis covers 1,315 valid purchase lines across 24 vendors and 16 materials. Total landed spend is ₹949,482,003; indicative comparable-offer savings are ₹90,339,754 (9.5% of landed spend). Opportunities are directional and require procurement, quality, and capacity review.
+Analysis source: Groq analysis with Python reconciliation
+
+KEY METRICS (Groq-calculated where reconciled; otherwise Python fallback)
+Purchase rows in source file: 1,315
+Valid purchase lines used: 1,315
+Excluded invalid purchase lines: 0
+Vendors / materials: 24 / 16
+Quantity purchased: 9,235,008 kg
+Material spend: ₹907,292,732.98
+Freight spend: ₹42,189,270.10
+Landed spend (material + freight): ₹949,482,003.08
+Freight share of landed spend: 4.44%
+Average landed cost: ₹102.81/kg
+Indicative combined offer savings: ₹90,339,753.95
+Savings / landed spend: 9.51%
+Comparable quote coverage: 100.00%
+
+DATA QUALITY & ANOMALIES
+- 37 lines have price more than 25% from quote or freight more than 50% above quote; review as potential leakage or stale quotes.
+- 12 lines exceed 1.5× their material's median price; verify for unusual rates.
+
+GROQ VALIDATION & DASHBOARD METRIC REVIEW
+Status: Groq review completed; 15/15 KPI values reconciled to Python. Chart series are row-level Python aggregations reviewed in the Groq analysis.
+KPI values reconciled: 15/15
+Chart series source: Python row-level aggregation, reviewed by Groq.
+Executive narrative contains no unverified numeric claims: Python-generated fallback.
+Additional LLM findings (review before action):
+- A subset of purchase lines shows significant deviations from quoted prices or freight, indicating potential leakage or stale quotes.
+- A small number of lines exceed the median price for their material, warranting further review for unusual rates.
+- All purchase rows have comparable vendor offers, ensuring full coverage for savings analysis.
+LLM calculation checks:
+- None returned.
+Metric reconciliation detail:
+- purchase_rows_in_file: PASS (Groq=1315.0, Python=1315)
+- valid_purchase_lines: PASS (Groq=1315.0, Python=1315)
+- excluded_purchase_rows: PASS (Groq=0.0, Python=0)
+- vendor_count: PASS (Groq=24.0, Python=24)
+- material_count: PASS (Groq=16.0, Python=16)
+- total_quantity_kg: PASS (Groq=9235007.63, Python=9235007.629999999)
+- material_spend_inr: PASS (Groq=907292732.98, Python=907292732.9777)
+- freight_spend_inr: PASS (Groq=42189270.1, Python=42189270.102)
+- landed_spend_inr: PASS (Groq=949482003.08, Python=949482003.0797)
+- freight_share_pct: PASS (Groq=4.44, Python=4.443398607362399)
+- average_landed_cost_per_kg_inr: PASS (Groq=102.81, Python=102.81334256782851)
+- combined_addressable_savings_inr: PASS (Groq=90339753.95, Python=90339753.9459)
+- savings_as_pct_of_landed_spend: PASS (Groq=9.51, Python=9.514635733260636)
+- lines_with_comparable_offer: PASS (Groq=1315.0, Python=1315)
+- comparable_offer_coverage_pct: PASS (Groq=100.0, Python=100.0)
+Dashboard insights:
+- Certain chemical categories and materials present the highest opportunities for cost reduction through better vendor negotiation.
+- Vendor performance varies significantly, with some vendors showing higher average landed costs and larger savings potential.
+- Quarterly trends indicate fluctuations in spend and cost per kilogram, suggesting opportunities for timing and volume optimization.
+
+ARITHMETIC VALIDATION
+Landed spend = material + freight: PASS (difference ₹0.00)
+Savings recompute from unit rate × kg: PASS (difference ₹0.00)
+Valid line count ≤ source row count: PASS
+
+SAVINGS METHOD & LIMITATIONS
+Price, freight, and combined landed-cost savings compare each purchase only with quoted offers for the same material and source country. The combined opportunity uses the lowest quoted landed cost, so it is not the sum of independently best price and freight opportunities. Estimates assume comparable supply is available and exclude switching, qualification, tax/duty, FX, quality, capacity, lead-time, and contract costs. Review quotes before action.

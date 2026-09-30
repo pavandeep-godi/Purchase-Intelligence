@@ -1,0 +1,584 @@
+{
+  "summary": {
+    "purchase_rows_in_file": 1315,
+    "valid_purchase_lines": 1315,
+    "excluded_purchase_rows": 0,
+    "vendor_count": 24,
+    "material_count": 16,
+    "total_quantity_kg": 9235007.629999999,
+    "material_spend_inr": 907292732.9777,
+    "freight_spend_inr": 42189270.102,
+    "landed_spend_inr": 949482003.0797,
+    "freight_share_pct": 4.443398607362399,
+    "average_landed_cost_per_kg_inr": 102.81334256782851,
+    "combined_addressable_savings_inr": 90339753.9459,
+    "savings_as_pct_of_landed_spend": 9.514635733260636,
+    "lines_with_comparable_offer": 1315,
+    "comparable_offer_coverage_pct": 100.0
+  },
+  "validations": {
+    "landed_spend_equals_material_plus_freight": true,
+    "landed_spend_reconciliation_delta_inr": 0.0,
+    "combined_savings_recomputed_from_unit_rates": true,
+    "combined_savings_recalculation_delta_inr": 0.0,
+    "valid_lines_do_not_exceed_file_rows": true
+  },
+  "quality": {
+    "findings": [
+      "37 lines have price more than 25% from quote or freight more than 50% above quote; review as potential leakage or stale quotes.",
+      "12 lines exceed 1.5× their material's median price; verify for unusual rates."
+    ],
+    "purchase_rows": 1315,
+    "vendor_offer_rows": 332,
+    "missing_purchase_cells": 0,
+    "missing_offer_cells": 0,
+    "duplicate_purchase_order_ids": 0,
+    "duplicate_vendor_offers": 0,
+    "invalid_purchase_rows": 0,
+    "invalid_purchase_dates": 0,
+    "invalid_vendor_offers": 0,
+    "unmatched_purchase_rows": 0,
+    "offer_deviation_rows": 37,
+    "extreme_price_rows": 12,
+    "classification_conflict_materials": 0
+  },
+  "narrative": "The analysis covers 1,315 valid purchase lines across 24 vendors and 16 materials. Total landed spend is ₹949,482,003; indicative comparable-offer savings are ₹90,339,754 (9.5% of landed spend). Opportunities are directional and require procurement, quality, and capacity review.",
+  "llm_review": {
+    "status": "Groq review completed; 15/15 KPI values reconciled to Python. Chart series are row-level Python aggregations reviewed in the Groq analysis.",
+    "source": "Groq analysis with Python reconciliation",
+    "executive_summary": "The analysis covers 1,315 valid purchase lines across 24 vendors and 16 materials. Total landed spend is ₹949,482,003; indicative comparable-offer savings are ₹90,339,754 (9.5% of landed spend). Opportunities are directional and require procurement, quality, and capacity review.",
+    "executive_summary_validated": false,
+    "additional_validation_findings": [
+      "A subset of purchase lines shows significant deviations from quoted prices or freight, indicating potential leakage or stale quotes.",
+      "A small number of lines exceed the median price for their material, warranting further review for unusual rates.",
+      "All purchase rows have comparable vendor offers, ensuring full coverage for savings analysis."
+    ],
+    "dashboard_insights": [
+      "Certain chemical categories and materials present the highest opportunities for cost reduction through better vendor negotiation.",
+      "Vendor performance varies significantly, with some vendors showing higher average landed costs and larger savings potential.",
+      "Quarterly trends indicate fluctuations in spend and cost per kilogram, suggesting opportunities for timing and volume optimization."
+    ],
+    "calculation_checks": [],
+    "dashboard_metrics": {
+      "purchase_rows_in_file": 1315,
+      "valid_purchase_lines": 1315,
+      "excluded_purchase_rows": 0,
+      "vendor_count": 24,
+      "material_count": 16,
+      "total_quantity_kg": 9235007.63,
+      "material_spend_inr": 907292732.98,
+      "freight_spend_inr": 42189270.1,
+      "landed_spend_inr": 949482003.08,
+      "freight_share_pct": 4.44,
+      "average_landed_cost_per_kg_inr": 102.81,
+      "combined_addressable_savings_inr": 90339753.95,
+      "savings_as_pct_of_landed_spend": 9.51,
+      "lines_with_comparable_offer": 1315,
+      "comparable_offer_coverage_pct": 100.0
+    },
+    "dashboard_series": {
+      "quarterly": [
+        {
+          "quarter": "2024Q1",
+          "material_spend_inr": 60034618.3349,
+          "freight_spend_inr": 2684961.2508,
+          "landed_spend_inr": 62719579.585700005,
+          "quantity_kg": 584857.25,
+          "purchase_lines": 100,
+          "average_landed_cost_per_kg_inr": 107.2391247363
+        },
+        {
+          "quarter": "2024Q2",
+          "material_spend_inr": 74450298.9131,
+          "freight_spend_inr": 3707902.952,
+          "landed_spend_inr": 78158201.8651,
+          "quantity_kg": 745106.5,
+          "purchase_lines": 107,
+          "average_landed_cost_per_kg_inr": 104.8953429679
+        },
+        {
+          "quarter": "2024Q3",
+          "material_spend_inr": 77572522.9362,
+          "freight_spend_inr": 3311618.9941000002,
+          "landed_spend_inr": 80884141.9303,
+          "quantity_kg": 710185.86,
+          "purchase_lines": 114,
+          "average_landed_cost_per_kg_inr": 113.8915127517
+        },
+        {
+          "quarter": "2024Q4",
+          "material_spend_inr": 73728633.936,
+          "freight_spend_inr": 3046506.8004,
+          "landed_spend_inr": 76775140.7364,
+          "quantity_kg": 778305.85,
+          "purchase_lines": 121,
+          "average_landed_cost_per_kg_inr": 98.6439209424
+        },
+        {
+          "quarter": "2025Q1",
+          "material_spend_inr": 106371390.3492,
+          "freight_spend_inr": 5306370.9762,
+          "landed_spend_inr": 111677761.3254,
+          "quantity_kg": 985392.96,
+          "purchase_lines": 128,
+          "average_landed_cost_per_kg_inr": 113.3332242656
+        },
+        {
+          "quarter": "2025Q2",
+          "material_spend_inr": 90532665.9657,
+          "freight_spend_inr": 4114443.5794,
+          "landed_spend_inr": 94647109.5451,
+          "quantity_kg": 1001246.39,
+          "purchase_lines": 135,
+          "average_landed_cost_per_kg_inr": 94.5292891844
+        },
+        {
+          "quarter": "2025Q3",
+          "material_spend_inr": 111818407.8811,
+          "freight_spend_inr": 5198054.6678,
+          "landed_spend_inr": 117016462.54890001,
+          "quantity_kg": 1128207.98,
+          "purchase_lines": 142,
+          "average_landed_cost_per_kg_inr": 103.7188750862
+        },
+        {
+          "quarter": "2025Q4",
+          "material_spend_inr": 84663007.5359,
+          "freight_spend_inr": 3694685.6683,
+          "landed_spend_inr": 88357693.2042,
+          "quantity_kg": 953693.49,
+          "purchase_lines": 149,
+          "average_landed_cost_per_kg_inr": 92.6478938261
+        },
+        {
+          "quarter": "2026Q1",
+          "material_spend_inr": 118854118.8051,
+          "freight_spend_inr": 5532168.4782,
+          "landed_spend_inr": 124386287.2833,
+          "quantity_kg": 1092681.5,
+          "purchase_lines": 156,
+          "average_landed_cost_per_kg_inr": 113.8358133484
+        },
+        {
+          "quarter": "2026Q2",
+          "material_spend_inr": 109267068.3205,
+          "freight_spend_inr": 5592556.7348,
+          "landed_spend_inr": 114859625.0553,
+          "quantity_kg": 1255329.85,
+          "purchase_lines": 163,
+          "average_landed_cost_per_kg_inr": 91.4975654051
+        }
+      ],
+      "vendors": [
+        {
+          "vendor": "Aarav Chemtrade",
+          "landed_spend_inr": 23898197.6649,
+          "quantity_kg": 278530.79,
+          "combined_savings_inr": 1270987.8361000007,
+          "average_landed_cost_per_kg_inr": 85.800918688,
+          "spend_share_pct": 2.5169721582
+        },
+        {
+          "vendor": "Bharat Specialities",
+          "landed_spend_inr": 49843156.2527,
+          "quantity_kg": 434609.05,
+          "combined_savings_inr": 4545154.8588000005,
+          "average_landed_cost_per_kg_inr": 114.6850399289,
+          "spend_share_pct": 5.2495103742
+        },
+        {
+          "vendor": "Coastal Industrial Supply",
+          "landed_spend_inr": 35913837.824,
+          "quantity_kg": 347732.47,
+          "combined_savings_inr": 2752129.213100001,
+          "average_landed_cost_per_kg_inr": 103.2800814488,
+          "spend_share_pct": 3.7824664088
+        },
+        {
+          "vendor": "Deccan Molecules",
+          "landed_spend_inr": 83933761.0994,
+          "quantity_kg": 707710.55,
+          "combined_savings_inr": 5676449.989300001,
+          "average_landed_cost_per_kg_inr": 118.5989965805,
+          "spend_share_pct": 8.8399528192
+        },
+        {
+          "vendor": "Eastern ChemSource",
+          "landed_spend_inr": 81901660.1442,
+          "quantity_kg": 693486.46,
+          "combined_savings_inr": 9403975.921600001,
+          "average_landed_cost_per_kg_inr": 118.1013110828,
+          "spend_share_pct": 8.6259307579
+        },
+        {
+          "vendor": "Evergreen Materials",
+          "landed_spend_inr": 32461805.9545,
+          "quantity_kg": 491169.67,
+          "combined_savings_inr": 3675090.7021999997,
+          "average_landed_cost_per_kg_inr": 66.0908193995,
+          "spend_share_pct": 3.4188963929
+        },
+        {
+          "vendor": "Frontier Chemical Co",
+          "landed_spend_inr": 18703106.092100002,
+          "quantity_kg": 230713.83,
+          "combined_savings_inr": 1361371.6005000004,
+          "average_landed_cost_per_kg_inr": 81.0662546415,
+          "spend_share_pct": 1.9698220747
+        },
+        {
+          "vendor": "Global Process Partners",
+          "landed_spend_inr": 41534412.9756,
+          "quantity_kg": 290053.28,
+          "combined_savings_inr": 3962404.1793999993,
+          "average_landed_cost_per_kg_inr": 143.1958051831,
+          "spend_share_pct": 4.3744286717
+        },
+        {
+          "vendor": "Horizon Petrochem",
+          "landed_spend_inr": 33561789.5811,
+          "quantity_kg": 356293.43,
+          "combined_savings_inr": 1917373.0327000006,
+          "average_landed_cost_per_kg_inr": 94.1970487109,
+          "spend_share_pct": 3.5347473119
+        },
+        {
+          "vendor": "Indus Industrial Solutions",
+          "landed_spend_inr": 15605217.5009,
+          "quantity_kg": 266745.07,
+          "combined_savings_inr": 914085.8274000006,
+          "average_landed_cost_per_kg_inr": 58.5023652017,
+          "spend_share_pct": 1.6435506361
+        },
+        {
+          "vendor": "Jupiter Fine Chemicals",
+          "landed_spend_inr": 59869682.452,
+          "quantity_kg": 632639.54,
+          "combined_savings_inr": 4328826.380799999,
+          "average_landed_cost_per_kg_inr": 94.634746434,
+          "spend_share_pct": 6.3055099789
+        },
+        {
+          "vendor": "Kaveri Trading",
+          "landed_spend_inr": 9724260.1688,
+          "quantity_kg": 134458.03,
+          "combined_savings_inr": 1860681.1770000004,
+          "average_landed_cost_per_kg_inr": 72.321899769,
+          "spend_share_pct": 1.0241647696
+        },
+        {
+          "vendor": "Lotus Raw Materials",
+          "landed_spend_inr": 77362006.9634,
+          "quantity_kg": 603254.97,
+          "combined_savings_inr": 6411046.304399999,
+          "average_landed_cost_per_kg_inr": 128.2409773821,
+          "spend_share_pct": 8.1478118292
+        },
+        {
+          "vendor": "Meridian ChemLink",
+          "landed_spend_inr": 11924896.540099999,
+          "quantity_kg": 185902.62,
+          "combined_savings_inr": 1339097.6544999995,
+          "average_landed_cost_per_kg_inr": 64.1459304882,
+          "spend_share_pct": 1.2559370795
+        },
+        {
+          "vendor": "Nexus Bulk Supply",
+          "landed_spend_inr": 14527989.4148,
+          "quantity_kg": 169116.93,
+          "combined_savings_inr": 3120389.5669999993,
+          "average_landed_cost_per_kg_inr": 85.9049972986,
+          "spend_share_pct": 1.5300963439
+        },
+        {
+          "vendor": "Oceanic Ingredients",
+          "landed_spend_inr": 42951430.2481,
+          "quantity_kg": 293889.9,
+          "combined_savings_inr": 6316680.626299997,
+          "average_landed_cost_per_kg_inr": 146.1480311099,
+          "spend_share_pct": 4.5236697598
+        },
+        {
+          "vendor": "Pioneer Chemical House",
+          "landed_spend_inr": 11204933.4723,
+          "quantity_kg": 181022.55,
+          "combined_savings_inr": 1258900.9645000005,
+          "average_landed_cost_per_kg_inr": 61.8979981903,
+          "spend_share_pct": 1.1801101481
+        },
+        {
+          "vendor": "Quartz Materials India",
+          "landed_spend_inr": 43794276.642799996,
+          "quantity_kg": 514605.41,
+          "combined_savings_inr": 2235313.9716,
+          "average_landed_cost_per_kg_inr": 85.102635518,
+          "spend_share_pct": 4.6124388351
+        },
+        {
+          "vendor": "Ridgeway Chemicals",
+          "landed_spend_inr": 56022103.3465,
+          "quantity_kg": 294957.32,
+          "combined_savings_inr": 3914940.5704999994,
+          "average_landed_cost_per_kg_inr": 189.9329141806,
+          "spend_share_pct": 5.9002806967
+        },
+        {
+          "vendor": "Summit Process Supply",
+          "landed_spend_inr": 27463915.7462,
+          "quantity_kg": 490556.78,
+          "combined_savings_inr": 2100860.694,
+          "average_landed_cost_per_kg_inr": 55.9851924709,
+          "spend_share_pct": 2.8925156725
+        },
+        {
+          "vendor": "Trident ChemWorks",
+          "landed_spend_inr": 52305988.2667,
+          "quantity_kg": 313929.62,
+          "combined_savings_inr": 8360296.638399999,
+          "average_landed_cost_per_kg_inr": 166.6169260062,
+          "spend_share_pct": 5.5088972826
+        },
+        {
+          "vendor": "Unity Industrial Partners",
+          "landed_spend_inr": 32900550.6795,
+          "quantity_kg": 387384.18,
+          "combined_savings_inr": 1636321.9796999993,
+          "average_landed_cost_per_kg_inr": 84.9300316794,
+          "spend_share_pct": 3.465105244
+        },
+        {
+          "vendor": "Vantage Chemical Supply",
+          "landed_spend_inr": 55200382.1483,
+          "quantity_kg": 508238.66,
+          "combined_savings_inr": 6098915.015999999,
+          "average_landed_cost_per_kg_inr": 108.6111437259,
+          "spend_share_pct": 5.8137365394
+        },
+        {
+          "vendor": "Westport Materials",
+          "landed_spend_inr": 36872641.9008,
+          "quantity_kg": 428006.52,
+          "combined_savings_inr": 5878459.2401,
+          "average_landed_cost_per_kg_inr": 86.1497201043,
+          "spend_share_pct": 3.883448215
+        }
+      ],
+      "categories": [
+        {
+          "chemical_category": "Agrochemicals",
+          "landed_spend_inr": 23193073.2096,
+          "quantity_kg": 662128.73
+        },
+        {
+          "chemical_category": "Inorganic Chemicals",
+          "landed_spend_inr": 52024387.273,
+          "quantity_kg": 2044567.27
+        },
+        {
+          "chemical_category": "Pigments",
+          "landed_spend_inr": 254906921.1909,
+          "quantity_kg": 1266818.73
+        },
+        {
+          "chemical_category": "Polymers",
+          "landed_spend_inr": 289665720.0678,
+          "quantity_kg": 1574983.07
+        },
+        {
+          "chemical_category": "Solvents",
+          "landed_spend_inr": 206821874.707,
+          "quantity_kg": 2477745.93
+        },
+        {
+          "chemical_category": "Specialty Chemicals",
+          "landed_spend_inr": 122870026.6314,
+          "quantity_kg": 1208763.9
+        }
+      ],
+      "materials": [
+        {
+          "material": "Acetone",
+          "price_savings_inr": 4860934.567700001,
+          "freight_savings_inr": 1186206.6455,
+          "combined_savings_inr": 4924601.3846
+        },
+        {
+          "material": "Carbon Black",
+          "price_savings_inr": 7609773.8058,
+          "freight_savings_inr": 1258438.3523000001,
+          "combined_savings_inr": 8199462.460299998
+        },
+        {
+          "material": "Caustic Soda",
+          "price_savings_inr": 1674626.4193000002,
+          "freight_savings_inr": 173025.0368,
+          "combined_savings_inr": 1713412.1270000006
+        },
+        {
+          "material": "Citric Acid",
+          "price_savings_inr": 7718871.267800001,
+          "freight_savings_inr": 957733.0580999999,
+          "combined_savings_inr": 7522505.8959
+        },
+        {
+          "material": "Epoxy Resin",
+          "price_savings_inr": 12138763.120299995,
+          "freight_savings_inr": 2078667.9932000001,
+          "combined_savings_inr": 12171936.389399994
+        },
+        {
+          "material": "Ethyl Acetate",
+          "price_savings_inr": 5168689.1696,
+          "freight_savings_inr": 1047762.3347,
+          "combined_savings_inr": 5671080.967200001
+        },
+        {
+          "material": "Glycerine",
+          "price_savings_inr": 5422082.4665,
+          "freight_savings_inr": 996067.8237000001,
+          "combined_savings_inr": 5772196.213099999
+        },
+        {
+          "material": "Hydrochloric Acid",
+          "price_savings_inr": 584007.0412,
+          "freight_savings_inr": 85929.1458,
+          "combined_savings_inr": 546271.6717000002
+        },
+        {
+          "material": "Methanol",
+          "price_savings_inr": 2563270.4564000005,
+          "freight_savings_inr": 364599.1864,
+          "combined_savings_inr": 2707675.372000001
+        },
+        {
+          "material": "Polyethylene Resin",
+          "price_savings_inr": 5335304.0002000015,
+          "freight_savings_inr": 1018295.7604,
+          "combined_savings_inr": 5935386.810900002
+        },
+        {
+          "material": "Polypropylene Resin",
+          "price_savings_inr": 7585388.974799999,
+          "freight_savings_inr": 1179171.0729,
+          "combined_savings_inr": 7006724.161499999
+        },
+        {
+          "material": "Sodium Carbonate",
+          "price_savings_inr": 2340772.7642,
+          "freight_savings_inr": 401805.3198,
+          "combined_savings_inr": 2682704.0272000004
+        },
+        {
+          "material": "Sulphuric Acid",
+          "price_savings_inr": 395906.0616000001,
+          "freight_savings_inr": 103712.1922,
+          "combined_savings_inr": 398164.2695000002
+        },
+        {
+          "material": "Titanium Dioxide",
+          "price_savings_inr": 17335736.438100003,
+          "freight_savings_inr": 3207364.2941,
+          "combined_savings_inr": 17326019.9953
+        },
+        {
+          "material": "Toluene",
+          "price_savings_inr": 6023295.0953,
+          "freight_savings_inr": 1083162.0953,
+          "combined_savings_inr": 5945329.254300001
+        },
+        {
+          "material": "Urea",
+          "price_savings_inr": 1770027.1061999996,
+          "freight_savings_inr": 182444.651,
+          "combined_savings_inr": 1816282.9459999998
+        }
+      ]
+    },
+    "series_audit": {
+      "quarterly": false,
+      "vendors": false,
+      "categories": false,
+      "materials": false
+    },
+    "dashboard_series_source": "Python row-level aggregation, reviewed by Groq",
+    "metric_audit": {
+      "purchase_rows_in_file": {
+        "python_value": 1315,
+        "llm_value": 1315.0,
+        "matched": true
+      },
+      "valid_purchase_lines": {
+        "python_value": 1315,
+        "llm_value": 1315.0,
+        "matched": true
+      },
+      "excluded_purchase_rows": {
+        "python_value": 0,
+        "llm_value": 0.0,
+        "matched": true
+      },
+      "vendor_count": {
+        "python_value": 24,
+        "llm_value": 24.0,
+        "matched": true
+      },
+      "material_count": {
+        "python_value": 16,
+        "llm_value": 16.0,
+        "matched": true
+      },
+      "total_quantity_kg": {
+        "python_value": 9235007.629999999,
+        "llm_value": 9235007.63,
+        "matched": true
+      },
+      "material_spend_inr": {
+        "python_value": 907292732.9777,
+        "llm_value": 907292732.98,
+        "matched": true
+      },
+      "freight_spend_inr": {
+        "python_value": 42189270.102,
+        "llm_value": 42189270.1,
+        "matched": true
+      },
+      "landed_spend_inr": {
+        "python_value": 949482003.0797,
+        "llm_value": 949482003.08,
+        "matched": true
+      },
+      "freight_share_pct": {
+        "python_value": 4.443398607362399,
+        "llm_value": 4.44,
+        "matched": true
+      },
+      "average_landed_cost_per_kg_inr": {
+        "python_value": 102.81334256782851,
+        "llm_value": 102.81,
+        "matched": true
+      },
+      "combined_addressable_savings_inr": {
+        "python_value": 90339753.9459,
+        "llm_value": 90339753.95,
+        "matched": true
+      },
+      "savings_as_pct_of_landed_spend": {
+        "python_value": 9.514635733260636,
+        "llm_value": 9.51,
+        "matched": true
+      },
+      "lines_with_comparable_offer": {
+        "python_value": 1315,
+        "llm_value": 1315.0,
+        "matched": true
+      },
+      "comparable_offer_coverage_pct": {
+        "python_value": 100.0,
+        "llm_value": 100.0,
+        "matched": true
+      }
+    },
+    "matched_metric_count": 15,
+    "metric_count": 15
+  }
+}
