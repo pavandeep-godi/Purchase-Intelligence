@@ -462,37 +462,81 @@ with savings_tab:
         opportunity_by_material = materials.rename(columns={
             "price_savings_inr": "price_saving_inr", "freight_savings_inr": "freight_saving_inr",
             "combined_savings_inr": "combined_saving_inr",
-        }).sort_values("combined_saving_inr", ascending=False).head(12)
-        left, right = st.columns([1.2, 1])
-        with left:
-            chart_data = opportunity_by_material.melt(id_vars="material", value_vars=["price_saving_inr", "freight_saving_inr"],
-                                                      var_name="Opportunity type", value_name="Savings (INR)")
-            chart_data["Opportunity type"] = chart_data["Opportunity type"].map({"price_saving_inr": "Material price", "freight_saving_inr": "Freight"})
-            fig = px.bar(chart_data, x="Savings (INR)", y="material", color="Opportunity type", barmode="group", orientation="h",
-                         color_discrete_map={"Material price": "#087e79", "Freight": "#e4a35c"})
-            fig.for_each_trace(lambda trace: trace.update(
-                text=[money_label(value) for value in trace.x], textposition="outside",
-                textfont=dict(size=9, color="#193749"), cliponaxis=False,
-            ))
-            fig = currency_axis(fig, "Where are the biggest price and freight opportunities?")
-            fig.update_xaxes(tickprefix="₹", separatethousands=True)
-            chart_max = float(chart_data["Savings (INR)"].max()) if not chart_data.empty else 0.0
-            fig.update_xaxes(range=[0, chart_max * 1.25] if chart_max else None)
+        })
+        st.markdown("#### Separate price and freight levers")
+        st.caption("Each chart ranks materials by one savings lever. Read the bars within a chart; price and freight totals are separate and may overlap.")
+        price_opportunities = opportunity_by_material[opportunity_by_material["price_saving_inr"] > 0].nlargest(
+            8, "price_saving_inr"
+        ).sort_values("price_saving_inr")
+        freight_opportunities = opportunity_by_material[opportunity_by_material["freight_saving_inr"] > 0].nlargest(
+            8, "freight_saving_inr"
+        ).sort_values("freight_saving_inr")
+        price_chart_column, freight_chart_column = st.columns(2)
+        with price_chart_column:
+            st.markdown("##### Material price")
+            if price_opportunities.empty:
+                st.caption("No price opportunity found in this quarter.")
+            else:
+                fig = px.bar(
+                    price_opportunities, x="price_saving_inr", y="material", orientation="h",
+                    color_discrete_sequence=["#087e79"],
+                    labels={"price_saving_inr": "Price opportunity (INR)", "material": "Material"},
+                )
+                fig.update_traces(
+                    text=[money_label(value) for value in price_opportunities["price_saving_inr"]],
+                    textposition="outside", textfont=dict(size=10, color="#193749"), cliponaxis=False,
+                    hovertemplate="%{y}<br>Price opportunity: ₹%{x:,.0f}<extra></extra>",
+                )
+                fig = currency_axis(fig, "Top materials · price only")
+                fig.update_xaxes(tickprefix="₹", separatethousands=True,
+                                 range=[0, float(price_opportunities["price_saving_inr"].max()) * 1.25])
+                fig.update_yaxes(tickprefix="")
+                fig.update_layout(xaxis_title="Indicative savings (INR)", yaxis_title="", height=360, margin=dict(l=8, r=28, t=48, b=12))
+                show_chart(fig)
+        with freight_chart_column:
+            st.markdown("##### Freight")
+            if freight_opportunities.empty:
+                st.caption("No freight opportunity found in this quarter.")
+            else:
+                fig = px.bar(
+                    freight_opportunities, x="freight_saving_inr", y="material", orientation="h",
+                    color_discrete_sequence=["#e28b45"],
+                    labels={"freight_saving_inr": "Freight opportunity (INR)", "material": "Material"},
+                )
+                fig.update_traces(
+                    text=[money_label(value) for value in freight_opportunities["freight_saving_inr"]],
+                    textposition="outside", textfont=dict(size=10, color="#193749"), cliponaxis=False,
+                    hovertemplate="%{y}<br>Freight opportunity: ₹%{x:,.0f}<extra></extra>",
+                )
+                fig = currency_axis(fig, "Top materials · freight only")
+                fig.update_xaxes(tickprefix="₹", separatethousands=True,
+                                 range=[0, float(freight_opportunities["freight_saving_inr"].max()) * 1.25])
+                fig.update_yaxes(tickprefix="")
+                fig.update_layout(xaxis_title="Indicative savings (INR)", yaxis_title="", height=360, margin=dict(l=8, r=28, t=48, b=12))
+                show_chart(fig)
+
+        st.markdown("#### Combined landed-cost opportunity")
+        st.caption("This ranks the best single quoted total cost (material price plus freight) for each material and source country.")
+        top_opportunities = opportunity_by_material.nlargest(10, "combined_saving_inr").sort_values("combined_saving_inr")
+        if top_opportunities["combined_saving_inr"].gt(0).any():
+            fig = px.bar(
+                top_opportunities, x="combined_saving_inr", y="material", orientation="h",
+                color_discrete_sequence=["#168b7e"],
+                labels={"combined_saving_inr": "Combined landed-cost opportunity (INR)", "material": "Material"},
+            )
+            fig.update_traces(
+                text=[money_label(value) for value in top_opportunities["combined_saving_inr"]],
+                textposition="outside", textfont=dict(size=10, color="#193749"), cliponaxis=False,
+                hovertemplate="%{y}<br>Combined opportunity: ₹%{x:,.0f}<extra></extra>",
+            )
+            fig = currency_axis(fig, "Top materials · combined landed cost")
+            fig.update_xaxes(tickprefix="₹", separatethousands=True,
+                             range=[0, float(top_opportunities["combined_saving_inr"].max()) * 1.2])
             fig.update_yaxes(tickprefix="")
-            fig.update_layout(xaxis_title="Indicative savings (INR)", yaxis_title="Material", legend_title_text="")
+            fig.update_layout(xaxis_title="Indicative savings (INR)", yaxis_title="", height=390)
             show_chart(fig)
-        with right:
-            top_opportunities = opportunity_by_material.sort_values("combined_saving_inr").tail(10)
-            fig = px.bar(top_opportunities, x="combined_saving_inr", y="material", orientation="h",
-                         color_discrete_sequence=["#168b7e"], labels={"combined_saving_inr": "Combined landed-cost opportunity (INR)", "material": "Material"})
-            fig.update_traces(text=[money_label(value) for value in top_opportunities["combined_saving_inr"]], textposition="outside",
-                              textfont=dict(size=10, color="#193749"), cliponaxis=False)
-            fig = currency_axis(fig, "Combined opportunity by material")
-            fig.update_xaxes(tickprefix="₹", separatethousands=True)
-            fig.update_xaxes(range=[0, float(top_opportunities["combined_saving_inr"].max()) * 1.2])
-            fig.update_yaxes(tickprefix="")
-            fig.update_layout(xaxis_title="Indicative savings (INR)", yaxis_title="")
-            show_chart(fig)
+        else:
+            st.caption("No combined landed-cost opportunity found in this quarter.")
         st.markdown("#### Purchase lines to review")
         st.caption("Sorted by largest combined landed-cost opportunity. Compare quoted vendor against the current supplier before negotiating or switching.")
         display_columns = ["purchase_order_id", "quarter", "material", "chemical_category", "quantity_kg", "vendor", "best_landed_vendor", "best_price_vendor", "best_freight_vendor", "source_country",
