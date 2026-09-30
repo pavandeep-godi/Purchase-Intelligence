@@ -69,9 +69,10 @@ footer { visibility:hidden; }
     .js-plotly-plot .plotly .main-svg { background:transparent !important; }
     .js-plotly-plot .xtick text, .js-plotly-plot .ytick text,
     .js-plotly-plot .g-xtitle text, .js-plotly-plot .g-ytitle text,
-    .js-plotly-plot .legend text, .js-plotly-plot .gtitle text,
+    .js-plotly-plot text.xtitle, .js-plotly-plot text.ytitle,
+    .js-plotly-plot text.legendtext, .js-plotly-plot text.gtitle,
     .js-plotly-plot .annotation-text { fill:#d6e0e8 !important; }
-    .js-plotly-plot .bartext, .js-plotly-plot .pointtext { fill:#f1f5f8 !important; }
+    .js-plotly-plot text.textpoint, .js-plotly-plot .bartext, .js-plotly-plot .pointtext { fill:#f1f5f8 !important; }
     .js-plotly-plot .gridlayer path { stroke:#354754 !important; }
     .js-plotly-plot .zerolinelayer path { stroke:#526572 !important; }
 }
