@@ -48,6 +48,33 @@ div[data-testid="stTabs"] [role="tabpanel"] { padding-top:1.1rem; }
 [data-testid="stMetric"] { background:white; border:1px solid var(--border); border-radius:12px; padding:13px 16px; }
 [data-testid="stDataFrame"] { border:1px solid var(--border); border-radius:10px; overflow:hidden; }
 footer { visibility:hidden; }
+@media (prefers-color-scheme: dark) {
+    :root { --ink:#e7edf3; --muted:#aab8c5; --teal:#62d5c2; --teal-light:#173b3b; --border:#344553; }
+    html, body, [class*="css"] { color:var(--ink); }
+    .stApp { background:linear-gradient(180deg,#101b24 0%,#15222c 260px,#111c25 100%); }
+    h1,h2,h3,h4,h5,p,label,small,span { color:inherit; }
+    .hero { box-shadow:0 14px 34px rgba(0,0,0,.28); }
+    .metric-card { background:linear-gradient(145deg,#1d2b36 0%,#182630 100%); border-color:#354754; box-shadow:0 4px 14px rgba(0,0,0,.18); }
+    .metric-label { color:#b6c4d0; }
+    .metric-value { color:#f1f5f8; }
+    .metric-help { color:#a1b0bd; }
+    .callout { background:#183735; color:#d8efea; }
+    div[data-testid="stTabs"] [role="tablist"] { border-bottom-color:#344553; }
+    div[data-testid="stTabs"] [role="tab"][aria-selected="true"] { color:#a4efe2; background:#1b393b; }
+    [data-testid="stExpander"] { background:#192630; border-color:#354754; }
+    [data-testid="stPlotlyChart"] { background:#192630; border-color:#354754; box-shadow:0 3px 12px rgba(0,0,0,.2); }
+    [data-testid="stMetric"] { background:#1d2b36; border-color:#354754; }
+    [data-testid="stDataFrame"] { border-color:#354754; }
+    div[data-testid="stAlert"] { background:#202f39; color:#e7edf3; }
+    .js-plotly-plot .plotly .main-svg { background:transparent !important; }
+    .js-plotly-plot .xtick text, .js-plotly-plot .ytick text,
+    .js-plotly-plot .g-xtitle text, .js-plotly-plot .g-ytitle text,
+    .js-plotly-plot .legend text, .js-plotly-plot .gtitle text,
+    .js-plotly-plot .annotation-text { fill:#d6e0e8 !important; }
+    .js-plotly-plot .bartext, .js-plotly-plot .pointtext { fill:#f1f5f8 !important; }
+    .js-plotly-plot .gridlayer path { stroke:#354754 !important; }
+    .js-plotly-plot .zerolinelayer path { stroke:#526572 !important; }
+}
 @media (max-width: 1100px) {
     .block-container { max-width:100%; padding-left:2rem; padding-right:2rem; }
     .hero { padding:24px 28px; }
@@ -115,8 +142,9 @@ def load_source_data() -> tuple[pd.DataFrame, pd.DataFrame, str]:
 def currency_axis(fig: go.Figure, title: str) -> go.Figure:
     fig.update_layout(
         title=title, title_font_size=16, title_font_color="#193749",
-        plot_bgcolor="white", paper_bgcolor="white", font_color="#526874", margin=dict(l=14, r=14, t=56, b=14),
-        legend_title_text="", hoverlabel=dict(bgcolor="white"),
+        plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)", font_color="#526874",
+        margin=dict(l=14, r=14, t=56, b=14), legend_title_text="",
+        hoverlabel=dict(bgcolor="#ffffff", font_color="#193749"),
     )
     fig.update_yaxes(gridcolor="#edf1f3", zeroline=False)
     fig.update_xaxes(showgrid=False)
