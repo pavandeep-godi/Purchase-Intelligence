@@ -25,7 +25,7 @@ st.markdown("""
 :root { --ink:#162b3b; --muted:#657987; --teal:#087e79; --teal-light:#e5f4f1; --border:#e4ecef; }
 html, body, [class*="css"] { font-family:system-ui,sans-serif; color:var(--ink); }
 .stApp { background:linear-gradient(180deg,#f3f7f8 0%,#f8fafb 260px,#f6f9fa 100%); }
-.block-container { padding-top:1.4rem; padding-bottom:2.5rem; max-width:1440px; }
+.block-container { padding-top:5rem; padding-bottom:2.5rem; max-width:1440px; }
 h1,h2,h3 { font-family:system-ui,sans-serif; color:var(--ink); letter-spacing:-.025em; }
 .hero { background:linear-gradient(115deg,#123247 0%,#0d5c62 100%); border-radius:20px; padding:28px 34px; color:white; margin:0 0 18px; box-shadow:0 14px 34px rgba(19,53,69,.14); position:relative; overflow:hidden; }
 .hero h1 { color:white; margin:0; font-size:2rem; letter-spacing:-.04em; }
@@ -39,8 +39,8 @@ h1,h2,h3 { font-family:system-ui,sans-serif; color:var(--ink); letter-spacing:-.
 .section-note { color:var(--muted); font-size:.9rem; margin-top:-8px; margin-bottom:15px; }
 .callout { border-left:4px solid var(--teal); background:var(--teal-light); padding:14px 16px; border-radius:0 10px 10px 0; color:#20434a; margin:8px 0 16px; }
 div[data-testid="stTabs"] [role="tablist"] { display:flex; gap:16px; border-bottom:1px solid var(--border); padding-bottom:6px; }
-div[data-testid="stTabs"] button[role="tab"] { flex:1; justify-content:center; font-weight:700; border-radius:10px; padding:.8rem 1rem; min-height:48px; }
-div[data-testid="stTabs"] button[aria-selected="true"] { color:var(--teal); background:#e8f4f2; }
+div[data-testid="stTabs"] [role="tab"] { flex:1 1 0% !important; width:auto !important; min-width:0; justify-content:center; font-weight:700; border-radius:10px; padding:.8rem 1rem; min-height:48px; }
+div[data-testid="stTabs"] [role="tab"][aria-selected="true"] { color:var(--teal); background:#e8f4f2; }
 div[data-testid="stTabs"] [role="tabpanel"] { padding-top:1.1rem; }
 .kpi-section-gap { height:22px; }
 [data-testid="stExpander"] { border-color:var(--border); border-radius:12px; background:rgba(255,255,255,.7); }
@@ -48,6 +48,34 @@ div[data-testid="stTabs"] [role="tabpanel"] { padding-top:1.1rem; }
 [data-testid="stMetric"] { background:white; border:1px solid var(--border); border-radius:12px; padding:13px 16px; }
 [data-testid="stDataFrame"] { border:1px solid var(--border); border-radius:10px; overflow:hidden; }
 footer { visibility:hidden; }
+@media (max-width: 1100px) {
+    .block-container { max-width:100%; padding-left:2rem; padding-right:2rem; }
+    .hero { padding:24px 28px; }
+    div[data-testid="stTabs"] [role="tablist"] { gap:8px; }
+    div[data-testid="stTabs"] [role="tab"] { padding:.7rem .6rem; font-size:.9rem; }
+    [data-testid="stPlotlyChart"] { padding:5px 4px 1px; }
+}
+@media (max-width: 700px) {
+    .block-container { padding:4.8rem .8rem 1.5rem; }
+    .hero { border-radius:15px; padding:20px 20px; margin-bottom:14px; }
+    .hero h1 { font-size:1.55rem; }
+    .hero p { font-size:.88rem; line-height:1.4; }
+    .eyebrow { font-size:.62rem; letter-spacing:.1em; }
+    div[data-testid="stTabs"] [role="tablist"] { flex-wrap:wrap; gap:5px; }
+    div[data-testid="stTabs"] [role="tab"] { flex:1 1 calc(33.333% - 5px) !important; min-width:0; min-height:52px; padding:.55rem .25rem; font-size:.72rem; line-height:1.2; white-space:normal; }
+    div[data-testid="stTabs"] [role="tabpanel"] { padding-top:.75rem; }
+    .metric-card { height:auto; min-height:122px; padding:13px 13px; border-radius:12px; }
+    .metric-label { font-size:.72rem; min-height:2.2em; }
+    .metric-value { font-size:clamp(1rem,5vw,1.3rem); white-space:normal; overflow-wrap:anywhere; }
+    .metric-help { font-size:.66rem; min-height:2.4em; }
+    .section-note { font-size:.82rem; margin-top:-5px; margin-bottom:11px; }
+    .callout { padding:11px 12px; font-size:.88rem; }
+    .kpi-section-gap { height:14px; }
+    [data-testid="stPlotlyChart"] { border-radius:11px; margin-bottom:.35rem; }
+    .js-plotly-plot .bartext { display:none !important; }
+    [data-testid="stDataFrame"] { max-width:100%; overflow-x:auto; }
+    [data-testid="stExpander"] summary { font-size:.9rem; }
+}
 </style>
 """, unsafe_allow_html=True)
 
