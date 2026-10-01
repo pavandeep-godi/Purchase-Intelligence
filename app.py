@@ -22,87 +22,88 @@ DATA_DIR = ROOT / "data"
 st.set_page_config(page_title="purchase_intelligence", page_icon="🧪", layout="wide", initial_sidebar_state="expanded")
 st.markdown("""
 <style>
-:root { --ink:#162b3b; --muted:#657987; --teal:#087e79; --teal-light:#e5f4f1; --border:#e4ecef; }
-html, body, [class*="css"] { font-family:system-ui,sans-serif; color:var(--ink); }
-.stApp { background:linear-gradient(180deg,#f3f7f8 0%,#f8fafb 260px,#f6f9fa 100%); }
-.block-container { padding-top:5rem; padding-bottom:2.5rem; max-width:1440px; }
+:root {
+    --ink:CanvasText;
+    --muted:CanvasText;
+    --teal:#087e79;
+    --surface:Canvas;
+    --page:Canvas;
+    --border:rgba(90,110,125,.2);
+    --soft-shadow:rgba(25,55,73,.08);
+}
+@supports (color:color-mix(in srgb, black, white)) {
+    :root {
+        --muted:color-mix(in srgb, CanvasText 68%, transparent);
+        --surface:color-mix(in srgb, CanvasText 5%, Canvas);
+        --border:color-mix(in srgb, CanvasText 15%, transparent);
+        --soft-shadow:color-mix(in srgb, CanvasText 8%, transparent);
+    }
+}
+html, body { font-family:system-ui,sans-serif; color:var(--ink); }
+.stApp { background:var(--page); color:var(--ink); }
+.block-container { width:100%; max-width:1440px; padding:4.8rem clamp(1rem,3vw,2.5rem) 2.5rem; }
 h1,h2,h3 { font-family:system-ui,sans-serif; color:var(--ink); letter-spacing:-.025em; }
 .hero { background:linear-gradient(115deg,#123247 0%,#0d5c62 100%); border-radius:20px; padding:28px 34px; color:white; margin:0 0 18px; box-shadow:0 14px 34px rgba(19,53,69,.14); position:relative; overflow:hidden; }
 .hero h1 { color:white; margin:0; font-size:2rem; letter-spacing:-.04em; }
 .hero p { color:#d5e9e8; margin:7px 0 0; font-size:.98rem; }
 .eyebrow { color:#91dbcc; text-transform:uppercase; letter-spacing:.13em; font-size:.72rem; font-weight:700; margin-bottom:7px; }
-.metric-card { background:linear-gradient(145deg,#fff 0%,#fbfdfd 100%); border:1px solid var(--border); border-radius:15px; padding:15px 17px; height:146px; display:flex; flex-direction:column; box-shadow:0 4px 14px rgba(22,43,59,.045); overflow:hidden; transition:transform .16s ease,box-shadow .16s ease; }
-.metric-card:hover { transform:translateY(-2px); box-shadow:0 9px 20px rgba(22,43,59,.08); }
+.metric-card { background:var(--surface); border:1px solid var(--border); border-radius:15px; padding:15px 17px; min-height:146px; height:100%; display:flex; flex-direction:column; box-shadow:0 4px 14px var(--soft-shadow); overflow:hidden; transition:transform .16s ease,box-shadow .16s ease; }
+.metric-card:hover { transform:translateY(-2px); box-shadow:0 9px 20px var(--soft-shadow); }
 .metric-label { color:var(--muted); font-size:.77rem; font-weight:650; line-height:1.25; min-height:2.5em; margin-bottom:5px; }
-.metric-value { color:var(--ink); font-family:system-ui,sans-serif; font-weight:800; font-size:clamp(1.12rem,1.6vw,1.5rem); line-height:1.15; min-height:1.3em; white-space:nowrap; }
-.metric-help { color:#81929c; font-size:.7rem; line-height:1.25; margin-top:auto; min-height:2.5em; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.metric-value { color:var(--ink); font-family:system-ui,sans-serif; font-weight:800; font-size:clamp(1.05rem,1.6vw,1.5rem); line-height:1.15; min-height:1.3em; overflow-wrap:anywhere; }
+.metric-help { color:var(--muted); font-size:.7rem; line-height:1.25; margin-top:auto; min-height:2.5em; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
 .section-note { color:var(--muted); font-size:.9rem; margin-top:-8px; margin-bottom:15px; }
-.callout { border-left:4px solid var(--teal); background:var(--teal-light); padding:14px 16px; border-radius:0 10px 10px 0; color:#20434a; margin:8px 0 16px; }
+.callout { border-left:4px solid var(--teal); background:color-mix(in srgb, var(--teal) 12%, Canvas); padding:14px 16px; border-radius:0 10px 10px 0; color:var(--ink); margin:8px 0 16px; }
 div[data-testid="stTabs"] [role="tablist"] { display:flex; gap:16px; border-bottom:1px solid var(--border); padding-bottom:6px; }
-div[data-testid="stTabs"] [role="tab"] { flex:1 1 0% !important; width:auto !important; min-width:0; justify-content:center; font-weight:700; border-radius:10px; padding:.8rem 1rem; min-height:48px; }
-div[data-testid="stTabs"] [role="tab"][aria-selected="true"] { color:var(--teal); background:#e8f4f2; }
+div[data-testid="stTabs"] [role="tab"] { flex:1 1 0% !important; width:auto !important; min-width:0; justify-content:center; color:var(--ink) !important; font-weight:700; border-radius:10px; padding:.8rem 1rem; min-height:48px; }
+div[data-testid="stTabs"] [role="tab"][aria-selected="true"] { color:var(--ink) !important; background:color-mix(in srgb, var(--teal) 12%, Canvas); }
 div[data-testid="stTabs"] [role="tabpanel"] { padding-top:1.1rem; }
 .kpi-section-gap { height:22px; }
-[data-testid="stExpander"] { border-color:var(--border); border-radius:12px; background:rgba(255,255,255,.7); }
-[data-testid="stPlotlyChart"] { background:#fff; border:1px solid var(--border); border-radius:14px; padding:8px 8px 2px; box-shadow:0 3px 12px rgba(22,43,59,.035); }
-[data-testid="stMetric"] { background:white; border:1px solid var(--border); border-radius:12px; padding:13px 16px; }
+[data-testid="stExpander"] { border-color:var(--border); border-radius:12px; background:var(--surface); }
+[data-testid="stPlotlyChart"] { min-width:0; max-width:100%; background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:8px 8px 2px; box-shadow:0 3px 12px var(--soft-shadow); }
+[data-testid="stMetric"] { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:13px 16px; }
 [data-testid="stDataFrame"] { border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+div[data-testid="stPlotlyChart"] .js-plotly-plot .plotly .main-svg { background:transparent !important; }
+div[data-testid="stPlotlyChart"] .js-plotly-plot .xtick text,
+div[data-testid="stPlotlyChart"] .js-plotly-plot .ytick text,
+div[data-testid="stPlotlyChart"] .js-plotly-plot .g-xtitle text,
+div[data-testid="stPlotlyChart"] .js-plotly-plot .g-ytitle text,
+div[data-testid="stPlotlyChart"] .js-plotly-plot text.xtitle,
+div[data-testid="stPlotlyChart"] .js-plotly-plot text.ytitle,
+div[data-testid="stPlotlyChart"] .js-plotly-plot text.legendtext,
+div[data-testid="stPlotlyChart"] .js-plotly-plot text.gtitle,
+div[data-testid="stPlotlyChart"] .js-plotly-plot .annotation-text,
+div[data-testid="stPlotlyChart"] .js-plotly-plot text.bartext,
+div[data-testid="stPlotlyChart"] .js-plotly-plot text.pointtext,
+div[data-testid="stPlotlyChart"] .js-plotly-plot text.textpoint { fill:var(--ink) !important; }
+div[data-testid="stPlotlyChart"] .js-plotly-plot .gridlayer path { stroke:var(--border) !important; }
 footer { visibility:hidden; }
-@media (prefers-color-scheme: dark) {
-    :root { --ink:#e7edf3; --muted:#aab8c5; --teal:#62d5c2; --teal-light:#173b3b; --border:#344553; }
-    html, body, [class*="css"] { color:var(--ink); }
-    .stApp { background:linear-gradient(180deg,#101b24 0%,#15222c 260px,#111c25 100%); }
-    h1,h2,h3,h4,h5,p,label,small,span { color:inherit; }
-    .hero { box-shadow:0 14px 34px rgba(0,0,0,.28); }
-    .metric-card { background:linear-gradient(145deg,#1d2b36 0%,#182630 100%); border-color:#354754; box-shadow:0 4px 14px rgba(0,0,0,.18); }
-    .metric-label { color:#b6c4d0; }
-    .metric-value { color:#f1f5f8; }
-    .metric-help { color:#a1b0bd; }
-    .callout { background:#183735; color:#d8efea; }
-    div[data-testid="stTabs"] [role="tablist"] { border-bottom-color:#344553; }
-    div[data-testid="stTabs"] [role="tab"][aria-selected="true"] { color:#a4efe2; background:#1b393b; }
-    [data-testid="stExpander"] { background:#192630; border-color:#354754; }
-    [data-testid="stPlotlyChart"] { background:#192630; border-color:#354754; box-shadow:0 3px 12px rgba(0,0,0,.2); }
-    [data-testid="stMetric"] { background:#1d2b36; border-color:#354754; }
-    [data-testid="stDataFrame"] { border-color:#354754; }
-    div[data-testid="stAlert"] { background:#202f39; color:#e7edf3; }
-    .js-plotly-plot .plotly .main-svg { background:transparent !important; }
-    .js-plotly-plot .xtick text, .js-plotly-plot .ytick text,
-    .js-plotly-plot .g-xtitle text, .js-plotly-plot .g-ytitle text,
-    .js-plotly-plot text.xtitle, .js-plotly-plot text.ytitle,
-    .js-plotly-plot text.legendtext, .js-plotly-plot text.gtitle,
-        .js-plotly-plot .annotation-text { fill:#d6e0e8 !important; }
-        .js-plotly-plot text.textpoint, .js-plotly-plot .bartext, .js-plotly-plot .pointtext,
-        .js-plotly-plot text[style*="fill: rgb(25, 55, 73)"] { fill:#f1f5f8 !important; }
-    .js-plotly-plot .gridlayer path { stroke:#354754 !important; }
-    .js-plotly-plot .zerolinelayer path { stroke:#526572 !important; }
-}
 @media (max-width: 1100px) {
-    .block-container { max-width:100%; padding-left:2rem; padding-right:2rem; }
+    .block-container { padding-left:1.5rem; padding-right:1.5rem; }
     .hero { padding:24px 28px; }
     div[data-testid="stTabs"] [role="tablist"] { gap:8px; }
     div[data-testid="stTabs"] [role="tab"] { padding:.7rem .6rem; font-size:.9rem; }
     [data-testid="stPlotlyChart"] { padding:5px 4px 1px; }
 }
 @media (max-width: 700px) {
-    .block-container { padding:4.8rem .8rem 1.5rem; }
-    .hero { border-radius:15px; padding:20px 20px; margin-bottom:14px; }
-    .hero h1 { font-size:1.55rem; }
+    .block-container { padding:4.5rem .8rem 1.5rem; }
+    .hero { border-radius:15px; padding:20px; margin-bottom:14px; }
+    .hero h1 { font-size:clamp(1.35rem,6vw,1.65rem); overflow-wrap:anywhere; }
     .hero p { font-size:.88rem; line-height:1.4; }
     .eyebrow { font-size:.62rem; letter-spacing:.1em; }
-    div[data-testid="stTabs"] [role="tablist"] { flex-wrap:wrap; gap:5px; }
-    div[data-testid="stTabs"] [role="tab"] { flex:1 1 calc(33.333% - 5px) !important; min-width:0; min-height:52px; padding:.55rem .25rem; font-size:.72rem; line-height:1.2; white-space:normal; }
+    div[data-testid="stTabs"] [role="tablist"] { justify-content:flex-start; gap:5px; overflow-x:auto; scrollbar-width:thin; }
+    div[data-testid="stTabs"] [role="tab"] { flex:0 0 auto !important; min-width:max-content; min-height:48px; padding:.6rem .75rem; font-size:.78rem; white-space:nowrap; }
     div[data-testid="stTabs"] [role="tabpanel"] { padding-top:.75rem; }
-    .metric-card { height:auto; min-height:122px; padding:13px 13px; border-radius:12px; }
+    .metric-card { height:100%; min-height:116px; padding:12px; border-radius:12px; }
     .metric-label { font-size:.72rem; min-height:2.2em; }
-    .metric-value { font-size:clamp(1rem,5vw,1.3rem); white-space:normal; overflow-wrap:anywhere; }
+    .metric-value { font-size:clamp(.95rem,4.6vw,1.25rem); }
     .metric-help { font-size:.66rem; min-height:2.4em; }
     .section-note { font-size:.82rem; margin-top:-5px; margin-bottom:11px; }
     .callout { padding:11px 12px; font-size:.88rem; }
     .kpi-section-gap { height:14px; }
     [data-testid="stPlotlyChart"] { border-radius:11px; margin-bottom:.35rem; }
     .js-plotly-plot .bartext { display:none !important; }
-    [data-testid="stDataFrame"] { max-width:100%; overflow-x:auto; }
+    [data-testid="stDataFrame"] { width:100%; max-width:100%; overflow-x:auto; }
     [data-testid="stExpander"] summary { font-size:.9rem; }
 }
 </style>
@@ -143,10 +144,10 @@ def load_source_data() -> tuple[pd.DataFrame, pd.DataFrame, str]:
 
 def currency_axis(fig: go.Figure, title: str) -> go.Figure:
     fig.update_layout(
-        title=title, title_font_size=16, title_font_color="#193749",
-        plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)", font_color="#526874",
+        title=title, title_font_size=16,
+        plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
         margin=dict(l=14, r=14, t=56, b=14), legend_title_text="",
-        hoverlabel=dict(bgcolor="#ffffff", font_color="#193749"),
+        hoverlabel=dict(font_color="#193749"),
     )
     fig.update_yaxes(gridcolor="#edf1f3", zeroline=False)
     fig.update_xaxes(showgrid=False)
