@@ -15,6 +15,9 @@ import streamlit as st
 from purchase_intelligence.agents.data_quality_agent import run_quality_checks
 from purchase_intelligence.agents.groq_analysis_agent import build_groq_context, load_groq_environment, run_groq_review
 from purchase_intelligence.agents.spend_analysis_agent import analyze_spend
+from purchase_intelligence.llm import BUDGET
+from purchase_intelligence.orchestrator import SUPPORTED_QUESTIONS, answer_question, build_report_markdown
+from purchase_intelligence.tools import AnalystContext, excluded_purchase_rows
 
 ROOT = Path(__file__).resolve().parent
 DATA_DIR = ROOT / "data"
@@ -264,7 +267,7 @@ else:
     st.caption(f"Groq analysis active · {llm_review['matched_metric_count']}/{llm_review['metric_count']} KPI values reconciled · "
                f"Charts: {llm_review['dashboard_series_source']}.")
 
-spend_tab, vendor_tab, savings_tab = st.tabs(["Spend overview", "Vendor summary", "Savings opportunities"])
+spend_tab, vendor_tab, savings_tab, ask_tab = st.tabs(["Spend overview", "Vendor summary", "Savings opportunities", "Ask the analyst"])
 
 with spend_tab:
     st.subheader("Spend at a glance")
@@ -403,6 +406,10 @@ with spend_tab:
                     st.write(f"• {check.get('name', 'Check')}: {check.get('status', 'review')} — {check.get('explanation', '')}")
         if summary["excluded_purchase_rows"]:
             st.write(f"Excluded from KPIs: {summary['excluded_purchase_rows']:,} invalid purchase lines.")
+        excluded_rows = excluded_purchase_rows(filtered)
+        if not excluded_rows.empty:
+            st.markdown("**Excluded purchase rows and why**")
+            st.dataframe(excluded_rows.head(200), width="stretch", hide_index=True)
 
 with vendor_tab:
     st.subheader("Vendor performance")
@@ -593,6 +600,90 @@ with savings_tab:
             "Offers are compared within the same material and country to avoid misleading cross-origin comparisons. The offer file contains indicative rates, not proof of availability or negotiated terms."
         )
 
+MAX_QUESTIONS_PER_SESSION = 20  # protects the shared free-tier Groq daily quota
+
+
+def _queue_question(text: str) -> None:
+    st.session_state["analyst_question"] = text
+    st.session_state["analyst_pending"] = True
+
+
+def _submit_typed_question() -> None:
+    st.session_state["analyst_pending"] = True
+
+
+with ask_tab:
+    st.subheader("Ask the procurement analyst")
+    st.markdown(
+        '<div class="section-note">A bounded workflow: Groq may choose from six approved analysis tools, but every number is calculated in Python '
+        'and the AI cannot run code, change data, or place orders. Open <b>How this was answered</b> to inspect each step.</div>', unsafe_allow_html=True)
+    analyst_ctx = AnalystContext.build(purchases, offers, selected_quarter if quarter_choices else None)
+    has_key = bool(os.getenv("GROQ_API_KEY"))
+    use_groq = st.toggle("Use Groq for planning and explanation", value=has_key, disabled=not has_key,
+                         help="Off, or without a key, an offline rule router picks the tools and only deterministic findings are shown.")
+    example_columns = st.columns(len(SUPPORTED_QUESTIONS))
+    for column, example in zip(example_columns, SUPPORTED_QUESTIONS):
+        column.button(example, on_click=_queue_question, args=(example,), width="stretch", key=f"example_{example}")
+    st.text_input("Your question", key="analyst_question", max_chars=300, on_change=_submit_typed_question,
+                  placeholder="e.g. Which materials have the largest savings opportunities, and are any based on unreliable data?")
+    ask_clicked = st.button("Ask", type="primary")
+    if ask_clicked or st.session_state.pop("analyst_pending", False):
+        asked = st.session_state.get("analyst_asked", 0)
+        if asked >= MAX_QUESTIONS_PER_SESSION:
+            st.warning(f"Session limit of {MAX_QUESTIONS_PER_SESSION} questions reached to protect the shared free Groq quota. Reload the page to continue.")
+        else:
+            st.session_state["analyst_asked"] = asked + 1
+            with st.spinner("Planning, running approved tools, and checking the answer…"):
+                st.session_state["analyst_answer"] = answer_question(analyst_ctx, st.session_state.get("analyst_question", ""), use_llm=use_groq)
+
+    answer = st.session_state.get("analyst_answer")
+    if answer:
+        if answer["status"] == "refused":
+            st.warning(answer["message"], icon="🚫")
+        elif answer["status"] in {"clarify", "unsupported"}:
+            st.info(answer["message"], icon="❓")
+            if answer["status"] == "unsupported":
+                st.markdown("Try one of the example questions above.")
+        else:
+            st.markdown(f"**Question:** {answer['question']}  \n**Reporting quarter default:** {answer['quarter']}")
+            if answer.get("synthesis"):
+                st.info(f"**Groq explanation** (checked: no numeric claims, valid citations): {answer['synthesis']}", icon="💬")
+            st.markdown("#### Findings calculated in Python")
+            for finding in answer["findings"]:
+                st.markdown(f"- **{finding['id']}** · {finding['text']}")
+            evidence = answer.get("evidence", {})
+            if "rank_savings_opportunities" in evidence:
+                top = pd.DataFrame(evidence["rank_savings_opportunities"]["top"]).sort_values("combined_saving_inr")
+                fig = px.bar(top, x="combined_saving_inr", y="name", orientation="h", color_discrete_sequence=["#168b7e"],
+                             labels={"combined_saving_inr": "Indicative saving (INR)", "name": evidence["rank_savings_opportunities"]["group_by"].title()})
+                fig.update_traces(text=[money_label(v) for v in top["combined_saving_inr"]], textposition="outside", cliponaxis=False,
+                                  hovertemplate="%{y}<br>₹%{x:,.0f}<extra></extra>")
+                fig = currency_axis(fig, f"Top indicative savings · {evidence['rank_savings_opportunities']['quarter']}")
+                fig.update_xaxes(tickprefix="₹", separatethousands=True, range=[0, float(top["combined_saving_inr"].max()) * 1.25 or 1])
+                show_chart(fig)
+            if "explain_variance" in evidence:
+                parts = evidence["explain_variance"]["components_inr"]
+                labels = {"volume": "Volume / mix", "price": "Material price rates", "freight": "Freight rates", "new_or_dropped": "New / dropped materials"}
+                fig = go.Figure(go.Bar(x=[labels[k] for k in parts], y=list(parts.values()), marker_color=["#168b7e" if v <= 0 else "#e28b45" for v in parts.values()],
+                                       text=[money_label(v) for v in parts.values()], textposition="outside", hovertemplate="%{x}<br>₹%{y:,.0f}<extra></extra>"))
+                fig = currency_axis(fig, "Spend change by component (sums to the total change)")
+                fig.update_yaxes(tickprefix="₹", separatethousands=True, title="Change in landed spend (INR)")
+                show_chart(fig)
+            for note in answer["limitations"]:
+                st.caption(f"⚠️ {note}")
+        with st.expander("How this was answered"):
+            llm_state = answer["llm"]
+            st.caption(f"Run ID {answer['run_id']} (data fingerprint + quarter) · plan source: {answer['plan_source'] or 'n/a'} · "
+                       f"planner: {llm_state['planner']} · explanation: {llm_state['synthesis']} · Groq tokens this answer: {llm_state['tokens']:,} · {answer.get('total_ms', 0)} ms")
+            st.dataframe(pd.DataFrame(answer["trace"]).rename(columns={"step": "Step", "stage": "Stage", "status": "Status", "detail": "Detail", "ms": "ms"}),
+                         width="stretch", hide_index=True)
+            budget = BUDGET.snapshot()
+            st.caption(f"Shared Groq budget: {budget['tokens_last_minute']:,}/{budget['tpm_limit']:,} tokens in the last minute · "
+                       f"{budget['requests_last_24h']}/{budget['daily_limit']} requests in 24 h (free tier allows 8,000 tokens/min and 1,000 requests/day). "
+                       "When exhausted, the analyst falls back to the offline router.")
+        st.download_button("Download analysis report (Markdown)", data=build_report_markdown(answer).encode("utf-8"),
+                           file_name="purchase_analyst_report.md", mime="text/markdown")
+
 st.divider()
 with st.expander("Upload different data (optional)", expanded=False):
     st.caption("Upload both CSVs to replace the sample data. Clear both uploads to return to the included sample.")
@@ -602,5 +693,5 @@ with st.expander("Upload different data (optional)", expanded=False):
     with upload_columns[0]:
         st.file_uploader("Purchase history CSV", type="csv", key="purchase_upload")
     with upload_columns[1]:
-        st.file_uploader("Vendor offers CSV", type="csv", key="vendor_upload")
+        st.file_uploader("Vendor offers CSV", type="csv", key="offer_upload")
 st.caption(f"purchase_intelligence · Data reviewed: {quality['purchase_rows']:,} purchase rows · Analysis: {llm_review['source']} · Metrics reconciled in Python.")

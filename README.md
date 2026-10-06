@@ -55,7 +55,7 @@ Use **Reporting quarter** near the top of the page. The main spend measures, sup
 
 ### Use your own files
 
-At the bottom of the dashboard, open **Upload different data (optional)** and provide both CSV files. Uploading only one file means the other input continues to use the sample data; the dashboard will show a reminder. Clear both uploads to return to the sample.
+At the bottom of the dashboard, open **Upload different data (optional)** and provide both CSV files. Uploading only one file means the other input continues to use the sample data; the dashboard will show a reminder. Clear both uploads to return to the sample. Each file is limited to 10 MB. Rows excluded from spend metrics are listed with the reason under **Data checks and potential anomalies**.
 
 ## 📊 What each tab shows
 
@@ -98,6 +98,8 @@ For each valid purchase line:
 Savings are compared only with offers for the **same material and source country**. This helps avoid misleading comparisons between different materials or origins.
 
 The application calculates spend and savings with Python. The optional Groq AI service reviews quality findings and calculations and can provide a plain-English summary. Every AI-produced KPI is checked against an independent Python calculation; if it does not match, the dashboard uses the Python result instead. The AI does not get to change the underlying purchase arithmetic.
+
+**How to describe this honestly:** the dashboard is a modular analytics workflow (deterministic Python calculations plus an optional Groq review), not an autonomous agent. Only the Ask the analyst tab lets a model choose between tools, and only from a fixed allowlist.
 
 ## 📁 The included sample data
 
@@ -144,7 +146,54 @@ The code is published in the GitHub repository **Purchase-Intelligence**, on the
 
 If Streamlit says it cannot find or connect to the repository, first check that you selected the `main` branch and `app.py`, and that Streamlit has GitHub permission to access the repository. Repository admins can authorize the GitHub connection.
 
-## 📝 Create a shareable analysis report
+## � Ask the analyst (bounded tool workflow)
+
+The **Ask the analyst** tab answers a narrow set of procurement questions: top savings opportunities (by material, supplier or category), why landed spend changed, best quotes for a material, data-quality issues, and supplier views. It is deliberately **not** a general chatbot.
+
+```mermaid
+flowchart TD
+    Q[Question] --> S[Screen: refuse actions, credential probes, over-long input]
+    S --> P[Plan: Groq picks approved tools, or offline rule router]
+    P --> V[Validate plan: allowlist, typed args, max 4 calls]
+    V --> T[Run tools in pandas]
+    T --> F[Findings with IDs, all numbers from Python]
+    F --> E[Optional Groq explanation]
+    E --> C[Check: no numbers, valid citations, no causal or contradictory claims]
+    C --> A[Answer + charts + limitations + run trace + Markdown report]
+```
+
+| Step | Who decides | Notes |
+| --- | --- | --- |
+| Refuse purchase actions and credential probes | Python rules | Runs before any Groq call, so it costs no tokens |
+| Choose tools and arguments | Groq, validated by Python (offline rules as fallback) | Six tools: `profile_data`, `check_data_quality`, `compare_spend`, `explain_variance`, `rank_savings_opportunities`, `lookup_best_quote` |
+| Every number | Python (pandas) | Variance parts (volume/mix, price rates, freight rates, new/dropped materials) sum exactly to the total change |
+| Explanation prose | Groq, then validated | Dropped if it contains digits, currency, causal wording, unknown citations or contradicts known data issues |
+
+Limits: at most 4 tool calls per question, 300-character questions, 20 questions per browser session. Open **How this was answered** to see each step, its status and timing, the run ID (data fingerprint + quarter), Groq tokens used, and the shared budget.
+
+The AI cannot run code or SQL, read files, change data, or place orders. Savings are indicative leads for human review, and the tool is not an autonomous purchasing system.
+
+### Free-tier reality check (measured, October 2026)
+
+| Resource | Limit | How the app stays inside it |
+| --- | --- | --- |
+| Groq free tier (key used in testing, model `qwen/qwen3.8-27b`) | 8,000 tokens/minute, 1,000 requests/day | A process-wide budget guard (7,200 tokens/min, 900 requests/day) skips Groq when exhausted; about 0.7-1.4k tokens per question; identical questions are cached; 429/network errors fall back to Python |
+| Streamlit Community Cloud | about 2.7 GB memory, 2 CPU cores, apps sleep after 12 hours without traffic | Plain pandas on about 1.3k rows; uploads capped at 10 MB in `.streamlit/config.toml`; no database or extra services |
+
+Your own account's limits may differ; check them at console.groq.com. Because the Groq quota is shared by all visitors of a deployed app, heavy public use will exhaust it and the app will then show deterministic answers only.
+
+### Evaluation
+
+`evaluation/cases.json` holds 18 questions with the expected status, tools and arguments (supported questions, ambiguity, unknown quarter, purchase actions, credential and prompt-injection attempts, off-topic, over-long input).
+
+```bash
+python run_evaluation.py --mode rules   # offline, no Groq calls
+python run_evaluation.py --mode live    # real Groq planner and explanation; paced, uses about 13k tokens
+```
+
+Latest results (saved in `reports/`): **offline rules 18/18, live Groq 18/18** (Groq planned 11 of the cases; the rest were screened or clarified before planning). Caveats: the same author wrote the cases and the offline router, so the offline score shows regression safety rather than independent accuracy; 18 cases is a small sample; live results vary by model run, and one earlier live run had the model skip an optional step (cases now check the minimum sufficient tool set). Unit tests use a mocked LLM and also cover invalid or oversized plans, unsafe prose, Groq failure, budget exhaustion and key redaction.
+
+## �📝 Create a shareable analysis report
 
 Generate a plain-text summary and a machine-readable JSON report from the included CSVs:
 
@@ -164,6 +213,8 @@ To confirm the project calculations and data checks are working:
 ```bash
 python -m unittest discover -s tests -v
 ```
+
+The 35 tests need no Groq key or network. They cover the spend and savings arithmetic, tool argument validation, variance reconciliation to row-level totals, the orchestrator with a mocked LLM, guardrails, and the token budget.
 
 ## ⚠️ Use savings as leads, not promises
 
