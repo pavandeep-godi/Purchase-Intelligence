@@ -16,7 +16,7 @@ from purchase_intelligence.agents.data_quality_agent import run_quality_checks
 from purchase_intelligence.agents.groq_analysis_agent import build_groq_context, load_groq_environment, run_groq_review
 from purchase_intelligence.agents.spend_analysis_agent import analyze_spend
 from purchase_intelligence.llm import BUDGET
-from purchase_intelligence.orchestrator import SUPPORTED_QUESTIONS, answer_question, build_report_markdown
+from purchase_intelligence.orchestrator import SUPPORTED_QUESTIONS, answer_question, build_report_markdown, inr_compact
 from purchase_intelligence.tools import AnalystContext, excluded_purchase_rows
 
 ROOT = Path(__file__).resolve().parent
@@ -612,6 +612,99 @@ def _submit_typed_question() -> None:
     st.session_state["analyst_pending"] = True
 
 
+QUALITY_LABELS = {
+    "missing_purchase_cells": "Blank required cells", "duplicate_purchase_order_ids": "Duplicate order IDs",
+    "duplicate_vendor_offers": "Repeated vendor quotes", "invalid_purchase_rows": "Invalid rows (left out of spend)",
+    "invalid_purchase_dates": "Missing or unreadable dates", "unmatched_purchase_rows": "Purchases with no matching quote",
+    "offer_deviation_rows": "Price over 25% off quote, or freight over 50% above", "extreme_price_rows": "Price above 1.5× the material's median",
+}
+VARIANCE_MEANING = {
+    "volume": ("Volume / mix", "Buying more or fewer kg, or shifting between materials"),
+    "price": ("Material price rates", "Paying a different price per kg"),
+    "freight": ("Freight rates", "Paying a different freight cost per kg"),
+    "new_or_dropped": ("New / dropped materials", "Materials bought in only one of the two quarters"),
+}
+
+
+def _effect(value: float) -> str:
+    return "No change" if round(value) == 0 else f"Spend {'up' if value > 0 else 'down'} {inr_compact(abs(value))}"
+
+
+def render_evidence(evidence: dict) -> None:
+    """Show tool results as cards and tables in plain business language."""
+    if "compare_spend" in evidence:
+        d = evidence["compare_spend"]
+        cur, prev = d["current"], d["prior"]
+        cards = st.columns(3)
+        pct = d["landed_spend_change_pct"]
+        cards[0].metric(f"Landed spend · {d['quarter']}", inr_compact(cur["landed_spend_inr"]),
+                        f"{pct:+.1f}% vs {d['prior_quarter']}" if pct is not None else None, delta_color="inverse")
+        cards[1].metric("Quantity bought", f"{cur['total_quantity_kg'] / 1000:,.0f} tonnes",
+                        f"{(cur['total_quantity_kg'] / prev['total_quantity_kg'] - 1) * 100:+.1f}%" if prev["total_quantity_kg"] else None, delta_color="off")
+        cards[2].metric("Average landed cost", f"₹{cur['average_landed_cost_per_kg_inr']:,.2f}/kg",
+                        f"{cur['average_landed_cost_per_kg_inr'] - prev['average_landed_cost_per_kg_inr']:+,.2f} ₹/kg", delta_color="inverse")
+    if "explain_variance" in evidence:
+        d = evidence["explain_variance"]
+        parts = d["components_inr"]
+        st.markdown(f"##### What moved spend: {d['prior_quarter']} → {d['quarter']}")
+        fig = go.Figure(go.Bar(x=[VARIANCE_MEANING[k][0] for k in parts], y=list(parts.values()),
+                               marker_color=["#168b7e" if v <= 0 else "#e28b45" for v in parts.values()],
+                               text=[inr_compact(v) for v in parts.values()], textposition="outside", hovertemplate="%{x}<br>₹%{y:,.0f}<extra></extra>"))
+        fig = currency_axis(fig, "Green = spend down, orange = spend up (drivers add up to the total change)")
+        fig.update_yaxes(tickprefix="₹", separatethousands=True, title="Change in landed spend (INR)")
+        show_chart(fig)
+        st.dataframe(pd.DataFrame([{"Driver": VARIANCE_MEANING[k][0], "What it means": VARIANCE_MEANING[k][1], "Effect": _effect(v)} for k, v in parts.items()]),
+                     width="stretch", hide_index=True)
+        st.markdown("##### Materials that moved spend the most")
+        st.dataframe(pd.DataFrame([{"Material": m["material"], "Volume / mix": inr_compact(m["volume"]), "Price rate": inr_compact(m["price"]),
+                                    "Freight rate": inr_compact(m["freight"]), "Net change": inr_compact(m["net"])} for m in d["top_materials"]]),
+                     width="stretch", hide_index=True)
+    if "rank_savings_opportunities" in evidence:
+        d = evidence["rank_savings_opportunities"]
+        label = {"material": "Material", "vendor": "Supplier", "category": "Category"}[d["group_by"]]
+        cards = st.columns(3)
+        cards[0].metric("Indicative saving", inr_compact(d["total_combined_saving_inr"]))
+        cards[1].metric("Share of landed spend", f"{d['total_combined_saving_inr'] / d['total_landed_spend_inr'] * 100:.1f}%" if d["total_landed_spend_inr"] else "n/a")
+        cards[2].metric("Lines with a comparable quote", f"{d['comparable_offer_coverage_pct']:.0f}%")
+        top = pd.DataFrame(d["top"])
+        chart_data = top.sort_values("combined_saving_inr")
+        fig = px.bar(chart_data, x="combined_saving_inr", y="name", orientation="h", color_discrete_sequence=["#168b7e"],
+                     labels={"combined_saving_inr": "Indicative saving (INR)", "name": label})
+        fig.update_traces(text=[inr_compact(v) for v in chart_data["combined_saving_inr"]], textposition="outside", cliponaxis=False,
+                          hovertemplate="%{y}<br>₹%{x:,.0f}<extra></extra>")
+        fig = currency_axis(fig, f"Largest indicative savings by {label.lower()} · {d['quarter']}")
+        fig.update_xaxes(tickprefix="₹", separatethousands=True, range=[0, float(chart_data["combined_saving_inr"].max()) * 1.25 or 1])
+        show_chart(fig)
+        st.dataframe(pd.DataFrame({
+            "Rank": range(1, len(top) + 1), label: top["name"], "Indicative saving": top["combined_saving_inr"].map(inr_compact),
+            "Share of total saving": top["share_of_total_saving_pct"].map("{:.1f}%".format), "Purchase lines": top["purchase_lines"],
+            "Lines to double-check": top["unreliable_lines"]}), width="stretch", hide_index=True)
+        st.caption("Lines to double-check: no quote from the same supplier, or the price paid is far from that supplier's quote. Savings built on these lines are less certain.")
+    if "lookup_best_quote" in evidence:
+        d = evidence["lookup_best_quote"]
+        st.markdown(f"##### Lowest landed quotes for {d['material']}")
+        st.dataframe(pd.DataFrame([{"Rank": i, "Supplier": q["vendor"], "Origin": q["country"], "Price (₹/kg)": f"{q['price_per_kg_inr']:,.2f}",
+                                    "Freight (₹/kg)": f"{q['freight_per_kg_inr']:,.2f}", "Landed (₹/kg)": f"{q['landed_per_kg_inr']:,.2f}"}
+                                   for i, q in enumerate(d["best"], 1)]), width="stretch", hide_index=True)
+    if "profile_data" in evidence:
+        d = evidence["profile_data"]
+        cards = st.columns(4)
+        cards[0].metric("Purchase rows", f"{d['purchase_rows']:,}")
+        cards[1].metric("Vendor quotes", f"{d['vendor_offer_rows']:,}")
+        cards[2].metric("Valid lines", f"{d['valid_purchase_lines']:,}")
+        cards[3].metric("Excluded rows", f"{d['excluded_purchase_rows']:,}")
+        st.caption(f"Purchases from {d['first_purchase_date']} to {d['last_purchase_date']} · quarters: {', '.join(d['quarters'])}")
+    if "check_data_quality" in evidence:
+        d = evidence["check_data_quality"]
+        raised = {QUALITY_LABELS[k]: v for k, v in d["flags"].items() if v}
+        st.markdown(f"##### Data checks · {d['quarter']} ({d['rows_checked']:,} rows)")
+        if raised:
+            st.dataframe(pd.DataFrame({"Check": list(raised), "Rows flagged": list(raised.values())}), width="stretch", hide_index=True)
+        else:
+            st.success("No data-quality flags were raised.")
+        st.caption(f"{d['comparable_offer_coverage_pct']:.1f}% of purchase lines have a comparable vendor quote.")
+
+
 with ask_tab:
     st.subheader("Ask the procurement analyst")
     st.markdown(
@@ -645,32 +738,18 @@ with ask_tab:
             if answer["status"] == "unsupported":
                 st.markdown("Try one of the example questions above.")
         else:
-            st.markdown(f"**Question:** {answer['question']}  \n**Reporting quarter default:** {answer['quarter']}")
+            st.markdown(f"**Question:** {answer['question']}")
+            if answer.get("headline"):
+                st.success(answer["headline"], icon="✅")
             if answer.get("synthesis"):
-                st.info(f"**Groq explanation** (checked: no numeric claims, valid citations): {answer['synthesis']}", icon="💬")
-            st.markdown("#### Findings calculated in Python")
-            for finding in answer["findings"]:
-                st.markdown(f"- **{finding['id']}** · {finding['text']}")
-            evidence = answer.get("evidence", {})
-            if "rank_savings_opportunities" in evidence:
-                top = pd.DataFrame(evidence["rank_savings_opportunities"]["top"]).sort_values("combined_saving_inr")
-                fig = px.bar(top, x="combined_saving_inr", y="name", orientation="h", color_discrete_sequence=["#168b7e"],
-                             labels={"combined_saving_inr": "Indicative saving (INR)", "name": evidence["rank_savings_opportunities"]["group_by"].title()})
-                fig.update_traces(text=[money_label(v) for v in top["combined_saving_inr"]], textposition="outside", cliponaxis=False,
-                                  hovertemplate="%{y}<br>₹%{x:,.0f}<extra></extra>")
-                fig = currency_axis(fig, f"Top indicative savings · {evidence['rank_savings_opportunities']['quarter']}")
-                fig.update_xaxes(tickprefix="₹", separatethousands=True, range=[0, float(top["combined_saving_inr"].max()) * 1.25 or 1])
-                show_chart(fig)
-            if "explain_variance" in evidence:
-                parts = evidence["explain_variance"]["components_inr"]
-                labels = {"volume": "Volume / mix", "price": "Material price rates", "freight": "Freight rates", "new_or_dropped": "New / dropped materials"}
-                fig = go.Figure(go.Bar(x=[labels[k] for k in parts], y=list(parts.values()), marker_color=["#168b7e" if v <= 0 else "#e28b45" for v in parts.values()],
-                                       text=[money_label(v) for v in parts.values()], textposition="outside", hovertemplate="%{x}<br>₹%{y:,.0f}<extra></extra>"))
-                fig = currency_axis(fig, "Spend change by component (sums to the total change)")
-                fig.update_yaxes(tickprefix="₹", separatethousands=True, title="Change in landed spend (INR)")
-                show_chart(fig)
+                st.info(f"**Plain-English summary** (written by Groq, checked: no numbers or causes added): {answer['synthesis']}", icon="💬")
+            render_evidence(answer.get("evidence", {}))
             for note in answer["limitations"]:
                 st.caption(f"⚠️ {note}")
+            with st.expander("Calculation details and evidence references (F1, F2, …)"):
+                st.caption("Every sentence below is calculated in Python from the data; the IDs let the Groq summary cite its sources.")
+                for finding in answer["findings"]:
+                    st.markdown(f"- **{finding['id']}** · {finding['text']}")
         with st.expander("How this was answered"):
             llm_state = answer["llm"]
             st.caption(f"Run ID {answer['run_id']} (data fingerprint + quarter) · plan source: {answer['plan_source'] or 'n/a'} · "

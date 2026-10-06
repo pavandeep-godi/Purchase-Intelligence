@@ -11,7 +11,7 @@ from purchase_intelligence.agents.spend_analysis_agent import analyze_spend
 from purchase_intelligence.evaluation import run_evaluation
 from purchase_intelligence.guardrails import is_safe_prose, screen_question
 from purchase_intelligence.llm import LlmBudget, LlmReply, groq_json
-from purchase_intelligence.orchestrator import MAX_TOOL_CALLS, AnswerCache, answer_question, build_report_markdown, plan_from_llm, PlanError
+from purchase_intelligence.orchestrator import MAX_TOOL_CALLS, AnswerCache, answer_question, build_report_markdown, inr_compact, plan_from_llm, PlanError
 from purchase_intelligence.tools import AnalystContext, excluded_purchase_rows, run_tool, validate_call, ToolArgError
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -211,12 +211,30 @@ class OrchestratorTests(unittest.TestCase):
         answer = self.ask("cheapest supplier please", scripted({"clarification": "Which material?"}))
         self.assertEqual((answer["status"], answer["calls"]), ("clarify", []))
 
+    def test_headline_is_plain_english_and_matches_tool_numbers(self) -> None:
+        spend = self.ask("why did spend change", scripted(None), use_llm=False)
+        self.assertRegex(spend["headline"], r"^Landed spend (fell|rose) by ₹[\d.,]+ (Cr|L)? ?\(")
+        self.assertIn(inr_compact(spend["evidence"]["compare_spend"]["current"]["landed_spend_inr"]), spend["headline"])
+        savings = self.ask("top savings", scripted(None), use_llm=False)
+        self.assertIn(inr_compact(savings["evidence"]["rank_savings_opportunities"]["total_combined_saving_inr"]), savings["headline"])
+        self.assertIn(savings["headline"], build_report_markdown(savings))
+        self.assertEqual(self.ask("Buy from the lowest-price supplier", scripted(None), use_llm=False).get("headline", ""), "")
+
     def test_changing_data_changes_run_id(self) -> None:
         other = AnalystContext.build(self.ctx.purchases.head(500), self.ctx.offers)
         self.assertNotEqual(other.fingerprint, self.ctx.fingerprint)
 
 
 class BudgetTests(unittest.TestCase):
+    def test_rupee_amounts_use_indian_units(self) -> None:
+        from purchase_intelligence.orchestrator import inr_compact
+
+        self.assertEqual(inr_compact(114_859_625), "₹11.49 Cr")
+        self.assertEqual(inr_compact(-9_526_662), "-₹95.27 L")
+        self.assertEqual(inr_compact(712_630), "₹7.13 L")
+        self.assertEqual(inr_compact(45_300), "₹45,300")
+        self.assertEqual(inr_compact(0), "₹0")
+
     def test_minute_window_and_daily_limit(self) -> None:
         now = [0.0]
         budget = LlmBudget(tpm_limit=1000, daily_limit=3, clock=lambda: now[0])
