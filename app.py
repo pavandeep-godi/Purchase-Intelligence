@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import html
 import json
 import hashlib
 import os
@@ -61,7 +62,33 @@ div[data-testid="stTabs"] [role="tablist"] { display:flex; gap:16px; border-bott
 div[data-testid="stTabs"] [role="tab"] { flex:1 1 0% !important; width:auto !important; min-width:0; justify-content:center; color:var(--ink) !important; font-weight:700; border-radius:10px; padding:.8rem 1rem; min-height:48px; }
 div[data-testid="stTabs"] [role="tab"][aria-selected="true"] { color:var(--ink) !important; background:color-mix(in srgb, var(--teal) 12%, Canvas); }
 div[data-testid="stTabs"] [role="tabpanel"] { padding-top:1.1rem; }
+.st-key-about_poc [data-testid="stExpander"] { border:1px solid color-mix(in srgb, var(--teal) 45%, transparent); border-radius:14px; background:linear-gradient(100deg,color-mix(in srgb, var(--teal) 12%, Canvas),var(--surface)); margin-bottom:14px; }
+.st-key-about_poc summary { padding:.85rem 1.2rem; font-weight:700; }
+.st-key-about_poc summary:hover { background:color-mix(in srgb, var(--teal) 8%, transparent); }
+.about-lead { font-size:1.02rem; line-height:1.55; color:var(--ink); margin:2px 0 16px; }
+.about-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-bottom:16px; }
+.about-card { background:var(--surface); border:1px solid var(--border); border-top:3px solid var(--teal); border-radius:12px; padding:14px 16px; }
+.about-card h4 { margin:0 0 6px; padding:0; font-size:.95rem; color:var(--ink); }
+.about-card p, .about-card li { font-size:.85rem; line-height:1.45; color:var(--muted); margin:0; }
+.about-card ul { margin:0; padding-left:1.1rem; }
+.about-flow { display:flex; align-items:stretch; gap:8px; margin-bottom:14px; }
+.about-step { flex:1 1 0; min-width:0; background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:10px 12px; text-align:center; }
+.about-step b { display:block; font-size:.85rem; color:var(--ink); }
+.about-step span { font-size:.74rem; color:var(--muted); }
+.about-arrow { align-self:center; color:var(--teal); font-weight:800; }
+.about-foot { font-size:.82rem; color:var(--muted); }
 .kpi-section-gap { height:22px; }
+.stat-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px 10px; padding:2px 0; }
+.st-key-quarter_filter { padding-right:18px; border-right:1px solid var(--border); }
+.st-key-quarter_filter label p { font-weight:700; }
+.st-key-quarter_filter [role="group"], .st-key-quarter_filter [data-baseweb="select"] > div { border:1.5px solid var(--teal) !important; background:color-mix(in srgb, var(--teal) 9%, Canvas) !important; }
+.st-key-filter_bar [data-testid="stElementContainer"] { height:auto !important; min-height:0 !important; }
+.st-key-filter_bar [data-testid="stMarkdownContainer"] p { margin:0; }
+.stat-tile { border-left:3px solid var(--teal); padding:2px 0 2px 12px; min-width:0; }
+.stat-tile span { display:block; color:var(--muted); font-size:.68rem; font-weight:650; text-transform:uppercase; letter-spacing:.06em; }
+.stat-tile b { display:block; color:var(--ink); font-size:.92rem; font-weight:700; overflow-wrap:anywhere; }
+.stat-tile.warn { border-left-color:#d68c14; }
+.st-key-filter_bar { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:14px 18px 22px; margin-bottom:16px; }
 [data-testid="stExpander"] { border-color:var(--border); border-radius:12px; background:var(--surface); }
 [data-testid="stPlotlyChart"] { min-width:0; max-width:100%; background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:8px 8px 2px; box-shadow:0 3px 12px var(--soft-shadow); }
 [data-testid="stMetric"] { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:13px 16px; }
@@ -84,6 +111,7 @@ footer { visibility:hidden; }
 @media (max-width: 1100px) {
     .block-container { padding-left:1.5rem; padding-right:1.5rem; }
     .hero { padding:24px 28px; }
+    .stat-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
     div[data-testid="stTabs"] [role="tablist"] { gap:8px; }
     div[data-testid="stTabs"] [role="tab"] { padding:.7rem .6rem; font-size:.9rem; }
     [data-testid="stPlotlyChart"] { padding:5px 4px 1px; }
@@ -91,6 +119,9 @@ footer { visibility:hidden; }
 @media (max-width: 700px) {
     .block-container { padding:4.5rem .8rem 1.5rem; }
     .hero { border-radius:15px; padding:20px; margin-bottom:14px; }
+    .about-grid { grid-template-columns:1fr; }
+    .about-flow { flex-direction:column; }
+    .about-arrow { transform:rotate(90deg); }
     .hero h1 { font-size:clamp(1.35rem,6vw,1.65rem); overflow-wrap:anywhere; }
     .hero p { font-size:.88rem; line-height:1.4; }
     .eyebrow { font-size:.62rem; letter-spacing:.1em; }
@@ -184,6 +215,33 @@ def cached_groq_review(context_json: str, credential_fingerprint: str, model_nam
     return run_groq_review(json.loads(context_json))
 
 
+with st.container(key="about_poc"):
+    with st.expander("✨ About this POC — what it does, the data behind it and how it works (click to read)"):
+        st.markdown(
+            '<p class="about-lead"><b>Purchase Intelligence</b> shows a chemicals company where its purchasing money goes and where it could '
+            'save some — in plain business language. Browse the dashboard or just <b>ask a question</b> and get a short, checked answer.</p>'
+            '<div class="about-grid">'
+            '<div class="about-card"><h4>🎯 What we are doing</h4><ul>'
+            '<li>Track landed spend (material + freight) by quarter</li><li>Rank materials, categories and suppliers</li>'
+            '<li>Spot indicative savings versus comparable supplier quotes</li><li>Flag data errors before anyone acts on them</li></ul></div>'
+            '<div class="about-card"><h4>📄 The data</h4><ul>'
+            '<li><b>Purchases:</b> material, kg, price, freight, supplier, country</li>'
+            '<li><b>Supplier quotes:</b> quoted price and freight per kg</li>'
+            '<li>Sample data is invented — not real company spend</li><li>Upload your own two CSVs at the bottom of the page</li></ul></div>'
+            '<div class="about-card"><h4>👀 Try this</h4><ul>'
+            '<li>Change the <b>Reporting quarter</b> filter</li><li>Open <b>Savings opportunities</b> for price vs freight levers</li>'
+            '<li>Go to <b>Ask the analyst</b> and click an example question</li><li>Download the list of lines to review</li></ul></div>'
+            '</div>'
+            '<div class="about-flow">'
+            '<div class="about-step"><b>1 · Load</b><span>Purchases + supplier quotes</span></div><div class="about-arrow">➜</div>'
+            '<div class="about-step"><b>2 · Check</b><span>Missing or odd values excluded and listed</span></div><div class="about-arrow">➜</div>'
+            '<div class="about-step"><b>3 · Calculate</b><span>Spend and savings in plain Python</span></div><div class="about-arrow">➜</div>'
+            '<div class="about-step"><b>4 · Explain</b><span>Optional Groq AI writes summaries and reconciles KPIs</span></div><div class="about-arrow">➜</div>'
+            '<div class="about-step"><b>5 · Explore</b><span>Dashboard tabs or Ask the analyst</span></div></div>'
+            '<p class="about-foot">The figures always come from checkable code; the AI never produces the numbers you rely on, and the app works fully without it. '
+            'Savings are indicative leads to investigate, not promises.</p>',
+            unsafe_allow_html=True,
+        )
 st.markdown(
     '<div class="hero"><div class="eyebrow">CHEMICALS PROCUREMENT · SPEND INTELLIGENCE</div>'
     '<h1>purchase_intelligence</h1>'
@@ -198,20 +256,16 @@ quarter_choices = sorted(purchases["quarter"].dropna().astype(str).unique()) if 
 selected_quarter = quarter_choices[-1] if quarter_choices else "All quarters"
 
 if quarter_choices:
-    filter_columns = st.columns([1.1, 1.6, 3.3])
-    with filter_columns[0]:
-        selected_quarter = st.selectbox(
-            "Reporting quarter", quarter_choices, index=len(quarter_choices) - 1,
-            help="Spend bars compare this quarter with the two preceding quarters; the line chart keeps full history and highlights this quarter.",
-        )
-    with filter_columns[1]:
-        selected_index = quarter_choices.index(selected_quarter)
-        preview_quarters = quarter_choices[max(0, selected_index - 2):selected_index + 1]
-        st.caption(f"Spend bars: {preview_quarters[0]}–{preview_quarters[-1]}")
-    with filter_columns[2]:
-        st.caption(f"{data_source} · {len(purchases):,} purchase lines")
+    with st.container(key="filter_bar"):
+        filter_columns = st.columns([1, 3.4], vertical_alignment="center")
+        with filter_columns[0]:
+            selected_quarter = st.selectbox(
+                "Reporting quarter", quarter_choices, index=len(quarter_choices) - 1, key="quarter_filter",
+                help="Spend bars compare this quarter with the two preceding quarters; the line chart keeps full history and highlights this quarter.",
+            )
+        stat_slot = filter_columns[1].empty()
 else:
-    st.caption(f"{data_source} · {len(purchases):,} purchase lines · {len(offers):,} vendor offers")
+    stat_slot = st.empty()
 
 if "quarter" in purchases and quarter_choices:
     selected_index = quarter_choices.index(selected_quarter)
@@ -252,7 +306,22 @@ materials = analysis["savings_lines"].groupby("material", as_index=False).agg(
     combined_savings_inr=("combined_saving_inr", "sum"),
 ) if not analysis["savings_lines"].empty else pd.DataFrame()
 narrative = llm_review["executive_summary"]
-st.markdown(f"**Reporting period:** {', '.join(selected_quarters) if selected_quarters else 'No quarters selected'} &nbsp; · &nbsp; **Data:** {data_source}")
+_compared = f"{comparison_quarters[0]} → {comparison_quarters[-1]}" if comparison_quarters else "All quarters"
+_groq_live = not llm_review["source"].startswith("Python fallback")
+_groq_value = f'{llm_review["matched_metric_count"]}/{llm_review["metric_count"]} KPIs reconciled' if _groq_live else "Python fallback"
+_tiles = [
+    ("Spend bars compare", _compared, ""),
+    ("Data source", str(data_source), ""),
+    ("Records", f"{len(purchases):,} lines · {len(offers):,} offers", ""),
+    ("Groq review", _groq_value, "ok" if _groq_live else "warn"),
+]
+stat_slot.markdown(
+    '<div class="stat-grid">' + "".join(
+        f'<div class="stat-tile {cls}"><span>{html.escape(label)}</span><b>{html.escape(value)}</b></div>'
+        for label, value, cls in _tiles
+    ) + '</div>',
+    unsafe_allow_html=True,
+)
 if summary["excluded_purchase_rows"]:
     st.warning(f"{summary['excluded_purchase_rows']:,} invalid purchase rows were excluded from spend calculations. Review Data checks below.")
 if llm_review["source"].startswith("Python fallback"):
@@ -263,9 +332,6 @@ if llm_review["source"].startswith("Python fallback"):
         )
     else:
         st.warning(f"Groq review is unavailable: {llm_review['status']}. Dashboard metrics are using the validated Python fallback.")
-else:
-    st.caption(f"Groq analysis active · {llm_review['matched_metric_count']}/{llm_review['metric_count']} KPI values reconciled · "
-               f"Charts: {llm_review['dashboard_series_source']}.")
 
 spend_tab, vendor_tab, savings_tab, ask_tab = st.tabs(["Spend overview", "Vendor summary", "Savings opportunities", "Ask the analyst"])
 
