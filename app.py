@@ -5,6 +5,7 @@ from __future__ import annotations
 import html
 import json
 import hashlib
+import math
 import os
 from pathlib import Path
 
@@ -71,11 +72,17 @@ div[data-testid="stTabs"] [role="tabpanel"] { padding-top:1.1rem; }
 .about-card h4 { margin:0 0 6px; padding:0; font-size:.95rem; color:var(--ink); }
 .about-card p, .about-card li { font-size:.85rem; line-height:1.45; color:var(--muted); margin:0; }
 .about-card ul { margin:0; padding-left:1.1rem; }
-.about-flow { display:flex; align-items:stretch; gap:8px; margin-bottom:14px; }
-.about-step { flex:1 1 0; min-width:0; background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:10px 12px; text-align:center; }
-.about-step b { display:block; font-size:.85rem; color:var(--ink); }
-.about-step span { font-size:.74rem; color:var(--muted); }
-.about-arrow { align-self:center; color:var(--teal); font-weight:800; }
+.about-title { font-size:.8rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--teal); margin:0 0 10px; }
+.about-flow { display:grid; grid-template-columns:1fr auto 1fr auto 1fr; gap:12px; align-items:center; margin-bottom:16px; }
+.about-step { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:14px 16px; text-align:center; }
+.about-step small { display:block; font-size:.72rem; font-weight:650; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); }
+.about-step b { display:block; font-size:1.5rem; color:var(--ink); margin:4px 0; }
+.about-step span { display:block; font-size:.78rem; line-height:1.4; color:var(--muted); }
+.about-step.result { border-color:var(--teal); background:color-mix(in srgb, var(--teal) 12%, Canvas); }
+.about-step.result b { color:var(--teal); }
+.about-op { font-size:1.6rem; font-weight:700; color:var(--muted); }
+.about-asks { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 16px; }
+.about-asks span { background:var(--surface); border:1px solid var(--border); border-radius:999px; padding:5px 13px; font-size:.82rem; color:var(--ink); }
 .about-foot { font-size:.82rem; color:var(--muted); }
 .kpi-section-gap { height:22px; }
 .stat-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px 10px; padding:2px 0; }
@@ -120,8 +127,8 @@ footer { visibility:hidden; }
     .block-container { padding:4.5rem .8rem 1.5rem; }
     .hero { border-radius:15px; padding:20px; margin-bottom:14px; }
     .about-grid { grid-template-columns:1fr; }
-    .about-flow { flex-direction:column; }
-    .about-arrow { transform:rotate(90deg); }
+    .about-flow { grid-template-columns:1fr; }
+    .about-op { text-align:center; }
     .hero h1 { font-size:clamp(1.35rem,6vw,1.65rem); overflow-wrap:anywhere; }
     .hero p { font-size:.88rem; line-height:1.4; }
     .eyebrow { font-size:.62rem; letter-spacing:.1em; }
@@ -200,6 +207,44 @@ def money_label(value: float) -> str:
     return f"₹{value:,.0f}"
 
 
+def inr_tick(value: float) -> str:
+    """Axis tick text in Indian units (K / L / Cr) without trailing zeros."""
+    absolute = abs(value)
+    for divisor, suffix in ((10_000_000, " Cr"), (100_000, " L"), (1_000, "K")):
+        if absolute >= divisor:
+            return f"₹{value / divisor:.2f}".rstrip("0").rstrip(".") + suffix
+    return f"₹{value:,.0f}"
+
+
+def inr_axis(fig: go.Figure, axis: str, values, pad: float = 1.2) -> None:
+    """Replace Western 1,234,567 ticks with Indian-unit ticks and leave room for outside labels."""
+    values = [float(v) for v in values]
+    high, low = max(values + [0.0]) * pad, min(values + [0.0]) * pad
+    if high <= low:
+        return
+    raw = (high - low) / 5
+    magnitude = 10 ** math.floor(math.log10(raw))
+    step = next(m * magnitude for m in (1, 2, 2.5, 5, 10) if raw <= m * magnitude)
+    ticks = [i * step for i in range(math.floor(low / step), math.ceil(high / step) + 1)]
+    getattr(fig, f"update_{axis}axes")(range=[low, high], tickvals=ticks, ticktext=[inr_tick(t) for t in ticks], tickprefix="")
+
+
+def inr_hover(fig: go.Figure, axis: str, template: str) -> None:
+    """Hover text with Indian-unit values; VALUE in the template is replaced per point."""
+    for trace in fig.data:
+        if trace.type == "bar":
+            trace.customdata = [[inr_compact(v)] for v in (trace.x if axis == "x" else trace.y)]
+            trace.hovertemplate = template.replace("VALUE", "%{customdata[0]}") + "<extra></extra>"
+
+
+def qty_units(value: float) -> str:
+    if abs(value) >= 10_000_000:
+        return f"{value / 10_000_000:,.2f} Cr"
+    if abs(value) >= 100_000:
+        return f"{value / 100_000:,.2f} L"
+    return f"{value:,.0f}"
+
+
 def show_chart(fig: go.Figure) -> None:
     """Render an interactive chart without Plotly's extra toolbar buttons."""
     st.plotly_chart(
@@ -232,12 +277,15 @@ with st.container(key="about_poc"):
             '<li>Change the <b>Reporting quarter</b> filter</li><li>Open <b>Savings opportunities</b> for price vs freight levers</li>'
             '<li>Go to <b>Ask the analyst</b> and click an example question</li><li>Download the list of lines to review</li></ul></div>'
             '</div>'
+            '<p class="about-title">A 30-second example — how a saving is worked out</p>'
             '<div class="about-flow">'
-            '<div class="about-step"><b>1 · Load</b><span>Purchases + supplier quotes</span></div><div class="about-arrow">➜</div>'
-            '<div class="about-step"><b>2 · Check</b><span>Missing or odd values excluded and listed</span></div><div class="about-arrow">➜</div>'
-            '<div class="about-step"><b>3 · Calculate</b><span>Spend and savings in plain Python</span></div><div class="about-arrow">➜</div>'
-            '<div class="about-step"><b>4 · Explain</b><span>Optional Groq AI writes summaries and reconciles KPIs</span></div><div class="about-arrow">➜</div>'
-            '<div class="about-step"><b>5 · Explore</b><span>Dashboard tabs or Ask the analyst</span></div></div>'
+            '<div class="about-step"><small>What we paid</small><b>₹1,10,000</b><span>1,000 kg of a solvent × (₹100 price + ₹10 freight) per kg</span></div>'
+            '<div class="about-op">−</div>'
+            '<div class="about-step"><small>Best comparable quote</small><b>₹1,03,000</b><span>Same material, same country: ₹95 price + ₹8 freight = ₹103 per kg</span></div>'
+            '<div class="about-op">=</div>'
+            '<div class="about-step result"><small>Indicative saving</small><b>₹7,000</b><span>About 6% of what we paid — a lead to investigate, not a promise</span></div></div>'
+            '<p class="about-title">Questions you can ask in the app</p>'
+            '<div class="about-asks">' + ''.join(f'<span>💬 {html.escape(q)}</span>' for q in SUPPORTED_QUESTIONS) + '</div>'
             '<p class="about-foot">The figures always come from checkable code; the AI never produces the numbers you rely on, and the app works fully without it. '
             'Savings are indicative leads to investigate, not promises.</p>',
             unsafe_allow_html=True,
@@ -368,7 +416,7 @@ with spend_tab:
                                      "material_spend_inr": "Material", "freight_spend_inr": "Freight"},
                              color_discrete_map={"material_spend_inr": "#147b78", "freight_spend_inr": "#91c9bd"},
                              barmode="stack")
-        spend_chart.update_traces(hovertemplate="%{x}<br>%{fullData.name}: ₹%{y:,.0f}<extra></extra>")
+        inr_hover(spend_chart, "y", "%{x}<br>%{fullData.name}: VALUE")
         spend_chart.add_trace(go.Scatter(
             x=quarterly["quarter"], y=quarterly["landed_spend_inr"], mode="text",
             text=[money_label(value) for value in quarterly["landed_spend_inr"]],
@@ -376,8 +424,7 @@ with spend_tab:
             showlegend=False, hoverinfo="skip", cliponaxis=False,
         ))
         spend_chart = currency_axis(spend_chart, "Spend comparison · selected + prior quarters")
-        max_landed_spend = float(quarterly["landed_spend_inr"].max()) if not quarterly.empty else 0.0
-        spend_chart.update_yaxes(tickprefix="₹", separatethousands=True, range=[0, max_landed_spend * 1.18] if max_landed_spend else None)
+        inr_axis(spend_chart, "y", quarterly["landed_spend_inr"], 1.18)
         spend_chart.for_each_trace(lambda trace: trace.update(name={"material_spend_inr": "Material", "freight_spend_inr": "Freight"}.get(trace.name, trace.name)))
         spend_chart.update_layout(yaxis_title="Spend (INR)", xaxis_title="Quarter")
         show_chart(spend_chart)
@@ -439,11 +486,10 @@ with spend_tab:
             category_chart.update_traces(
                 text=[money_label(value) for value in categories.sort_values("landed_spend_inr")["landed_spend_inr"]],
                 textposition="outside", textfont=dict(size=10, color="#193749"), cliponaxis=False,
-                hovertemplate="%{y}<br>Landed spend: ₹%{x:,.0f}<extra></extra>",
             )
+            inr_hover(category_chart, "x", "%{y}<br>Landed spend: VALUE")
             category_chart = currency_axis(category_chart, "Which categories account for spend?")
-            category_chart.update_xaxes(tickprefix="₹", separatethousands=True)
-            category_chart.update_xaxes(range=[0, float(categories["landed_spend_inr"].max()) * 1.2])
+            inr_axis(category_chart, "x", categories["landed_spend_inr"])
             category_chart.update_yaxes(tickprefix="")
             category_chart.update_layout(xaxis_title="Landed spend (INR)", yaxis_title="")
             show_chart(category_chart)
@@ -505,10 +551,9 @@ with vendor_tab:
                          labels={"landed_spend_inr": "Landed spend (INR)", "vendor": "Supplier"})
             fig.update_traces(text=[money_label(value) for value in show["landed_spend_inr"]], textposition="outside",
                               textfont=dict(size=10, color="#193749"), cliponaxis=False)
-            fig.update_traces(hovertemplate="%{y}<br>₹%{x:,.0f}<extra></extra>")
+            inr_hover(fig, "x", "%{y}<br>VALUE")
             fig = currency_axis(fig, "Largest suppliers by spend")
-            fig.update_xaxes(tickprefix="₹", separatethousands=True)
-            fig.update_xaxes(range=[0, float(show["landed_spend_inr"].max()) * 1.2])
+            inr_axis(fig, "x", show["landed_spend_inr"])
             fig.update_yaxes(tickprefix="")
             fig.update_layout(xaxis_title="Landed spend (INR)", yaxis_title="", height=390)
             show_chart(fig)
@@ -519,10 +564,9 @@ with vendor_tab:
                          labels={"combined_savings_inr": "Indicative savings (INR)", "vendor": "Supplier"})
             fig.update_traces(text=[money_label(value) for value in savings_rank["combined_savings_inr"]], textposition="outside",
                               textfont=dict(size=10, color="#193749"), cliponaxis=False)
-            fig.update_traces(hovertemplate="%{y}<br>₹%{x:,.0f}<extra></extra>")
+            inr_hover(fig, "x", "%{y}<br>VALUE")
             fig = currency_axis(fig, "Largest supplier savings opportunities")
-            fig.update_xaxes(tickprefix="₹", separatethousands=True)
-            fig.update_xaxes(range=[0, float(savings_rank["combined_savings_inr"].max()) * 1.2])
+            inr_axis(fig, "x", savings_rank["combined_savings_inr"])
             fig.update_yaxes(tickprefix="")
             fig.update_layout(xaxis_title="Indicative savings (INR)", yaxis_title="", height=390)
             show_chart(fig)
@@ -532,12 +576,12 @@ with vendor_tab:
             "average_landed_cost_per_kg_inr": "Avg landed cost (₹/kg)", "purchase_lines": "Purchase lines",
             "combined_savings_inr": "Indicative savings (₹)", "quantity_kg": "Quantity (kg)",
         })[["Vendor", "Landed spend (₹)", "Spend share (%)", "Avg landed cost (₹/kg)", "Purchase lines", "Indicative savings (₹)", "Quantity (kg)"]]
+        vendor_table["Landed spend (₹)"] = vendor_table["Landed spend (₹)"].map(inr_compact)
+        vendor_table["Indicative savings (₹)"] = vendor_table["Indicative savings (₹)"].map(inr_compact)
+        vendor_table["Quantity (kg)"] = vendor_table["Quantity (kg)"].map(qty_units)
         st.dataframe(vendor_table, width="stretch", hide_index=True,
-                     column_config={"Landed spend (₹)": st.column_config.NumberColumn(format="₹%.0f"),
-                                    "Spend share (%)": st.column_config.NumberColumn(format="%.1f%%"),
-                                    "Avg landed cost (₹/kg)": st.column_config.NumberColumn(format="₹%.2f"),
-                                    "Indicative savings (₹)": st.column_config.NumberColumn(format="₹%.0f"),
-                                    "Quantity (kg)": st.column_config.NumberColumn(format="%,.0f")})
+                     column_config={"Spend share (%)": st.column_config.NumberColumn(format="%.1f%%"),
+                                    "Avg landed cost (₹/kg)": st.column_config.NumberColumn(format="₹%.2f")})
 
 with savings_tab:
     st.subheader("Savings opportunities")
@@ -589,11 +633,10 @@ with savings_tab:
                 fig.update_traces(
                     text=[money_label(value) for value in price_opportunities["price_saving_inr"]],
                     textposition="outside", textfont=dict(size=10, color="#193749"), cliponaxis=False,
-                    hovertemplate="%{y}<br>Price opportunity: ₹%{x:,.0f}<extra></extra>",
                 )
+                inr_hover(fig, "x", "%{y}<br>Price opportunity: VALUE")
                 fig = currency_axis(fig, "Top materials · price only")
-                fig.update_xaxes(tickprefix="₹", separatethousands=True,
-                                 range=[0, float(price_opportunities["price_saving_inr"].max()) * 1.25])
+                inr_axis(fig, "x", price_opportunities["price_saving_inr"], 1.25)
                 fig.update_yaxes(tickprefix="")
                 fig.update_layout(xaxis_title="Indicative savings (INR)", yaxis_title="", height=360, margin=dict(l=8, r=28, t=48, b=12))
                 show_chart(fig)
@@ -610,11 +653,10 @@ with savings_tab:
                 fig.update_traces(
                     text=[money_label(value) for value in freight_opportunities["freight_saving_inr"]],
                     textposition="outside", textfont=dict(size=10, color="#193749"), cliponaxis=False,
-                    hovertemplate="%{y}<br>Freight opportunity: ₹%{x:,.0f}<extra></extra>",
                 )
+                inr_hover(fig, "x", "%{y}<br>Freight opportunity: VALUE")
                 fig = currency_axis(fig, "Top materials · freight only")
-                fig.update_xaxes(tickprefix="₹", separatethousands=True,
-                                 range=[0, float(freight_opportunities["freight_saving_inr"].max()) * 1.25])
+                inr_axis(fig, "x", freight_opportunities["freight_saving_inr"], 1.25)
                 fig.update_yaxes(tickprefix="")
                 fig.update_layout(xaxis_title="Indicative savings (INR)", yaxis_title="", height=360, margin=dict(l=8, r=28, t=48, b=12))
                 show_chart(fig)
@@ -631,11 +673,10 @@ with savings_tab:
             fig.update_traces(
                 text=[money_label(value) for value in top_opportunities["combined_saving_inr"]],
                 textposition="outside", textfont=dict(size=10, color="#193749"), cliponaxis=False,
-                hovertemplate="%{y}<br>Combined opportunity: ₹%{x:,.0f}<extra></extra>",
             )
+            inr_hover(fig, "x", "%{y}<br>Combined opportunity: VALUE")
             fig = currency_axis(fig, "Top materials · combined landed cost")
-            fig.update_xaxes(tickprefix="₹", separatethousands=True,
-                             range=[0, float(top_opportunities["combined_saving_inr"].max()) * 1.2])
+            inr_axis(fig, "x", top_opportunities["combined_saving_inr"])
             fig.update_yaxes(tickprefix="")
             fig.update_layout(xaxis_title="Indicative savings (INR)", yaxis_title="", height=390)
             show_chart(fig)
@@ -655,7 +696,10 @@ with savings_tab:
             "benchmark_freight_per_kg_inr": "Best freight quote (₹/kg)", "benchmark_landed_per_kg_inr": "Best landed quote (₹/kg)",
             "combined_saving_inr": "Combined opportunity (₹)",
         })
-        st.dataframe(opportunity_table, width="stretch", hide_index=True, height=390)
+        st.dataframe(opportunity_table.assign(**{
+            "Qty (kg)": opportunity_table["Qty (kg)"].map(qty_units),
+            "Combined opportunity (₹)": opportunity_table["Combined opportunity (₹)"].map(inr_compact),
+        }), width="stretch", hide_index=True, height=390)
         st.download_button("Download opportunity lines (CSV)", data=opportunity_table.to_csv(index=False).encode("utf-8"),
                            file_name="purchase_savings_opportunities.csv", mime="text/csv")
     with st.expander("How the savings estimate works"):
@@ -705,7 +749,7 @@ def render_evidence(evidence: dict) -> None:
         pct = d["landed_spend_change_pct"]
         cards[0].metric(f"Landed spend · {d['quarter']}", inr_compact(cur["landed_spend_inr"]),
                         f"{pct:+.1f}% vs {d['prior_quarter']}" if pct is not None else None, delta_color="inverse")
-        cards[1].metric("Quantity bought", f"{cur['total_quantity_kg'] / 1000:,.0f} tonnes",
+        cards[1].metric("Quantity bought", f"{qty_units(cur['total_quantity_kg'] / 1000)} tonnes",
                         f"{(cur['total_quantity_kg'] / prev['total_quantity_kg'] - 1) * 100:+.1f}%" if prev["total_quantity_kg"] else None, delta_color="off")
         cards[2].metric("Average landed cost", f"₹{cur['average_landed_cost_per_kg_inr']:,.2f}/kg",
                         f"{cur['average_landed_cost_per_kg_inr'] - prev['average_landed_cost_per_kg_inr']:+,.2f} ₹/kg", delta_color="inverse")
@@ -715,9 +759,11 @@ def render_evidence(evidence: dict) -> None:
         st.markdown(f"##### What moved spend: {d['prior_quarter']} → {d['quarter']}")
         fig = go.Figure(go.Bar(x=[VARIANCE_MEANING[k][0] for k in parts], y=list(parts.values()),
                                marker_color=["#168b7e" if v <= 0 else "#e28b45" for v in parts.values()],
-                               text=[inr_compact(v) for v in parts.values()], textposition="outside", hovertemplate="%{x}<br>₹%{y:,.0f}<extra></extra>"))
+                               text=[inr_compact(v) for v in parts.values()], textposition="outside"))
+        inr_hover(fig, "y", "%{x}<br>VALUE")
         fig = currency_axis(fig, "Green = spend down, orange = spend up (drivers add up to the total change)")
-        fig.update_yaxes(tickprefix="₹", separatethousands=True, title="Change in landed spend (INR)")
+        inr_axis(fig, "y", list(parts.values()))
+        fig.update_yaxes(title="Change in landed spend (INR)")
         show_chart(fig)
         st.dataframe(pd.DataFrame([{"Driver": VARIANCE_MEANING[k][0], "What it means": VARIANCE_MEANING[k][1], "Effect": _effect(v)} for k, v in parts.items()]),
                      width="stretch", hide_index=True)
@@ -736,10 +782,10 @@ def render_evidence(evidence: dict) -> None:
         chart_data = top.sort_values("combined_saving_inr")
         fig = px.bar(chart_data, x="combined_saving_inr", y="name", orientation="h", color_discrete_sequence=["#168b7e"],
                      labels={"combined_saving_inr": "Indicative saving (INR)", "name": label})
-        fig.update_traces(text=[inr_compact(v) for v in chart_data["combined_saving_inr"]], textposition="outside", cliponaxis=False,
-                          hovertemplate="%{y}<br>₹%{x:,.0f}<extra></extra>")
+        fig.update_traces(text=[inr_compact(v) for v in chart_data["combined_saving_inr"]], textposition="outside", cliponaxis=False)
+        inr_hover(fig, "x", "%{y}<br>VALUE")
         fig = currency_axis(fig, f"Largest indicative savings by {label.lower()} · {d['quarter']}")
-        fig.update_xaxes(tickprefix="₹", separatethousands=True, range=[0, float(chart_data["combined_saving_inr"].max()) * 1.25 or 1])
+        inr_axis(fig, "x", chart_data["combined_saving_inr"], 1.25)
         show_chart(fig)
         st.dataframe(pd.DataFrame({
             "Rank": range(1, len(top) + 1), label: top["name"], "Indicative saving": top["combined_saving_inr"].map(inr_compact),
